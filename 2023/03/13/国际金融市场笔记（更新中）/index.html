@@ -323,7 +323,8 @@
 </ul>
 <p>$\color{red}{EURUSD：EUR是base currency}$<br>$\color{red}{USD&#x2F;EUR：EUR是base currency}$</p>
 <h4 id="外汇期权"><a href="#外汇期权" class="headerlink" title="外汇期权"></a>外汇期权</h4><ul>
-<li>对于外汇期权，需要注意执行价格（汇率）K(i&#x2F;j)<ul>
+<li><p>对于外汇期权，需要注意执行价格（汇率）K(i&#x2F;j)</p>
+<ul>
 <li>k单位i货币买入一单位j货币</li>
 <li>对于看涨期权，到期日：<ul>
 <li>使用看涨期权，你可以执行汇率K(i&#x2F;j) 兑换（卖出）K单位货币 i 且买入 1 单位货币 j</li>
@@ -335,7 +336,15 @@
 </li>
 </ul>
 </li>
+<li><p>即期汇率是 S(i&#x2F;j)，所以 S 上升意味着货币 j相对货币 i 升值，S 下降意味着贬值<br><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230313173015.png" alt="image.png|300"><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230313173027.png" alt="image.png|300"><br>注意区分payoff回报与profit利润！！</p>
+</li>
+<li><p>由于外汇期权价格取决于标的现汇汇率，而标的汇率以S(i&#x2F;j)表示，因此外汇期权价格也类似“汇率”，例如 c&#x3D;c(i&#x2F;j)</p>
+<ul>
+<li>美元&#x2F;欧元的欧洲看涨期权，其价格为0.05，意味着看涨价格是每欧元0.05美元</li>
 </ul>
+</li>
+</ul>
+<h4 id="定价"><a href="#定价" class="headerlink" title="定价"></a>定价</h4><p>回忆二叉树模型与Black-Scholes模型。<br><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230313173318.png" alt="image.png"><br><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230313173341.png" alt="image.png"></p>
 <hr>
 <h2 id="Swaps-掉期（互换）"><a href="#Swaps-掉期（互换）" class="headerlink" title="Swaps 掉期（互换）"></a>Swaps 掉期（互换）</h2><ul>
 <li>FX swap：做一笔即期和一笔远期结合起来，叫外汇掉期。</li>
@@ -511,6 +520,7 @@
 </ul>
 </li>
 <li>盈亏平衡点：1.48USD&#x2F;GBP</li>
+<li><strong>在外汇市场上，汇率变化很难变化特别大，因此不一定期权对冲效果好。</strong></li>
 </ul>
 </li>
 </ul>
@@ -552,6 +562,12 @@
 <li>公司可以通过适当选择发票的货币来转移、分担或分散汇率风险</li>
 <li>例如波音可以通过开1500万美元的发票而不是1000万英镑发票将风险转移到英国航空公司。</li>
 <li>或者分享敞口，例如以美元开具账单的一半发票，其余一半以英镑开具发票，即750万美元和500万英镑</li>
+<li><strong>SDR（特别提款权）是国际货币基金组织于1969年创建的国际储备资产</strong><ul>
+<li>SDR不仅用作储备资产，还用作国际交易的计价货币</li>
+<li>由于特别提款权是货币的“投资组合”，其价值往往比特别提款权中包含的任何单个货币的价值更稳定。</li>
+<li>公司可以通过使用特别提款权等货币篮子单位作为发票货币，在一定程度上使外汇风险多样化。</li>
+</ul>
+</li>
 </ul>
 </li>
 <li><p><strong>领先或者滞后支付对冲 Hedging via Lead and Lag</strong></p>
@@ -560,7 +576,29 @@
 <li>波音可能要求对方提前付款，对方要求提供大额折扣。</li>
 </ul>
 </li>
-<li></li>
+<li><p><strong>敞口净额 Exposure Netting</strong></p>
+<ul>
+<li>跨国公司可能拥有多种不同货币的头寸。 </li>
+<li>例如：<ul>
+<li>一家美国公司可能有一个欧元应付账款，同时有一个瑞士法郎的应收账款。</li>
+<li>欧元和法郎经常对美元的汇率相关性较高，公司可以等到这些账户到期，然后用法郎购买欧元现货。</li>
+<li>不必分别对冲风险。</li>
+</ul>
+</li>
+<li>如果公司拥有货币头寸组合，那么对冲剩余风险敞口而不是单独对冲每个货币头寸是有意义的。</li>
+</ul>
+</li>
+</ul>
+<h5 id="是否应该对冲？"><a href="#是否应该对冲？" class="headerlink" title="是否应该对冲？"></a>是否应该对冲？</h5><ul>
+<li>任何对冲都有成本</li>
+<li>几乎没有共识是否一定对冲</li>
+<li>各种市场缺陷表明，企业风险对冲确实增加了价值：<ul>
+<li>信息不对称：管理层比股东更了解公司的风险敞口状况。因此，公司的管理层应管理外汇风险。</li>
+<li>差异交易成本：公司能够获得低成本套期保值; 个人股东的交易成本可能很高。</li>
+<li>违约成本：如果违约成本很大，企业对冲是合理的，因为它会降低违约的可能性。这可以带来更好的信用评级和更低的融资成本。</li>
+<li>累进税：在累进式公司税率下（高收入时期缴纳的税款多于低收入时期的储蓄），稳定的税前收益导致公司税低于具有相同平均值的波动性收益。</li>
+</ul>
+</li>
 </ul>
 <h4 id="Economic-Exposure-经济风险"><a href="#Economic-Exposure-经济风险" class="headerlink" title="Economic Exposure 经济风险"></a>Economic Exposure 经济风险</h4><ul>
 <li>由于外汇波动，企业在未来特定时期的收益发生变化，即企业未来现金流折现值的损失程度</li>
