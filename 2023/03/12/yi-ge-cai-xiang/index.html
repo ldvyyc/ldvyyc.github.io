@@ -606,14 +606,10 @@
             <div class="reward-content">
                 <div class="reward-tabs">
                     <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
-                    <div id="alipay">
-                        <img src="" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat_yyc.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/medias/reward/Wechat_yyc.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1226,7 +1222,7 @@ According to the announcement &#x2F; propo
     <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
-            &copy; 2017-2020 WeiYang. 版权所有
+            &copy; 2023- Yu YuChen. 版权所有
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
@@ -1298,11 +1294,11 @@ According to the announcement &#x2F; propo
 
         function fixCount() {
             if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
-                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + pvcountOffset);
+                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()));
                 clearInterval(int);
             }
             if ($("#busuanzi_container_site_pv").css("display") != "none") {
-                $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + uvcountOffset); // 加上初始数据 
+                $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html())); // 加上初始数据 
                 clearInterval(int);
             }
         }
