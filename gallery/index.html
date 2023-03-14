@@ -580,7 +580,7 @@
     <div id="rewardModal" class="modal">
         <div class="modal-content">
             <a class="close modal-close"><i class="fa fa-close"></i></a>
-            <h4 class="reward-title">写作不易，客官能否打赏一杯奶茶？</h4>
+            <h4 class="reward-title">随缘买咖啡～</h4>
             <div class="reward-content">
                 <div class="reward-tabs">
                     <ul class="tabs row">
@@ -588,10 +588,10 @@
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/medias/reward/wechat_yyc.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -941,15 +941,15 @@
 <script>
     new Valine({
         el: '#vcomments',
-        appId: '查教程获取',
-        appKey: '查教程获取',
+        appId: 'hT2FleeXPxQc2jGKgU452fdc-gzGzoHsz',
+        appKey: 'Ne3GPqNG4eqIbu2oU13apSYY',
         notify: 'false' === 'true',
         verify: 'false' === 'true',
         visitor: 'false' === 'true',
-        avatar: 'wavatar',
+        avatar: 'retro',
         pageSize: '10',
         lang: 'zh-cn',
-        placeholder: '如果你没有GitHub账号，还可以在这里评论啦！'
+        placeholder: '这里可以匿名评论～'
     });
 </script>
 
@@ -1097,7 +1097,7 @@
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
             // headingsOffset: -205,
-            headingSelector: 'h1, h2, h3, h4'
+            headingSelector: 'h1, h2, h3, h4, h5, h6'
         });
 
         // modify the toc link href to support Chinese.
@@ -1109,7 +1109,7 @@
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+        $('#articleContent').children('h1, h2, h3, h4, h5, h6').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 
