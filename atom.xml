@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Frank&#39;s Blog</title>
+  
+  <subtitle>some sparks in life worth recording</subtitle>
+  <link href="https://ldvyyc.top/atom.xml" rel="self"/>
+  
+  <link href="https://ldvyyc.top/"/>
+  <updated>2023-03-14T07:05:41.030Z</updated>
+  <id>https://ldvyyc.top/</id>
+  
+  <author>
+    <name>Frank Yu</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>衣戈猜想</title>
+    <link href="https://ldvyyc.top/2023/03/12/yi-ge-cai-xiang/"/>
+    <id>https://ldvyyc.top/2023/03/12/yi-ge-cai-xiang/</id>
+    <published>2023-03-12T15:39:19.679Z</published>
+    <updated>2023-03-14T07:05:41.030Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;看到了影视飓风采访衣戈猜想的视频，写作文这一段有点惊艳到我。文采斐然，应试作文里面的差距确实大。&lt;br&gt;视频链接：&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="thoughts" scheme="https://ldvyyc.top/categories/thoughts/"/>
+    
+    
+    <category term="作文" scheme="https://ldvyyc.top/tags/%E4%BD%9C%E6%96%87/"/>
+    
+    <category term="b站" scheme="https://ldvyyc.top/tags/b%E7%AB%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>托福口语准备</title>
+    <link href="https://ldvyyc.top/2023/03/11/tuo-fu-kou-yu/"/>
+    <id>https://ldvyyc.top/2023/03/11/tuo-fu-kou-yu/</id>
+    <published>2023-03-11T12:48:43.356Z</published>
+    <updated>2023-03-14T07:05:33.719Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;综合口语&quot;&gt;&lt;a href=&quot;#综合口语&quot; class=&quot;headerlink&quot; title=&quot;综合口语&quot;&gt;&lt;/a&gt;综合口语&lt;/h2&gt;&lt;h3 id=&quot;Task-2-reading45-listening90-pre30-answer60&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Learning" scheme="https://ldvyyc.top/categories/Learning/"/>
+    
+    
+    <category term="English" scheme="https://ldvyyc.top/tags/English/"/>
+    
+    <category term="Toefl" scheme="https://ldvyyc.top/tags/Toefl/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hello hexo</title>
+    <link href="https://ldvyyc.top/2023/03/10/hello-hexo/"/>
+    <id>https://ldvyyc.top/2023/03/10/hello-hexo/</id>
+    <published>2023-03-10T13:39:05.789Z</published>
+    <updated>2023-03-14T07:05:49.405Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;下午已经发了第一篇文章，但不知为何重启电脑之后整个Hexo文件夹又消失不见了，又重新配了一遍，如果还是有问题我直接放弃Hexo，换一个站来。&lt;/p&gt;
+&lt;p&gt;庆祝一下这个地方建立啦！&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="Waffle" scheme="https://ldvyyc.top/categories/Waffle/"/>
+    
+    
+    <category term="chatting" scheme="https://ldvyyc.top/tags/chatting/"/>
+    
+  </entry>
+  
+</feed>
