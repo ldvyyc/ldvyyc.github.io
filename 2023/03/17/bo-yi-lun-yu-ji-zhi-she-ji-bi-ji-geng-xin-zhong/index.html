@@ -4,18 +4,14 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="MNIST Classification with MLP, Frank&#39;s Blog, LDVYYC, 于雨琛, blog">
+    <meta name="keywords" content="博弈论与机制设计笔记（更新中）, Frank&#39;s Blog, LDVYYC, 于雨琛, blog">
     <meta name="baidu-site-verification" content="fmlEuI34ir" />
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48" />
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" />
     <meta name="description" content="
-
-	
-    
-	
-
-
-">
+Static Games of Complete InformationNormal-form games
+Static: one shot, simultaneous move
+complete information: each pl">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -23,7 +19,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>MNIST Classification with MLP | Frank&#39;s Blog</title>
+    <title>博弈论与机制设计笔记（更新中） | Frank&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -255,13 +251,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2023/03/11/8nTKz7lUIEvLPSg.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230317152434.png')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        MNIST Classification with MLP
+                        博弈论与机制设计笔记（更新中）
                     </div>
                 </div>
             </div>
@@ -372,8 +368,12 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/MachineLearning/" target="_blank">
-                            <span class="chip bg-color">MachineLearning</span>
+                        <a href="/tags/Notes/" target="_blank">
+                            <span class="chip bg-color">Notes</span>
+                        </a>
+                        
+                        <a href="/tags/GameTheory/" target="_blank">
+                            <span class="chip bg-color">GameTheory</span>
                         </a>
                         
                     </div>
@@ -396,7 +396,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-03-16
+                    2023-03-17
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -410,14 +410,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    18 分
                 </div>
                 
                 
@@ -433,13 +433,363 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
-
-	<div class="row">
-    <embed src="/pdf/MNISTClassificationWithMLP_于雨琛_2020011846.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
+                <hr>
+<h2 id="Static-Games-of-Complete-Information"><a href="#Static-Games-of-Complete-Information" class="headerlink" title="Static Games of Complete Information"></a>Static Games of Complete Information</h2><h3 id="Normal-form-games"><a href="#Normal-form-games" class="headerlink" title="Normal-form games"></a>Normal-form games</h3><ul>
+<li>Static: one shot, simultaneous move</li>
+<li>complete information: each player’s payof function is common knowledge among all players.</li>
+</ul>
+<h5 id="Normal-form-representation"><a href="#Normal-form-representation" class="headerlink" title="Normal-form representation"></a>Normal-form representation</h5><ul>
+<li>the players (参与者) in the game;</li>
+<li>the strategies (策略) available to each player;</li>
+<li>the payoff(收益&#x2F;效用) received by each player for each combination of strategies that could be chosen by the players.</li>
+</ul>
+<h5 id="Normal-form-Defination"><a href="#Normal-form-Defination" class="headerlink" title="Normal-form Defination"></a>Normal-form Defination</h5><p>The normal-form (标准式) (also called strategic-form) representation of an n-player game speciies the players’ strategy sets&#x2F;spaces $S_1$ , . . . , $S_n$ and their $\color{red}{payoff \quad functions}$ u1, . . . , un. We denote this game by</p>
+<p><strong>Proof:</strong></p>
+<p>Let A be an anti-symmetric payoff matrix of a two-player zero-sum game, and let v be the value of the game in pure strategies.</p>
+<p>Suppose player I plays a mixed strategy p, and player II plays a mixed strategy q. Then the expected payoff of player I is given by:</p>
+<p>$$\sum_{i,j} p_i q_j a_{i,j}$$</p>
+<p>Since A is anti-symmetric, we have:</p>
+<p>$$\sum_{i,j} p_i q_j a_{i,j} &#x3D; \sum_{i,j} p_i q_j (-a_{j,i}) &#x3D; -\sum_{i,j} p_j q_i a_{i,j}$$</p>
+<p>Therefore, the expected payoff of player II is:</p>
+<p>$$\sum_{i,j} p_j q_i a_{i,j}$$</p>
+<p>So, the value of the game in mixed strategies is:</p>
+<p>$$\min_{p}\max_{q}\sum_{i,j} p_i q_j a_{i,j} &#x3D; \min_{p}\max_{q}-\sum_{i,j} p_j q_i a_{i,j} &#x3D; -\max_{q}\min_{p}\sum_{i,j} p_j q_i a_{i,j} &#x3D; 0$$</p>
+<p>The first and third equalities follow from the definition of the value of the game, and the second equality follows from the anti-symmetry of A.</p>
+<p>Since the value of the game in mixed strategies is 0, we know that there exists a pair of mixed strategies (p*, q*) such that the expected payoff of player I against q* is 0, and the expected payoff of player II against p* is 0. Thus, p* and q* are optimal strategies for both players.</p>
+<p>Finally, note that the identification of Player I’s pure strategy given by row k with Player II’s pure strategy given by column k is equivalent to transposing A and exchanging the roles of the players. Since the value of the game is unchanged under this transformation, the set of optimal strategies for Player I is identical to that of Player II.</p>
+<hr>
+<h2 id="Dynamic-Games-of-Complete-Information"><a href="#Dynamic-Games-of-Complete-Information" class="headerlink" title="Dynamic Games of Complete Information"></a>Dynamic Games of Complete Information</h2><h3 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h3><p>dynamic games: sequential choice or repeated play<br>Complete Information:  each player’s payof function is common knowledge among all players </p>
+<p><strong>center issue is credibility.</strong></p>
+<ul>
+<li>Use  extensive-form (扩展式) representation for dynamic games. </li>
+<li>Draw game trees.</li>
+</ul>
+<h3 id="Games-of-Perfect-Information"><a href="#Games-of-Perfect-Information" class="headerlink" title="Games of Perfect Information"></a>Games of Perfect Information</h3><p><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230316092735.png" alt="image.png"><br><em>an example of dynamic games of complete and perfect information</em></p>
+<p>Player 2 choose after he knows what player 1 choose.</p>
+<p>If its imperfect Information, we draw a dotted line between 2 and 2 in the tree above.</p>
+<p><strong>Note that</strong></p>
+<ul>
+<li>A2 may depend on the action a1, i.e., A2(a1).</li>
+<li>Some action a1 may even end the game, so that A2(a1) is an empty set (i.e., no choice of player 2).</li>
+<li>The action a1 is perfectly observed by player 2.</li>
+</ul>
+<p>In the game of the farmer and the snake:<br><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230316093517.png" alt="image.png"></p>
+<h5 id="Some-key-features"><a href="#Some-key-features" class="headerlink" title="Some key features"></a>Some key features</h5><ul>
+<li>the moves occur in sequence;</li>
+<li>all previous moves are observed before the next move ischosen</li>
+<li>the players’ payofs from each combination of moves are common knowledge.</li>
+</ul>
+<h4 id="Backwards-Induction"><a href="#Backwards-Induction" class="headerlink" title="Backwards Induction"></a>Backwards Induction</h4><ul>
+<li>In the second stage, player 2 observes what player 1 choose and choose action to solving $$\max \limits_{a_2\in A_2}\quad u_2(a_1, a_2)$$</li>
+<li>Assume this optimization problem has a unique solution, denoted by $R_2(a_1)$.<ul>
+<li>This is player 2’s best response to player 1’s action $a_1$</li>
+</ul>
+</li>
+<li>In the first stage, knowing player 2’s best response, player 1’s problem become$$\max \limits_{a_1\in A_1}\quad u_1(a_1, R_2(a_1))$$</li>
+<li>Assume it also has a unique solution, denoted by $a_1^*$.</li>
+<li>We call $(a_1, R_2(a_1^*))$ the backwards-induction outcome (逆向归纳的结果) of the game</li>
+<li>In the backwards-induction outcome, $a_1^*$ is determined by maximizing $u_1 (a_1 , R_2(a_1))$, and $a_2^* &#x3D; R_2(a_1^*)$. </li>
+<li>However, $a_1^*$ may not maximize $u_1(a_1, a_2^*)$.<br><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230316101111.png" alt="image.png"></li>
+</ul>
+<h4 id="Stackelberg-Model-of-Duopoly"><a href="#Stackelberg-Model-of-Duopoly" class="headerlink" title="Stackelberg Model of Duopoly"></a>Stackelberg Model of Duopoly</h4><p>Consider a dominant firm moving first and a follower moving second.</p>
+<ul>
+<li>The game is as follows:<ul>
+<li>Firm 1 choose quantity $q_1 \ge 0$<ul>
+<li>Firm 2 observes $q_1$ and then chooses a quantity $q_2 \ge 0$.</li>
+</ul>
+</li>
+<li>The payoff of firm i is the profit $$\pi_i\left(q_1, q_2\right)&#x3D;q_i[P(Q)-c]$$where $Q&#x3D;q_1+q_2$ and<br>$$<br>P(Q)&#x3D; \begin{cases}a-Q, &amp; \text { if } Q&lt;a \ 0, &amp; \text { if } Q \geq a\end{cases}<br>$$</li>
+</ul>
+</li>
+</ul>
+<h5 id="Now-solve-this-game"><a href="#Now-solve-this-game" class="headerlink" title="Now solve this game."></a>Now solve this game.</h5><ul>
+<li>First, find the best response function $R_2 (q_1)$ for firm 2, i.e.for any given $q_1$, find $q_2$ that solves $$\max _{q_2 \geq 0} \pi_2\left(q_1, q_2\right)$$where<br>$$\pi_2\left(q_1, q_2\right)&#x3D; \begin{cases}q_2\left(a-q_1-q_2-c\right), &amp; \text { if } q_1+q_2&lt;a ; \ -c q_2, &amp; \text { if } q_1+q_2 \geq a .\end{cases}$$ </li>
+<li>Then we have<br>$$<br>R_2\left(q_1\right)&#x3D; \begin{cases}\frac{a-c-q_1}{2}, &amp; \text { if } q_1&lt;a-c \ 0, &amp; \text { if } q_1 \geq a-c .\end{cases}<br>$$</li>
+<li>$R_2(q_1)$ is the same as that in the Cournot model.</li>
+<li>Second, firm 1 knows $R_2 (q_1)$ and solves$$\max \limits_{q_1 \ge 0} \quad \pi_1(q_1, R_2(q_1))$$ where$$\pi_1\left(q_1, R_2\left(q_1\right)\right)&#x3D; \begin{cases}q_1\left[a-q_1-\frac{a-q_1-c}{2}-c\right], &amp; \text { if } q_1&lt;a-c \ q_1\left[a-q_1-c\right], &amp; \text { if } a-c \leq q_1&lt;a \ -c q_1, &amp; \text { if } q_1 \geq a\end{cases}$$</li>
+</ul>
+<ul>
+<li>Clearly, for $q_1&gt;a-c$, firm 1’s profit is always negative.</li>
+<li>Thus we only need to solve<br>$$<br>\max _{a-c \geq q_1 \geq 0} q_1\left[a-q_1-\frac{a-q_1-c}{2}-c\right],<br>$$<br>which leads to the following first-order condition<br>$$<br>a-c-2 q_1&#x3D;0 .<br>$$</li>
+<li>The optimal choice of firm 1 is<br>$$<br>q_1^*&#x3D;\frac{a-c}{2}<br>$$</li>
+<li>The quantity chosen by firm 2 is<br>$$<br>q_2^*&#x3D;R_2\left(q_1^*\right)&#x3D;\frac{a-c}{4} .<br>$$</li>
+<li>The market price is<br>$$<br>P^*&#x3D;a-q_1^*-q_2^*&#x3D;c+\frac{a-c}{4} .<br>$$</li>
+<li>Firms’ profits and the total profit are<br>$$<br>\pi_1^*&#x3D;\frac{(a-c)^2}{8}, \pi_2^*&#x3D;\frac{(a-c)^2}{16}, \text { and } \Pi^*&#x3D;\frac{3(a-c)^2}{16}<br>$$</li>
+</ul>
+<h5 id="Compare-with-Cournot-Model"><a href="#Compare-with-Cournot-Model" class="headerlink" title="Compare with Cournot Model"></a>Compare with Cournot Model</h5><p>$$<br>\begin{aligned}<br>&amp;\begin{array}{ccc}<br>\text {Variable} &amp; \text{Cournot Model} &amp; \text{Stackelberg Model}\<br>\hline q_1^* &amp; \frac{a-c}{3} &amp; \frac{a-c}{2} \<br>q_2^* &amp; \frac{a-c}{3} &amp; \frac{a-c}{4} \<br>\pi_1^* &amp; \frac{(a-c)^2}{9} &amp; \frac{(a-c)^2}{8} \<br>\pi_2^* &amp; \frac{(a-c)^2}{9} &amp; \frac{(a-c)^2}{16} \<br>\Pi^* &amp; \frac{2(a-c)^2}{9} &amp; \frac{3(a-c)^2}{16} \<br>P^* &amp; c+\frac{a-c}{3} &amp; c+\frac{a-c}{4} \<br>\hline<br>\end{array}<br>\end{aligned}<br>$$</p>
+<ul>
+<li>Note: First-move advantage:<ul>
+<li>先手有优势，比起同时的情况。</li>
+</ul>
+</li>
+</ul>
+<h3 id="Games-of-Imperfect-Information"><a href="#Games-of-Imperfect-Information" class="headerlink" title="Games of Imperfect Information"></a>Games of Imperfect Information</h3><ul>
+<li>Consider the following game<ul>
+<li>Players 1 and 2 simultaneously choose actions $a_1$ and $a_2$ from the feasible sets $A_1$ and $A_2$, respectively.</li>
+<li>Players 3 and 4 observe the outcome of the first stage $(a_1 , a_2)$ and then simultaneously choose actions $a_3$ and $a_4$ from the feasible sets $A_3$ and $A_4$, respectively.</li>
+<li>Payoffs are $u_i(a_1, a_2, a_3, a_4)$ for i &#x3D; 1, 2, 3, 4.</li>
+</ul>
+</li>
+<li><strong>There are simultaneous moves within each stage.</strong></li>
+</ul>
+<h5 id="Solve"><a href="#Solve" class="headerlink" title="Solve"></a>Solve</h5><ul>
+<li>Still, backwards induction.</li>
+</ul>
+<ul>
+<li>For each given $\left(a_1, a_2\right)$, players 3 and 4 try to find the Nash equilibrium in stage 2.</li>
+<li>Assume the second-stage game has a unique Nash equilibrium$$\left(a_3^<em>\left(a_1, a_2\right), a_4^</em>\left(a_1, a_2\right)\right)$$</li>
+<li>Then, player 1 and player 2 play a simultaneous-move game with payoffs$$<br>u_i\left(a_1, a_2, a_3^<em>\left(a_1, a_2\right), a_4^</em>\left(a_1, a_2\right)\right), \text { for } i&#x3D;1,2$$</li>
+<li>Suppose $\left(a_1^*, a_2^*\right)$ is the unique Nash equilibrium of this simultaneous-move game.</li>
+<li>Then$$\left(a_1^*, a_2^*, a_3^<em>\left(a_1^</em>, a_2^<em>\right), a_4^</em>\left(a_1^*, a_2^*\right)\right)$$is the subgame-perfect outcome (子博恋精炼结果) of the two-stage game.</li>
+</ul>
+<h5 id="Example-Bank-Run"><a href="#Example-Bank-Run" class="headerlink" title="Example: Bank Run"></a>Example: Bank Run</h5><ul>
+<li>payoff in date 1:</li>
+<li>|          | Withdraw | Don’t      |</li>
+</ul>
+<p>| ——– | ——– | ———- |<br>| <strong>Withdraw</strong> | 4,4      | 5,3        |<br>| <strong>Don’t</strong>    | 3,5      | next stage |</p>
+<ul>
+<li>payoff in date 2</li>
+<li><table>
+<thead>
+<tr>
+<th></th>
+<th>Withdraw</th>
+<th>Don’t</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Withdraw</strong></td>
+<td>8,8</td>
+<td>11,5</td>
+</tr>
+<tr>
+<td><strong>Don’t</strong></td>
+<td>5,11</td>
+<td>8,8</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h6 id="Solve-backwards"><a href="#Solve-backwards" class="headerlink" title="Solve: backwards"></a>Solve: backwards</h6><p>date2, both obtain 8 in nash equilibrium.<br>Thus, in date1, they play the following game:</p>
+<ul>
+<li><table>
+<thead>
+<tr>
+<th></th>
+<th>Withdraw</th>
+<th>Don’t</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Withdraw</strong></td>
+<td>4,4</td>
+<td>5,3</td>
+</tr>
+<tr>
+<td><strong>Don’t</strong></td>
+<td>3,5</td>
+<td>8,8</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>There are two NE.</p>
+<h3 id="Extensive-form-Representation"><a href="#Extensive-form-Representation" class="headerlink" title="Extensive-form Representation"></a>Extensive-form Representation</h3><h5 id="Defination"><a href="#Defination" class="headerlink" title="Defination"></a>Defination</h5><p>The extensive-form (扩展式) representation of a game speciies:</p>
+<ul>
+<li>the players in the game;</li>
+<li>when each player has the move; *</li>
+<li>what each player can do at each of his or her opportunities to move; *</li>
+<li>what each player knows at each of his or her opportunities to move; *</li>
+<li>the payoffs received by each player for each combination of moves that could be chosen by the players<br><strong>the three * part describes strategies of each player in detail.</strong></li>
+</ul>
+<p>use trees for extensive-form representations.<br><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230316110447.png" alt="image.png"></p>
+<h4 id="Information-Set"><a href="#Information-Set" class="headerlink" title="Information Set"></a>Information Set</h4><ul>
+<li>Complete and perfect information<ul>
+<li>A dynamic game of complete and perfect information is a game in which the players move in sequence, all previous moves are observed before the next move is chosen, and payoffs are common knowledge. </li>
+<li><strong>Such games can be easily represented by a game tree.</strong></li>
+</ul>
+</li>
+<li>Imperfect information<ul>
+<li>some previous moves are not observed by the player with the current move. </li>
+<li>To present this kind of ignorance of previous moves and to describe what each player knows at each of his&#x2F;her move, we introduce the notion of a player’s information set (信息集)</li>
+</ul>
+</li>
+</ul>
+<h5 id="Definition-of-Information-Set"><a href="#Definition-of-Information-Set" class="headerlink" title="Definition of Information Set"></a>Definition of Information Set</h5><p>An information set (信息集) for a player is a collection of decision nodes satisfying:</p>
+<ul>
+<li>The player needs to move at every node in the information set.</li>
+<li>When the play of the game reaches a node in the information set, the player with the move does not know which node in the set has (or has not) been reached.<ul>
+<li>implies that the player must have the same set of feasible actions at each decision node in an information set; Otherwise the player could infer from the set of actions available that some node(s) had or had not been reached.</li>
+</ul>
+</li>
+<li><strong>Any two nodes from different information sets of a player can be distinguished from each other.</strong></li>
+</ul>
+<h5 id="Application-of-Information-Set"><a href="#Application-of-Information-Set" class="headerlink" title="Application of Information Set"></a>Application of Information Set</h5><ul>
+<li>A game is:<ul>
+<li>of perfect information (完美信息) if every information set is a singleton;</li>
+<li>of imperfect information (不完美信息) if there is at least one non-singleton information set.<ul>
+<li>meaning there is at least a dotted line in the tree form.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Prisoners Dilemma<br><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230316113717.png" alt="image.png"></p>
+<h4 id="Strategy"><a href="#Strategy" class="headerlink" title="Strategy"></a>Strategy</h4><h5 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h5><p>A strategy (策略) for a player is a complete plan of actions. It specifies a feasible action for the player in every contingency in which the player might be called on to act.</p>
+<ul>
+<li>For dynamic games with complete information: <ul>
+<li>A player’s strategy is a function which assigns an action to each information set (not each decision node) belonging to the player. </li>
+<li>对每个选择节点，指定一个策略</li>
+</ul>
+</li>
+<li>An action and a strategy do not make a big diference in static games, while they do in dynamic games.</li>
+</ul>
+<h5 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h5><p><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230316111235.png" alt="image.png"></p>
+<ul>
+<li>Player 1 has 2 actions (and also 2 strategies): L and R. Player 2 has 2 actions: L′ and R′, but 4 strategies:$$(L^\prime, L^\prime); (L^\prime, R^\prime); (R^\prime, L^\prime); (R^\prime, R^\prime)$$</li>
+<li>For example, the strategy $(L^\prime, R^\prime)$ means:<ul>
+<li>if player 1 plays L, then player 2 plays $L^\prime$;</li>
+<li>if player 1 plays R, then player 2 plays $R^\prime$.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Subgame-perfect-Nash-Equilibrium"><a href="#Subgame-perfect-Nash-Equilibrium" class="headerlink" title="Subgame-perfect Nash Equilibrium"></a>Subgame-perfect Nash Equilibrium</h3><h5 id="Question-how-to-represent-this-game-in-normal-form"><a href="#Question-how-to-represent-this-game-in-normal-form" class="headerlink" title="Question: how to represent this game in normal form?"></a>Question: how to represent this game in normal form?</h5><p><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230316111235.png" alt="image.png"></p>
+<ul>
+<li><table>
+<thead>
+<tr>
+<th></th>
+<th>$L^\prime L^\prime$</th>
+<th>$L^\prime R^\prime$</th>
+<th>$L^\prime L^\prime$</th>
+<th>$L^\prime L^\prime$</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>L</strong></td>
+<td>3,1</td>
+<td>3,1</td>
+<td>1,2</td>
+<td>1,2</td>
+</tr>
+<tr>
+<td><strong>R</strong></td>
+<td>2,1</td>
+<td>0,0</td>
+<td>2,1</td>
+<td>0,0</td>
+</tr>
+</tbody></table>
+</li>
+<li>there are two NE: ($L, R^\prime R^\prime$), ($R, R^\prime L^\prime$)</li>
+</ul>
+<h5 id="Interpret"><a href="#Interpret" class="headerlink" title="Interpret"></a>Interpret</h5><ul>
+<li>NE ($R, R^\prime L^\prime$)seems okay. It respects the spirit of backwards induction.</li>
+<li>NE ($L, R^\prime R^\prime$) has a problem: No matter which action is chosen by Player 1, player 2 must choose L′ at the right node. </li>
+<li><strong>Interpretation: Player 2 tells player 1: if you choose R, I will choose R′ (threat), then each of us will get 0.</strong> </li>
+<li>This threat is non-creditable: Player 1 should not believe that player 2 will choose R′ after observing R. </li>
+<li>Key: Ignorance of dynamic feature.</li>
+</ul>
+<h4 id="Subgame"><a href="#Subgame" class="headerlink" title="Subgame"></a>Subgame</h4><h6 id="Defination-1"><a href="#Defination-1" class="headerlink" title="Defination"></a>Defination</h6><ul>
+<li><p>A subgame (子博弈) in an extensive-form game</p>
+<ul>
+<li>begins at a decision node n that is a singleton information set (but is not the game’s initial node); </li>
+<li>includes all the decision and terminal nodes following node n in the game tree (but no nodes that do not follow n); </li>
+<li>does not cut any information sets (i.e., if a decision node n′ follows n in the game tree, then all other nodes in the information set containing n′ must also follow n, and so must be included in the subgame).</li>
+<li><strong>只能从一个singleton的decision node节点切出来，并且不能把任何information set切断</strong></li>
+</ul>
+</li>
+<li><p>When focus on a subgame, we shall only consider the relevant part of the strategy profile s. </p>
+</li>
+<li><p>Relevant part of s specifies the “complete” plans (or strategy profile) for the players in that subgame.</p>
+</li>
+</ul>
+<h6 id="Example-1"><a href="#Example-1" class="headerlink" title="Example"></a>Example</h6><p><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230317150643.png" alt="image.png"></p>
+<ul>
+<li>We have a strategy profile $\left(L,\left(L^{\prime}, R^{\prime}\right),\left(L^{\prime \prime}, R^{\prime \prime}, R^{\prime \prime}, L^{\prime \prime}\right)\right)$.</li>
+<li>We turn to the subgame beginning at player 2’s right decision node.</li>
+<li>The relevant part is $\left(R^{\prime},\left(R^{\prime \prime}, L^{\prime \prime}\right)\right)$ or $\left(-, R^{\prime},\left(R^{\prime \prime}, L^{\prime \prime}\right)\right)$. It is a strategy profile for this subgame.<ul>
+<li>We can discuss whether it is “reasonable”, within this subgame.</li>
+</ul>
+</li>
+<li>One can repeat this procedure for every subgame.</li>
+</ul>
+<h3 id="Subgame-Perfect-Nash-Equilibrium"><a href="#Subgame-Perfect-Nash-Equilibrium" class="headerlink" title="Subgame-Perfect Nash Equilibrium"></a>Subgame-Perfect Nash Equilibrium</h3><h5 id="Definition-1"><a href="#Definition-1" class="headerlink" title="Definition"></a>Definition</h5><p>A Nash equilibrium is subgame-perfect (子博弈精炼), or is said to be a subgame-perfect Nash equilibrium (子博弈精炼均衡) if the players’ strategies constitute a Nash equilibrium in every subgame.</p>
+<h5 id="Application"><a href="#Application" class="headerlink" title="Application"></a>Application</h5><ul>
+<li>It can be shown that any finite dynamic game of complete information has a subgame-perfect Nash equilibrium, perhaps in mixed-strategies. </li>
+<li>To find subgame-perfect Nash equilibria, <ul>
+<li>we first need to find Nash equilibria in each subgame,</li>
+<li>then use backwards-induction to solve for the whole game</li>
+</ul>
+</li>
+<li>Subgame-perfect Nash equilibrium is closely related to two previous concepts:<ul>
+<li>1 backwards-induction outcome;</li>
+<li>2 subgame-perfect outcome. </li>
+<li>两者仅存在术语的差别，没有什么本质区别；混用没有问题。</li>
+</ul>
+</li>
+<li>What’s the diference between an equilibrium and an outcome? <ul>
+<li><strong>An equilibrium is a collection of players’ strategies (strategy profile), while an outcome is a collection of players’ actions.</strong></li>
+</ul>
+</li>
+</ul>
+<h5 id="Equilibrium-vs-Outcome"><a href="#Equilibrium-vs-Outcome" class="headerlink" title="Equilibrium vs. Outcome"></a>Equilibrium vs. Outcome</h5><ul>
+<li>Example：<ul>
+<li>The backwards-induction outcome is $\left(a_1^*, R_2\left(a_1^*\right)\right)$.</li>
+<li>The subgame-perfect Nash equilibrium is $\left(a_1^*, R_2(\cdot)\right)$.</li>
+<li>Note that $R_2\left(a_1^*\right)$ is an action, while $R_2(\cdot)$ is a strategy for player 2.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>In Example 1:<ul>
+<li>$\left(R, L^{\prime}\right)$ is the backwards-induction outcome,</li>
+<li>while $\left(R,\left(R^{\prime}, L^{\prime}\right)\right)$ is the subgame-perfect Nash equilibrium.</li>
+</ul>
+</li>
+<li>In the Stackelberg model:<ul>
+<li>The backwards-induction outcome is $\left(q_1^*, q_2^<em>\right)$, where $q_1^</em>&#x3D;\frac{a-c}{2}$ and $q_2^*&#x3D;\frac{a-c}{4}$,</li>
+<li>while the subgame-perfect Nash equilibrium is $\left(q_1^*, R_2\left(q_1\right)\right)$, where $R_2\left(q_1\right)&#x3D;\frac{a-c-q_1}{2}$.</li>
+</ul>
+</li>
+<li>For the two-stage game of complete but imperfect information<ul>
+<li>Then the subgame-perfect outcome is<br>$$<br>\left(a_1^*, a_2^*, a_3^<em>\left(a_1^</em>, a_2^<em>\right), a_4^</em>\left(a_1^*, a_2^*\right)\right) .<br>$$</li>
+</ul>
+<ul>
+<li>The subgame-perfect Nash equilibrium is<br>$$<br>\left(a_1^*, a_2^*, a_3^<em>\left(a_1, a_2\right), a_4^</em>\left(a_1, a_2\right)\right) .<br>$$</li>
+</ul>
+</li>
+</ul>
+<h5 id="Nash-Equilibrium-vs-Subgame-Perfect-Nash-Equilibrium"><a href="#Nash-Equilibrium-vs-Subgame-Perfect-Nash-Equilibrium" class="headerlink" title="Nash Equilibrium vs. Subgame-Perfect Nash Equilibrium"></a>Nash Equilibrium vs. Subgame-Perfect Nash Equilibrium</h5><p><strong>A Nash equilibrium may not be subgame-perfect.</strong></p>
+<ul>
+<li>Following the example above.<ul>
+<li>The Nash equilibrium $\left(R,\left(R^{\prime}, L^{\prime}\right)\right)$ is subgame-perfect, because $R^{\prime}$ and $L^{\prime}$ are the optimal strategies in the left and right subgames, respectively, where player 2 is the only player.</li>
+<li>On the other hand, the Nash equilibrium $\left(L,\left(R^{\prime}, R^{\prime}\right)\right)$ is not subgame-perfect, because when player 1 chooses $R, R^{\prime}$ is not optimal to player 2 in the right subgame, i.e., $R^{\prime}$ is not a Nash equilibrium in that subgame.</li>
+<li>One can think the strategy $\left(R^{\prime}, R^{\prime}\right)$ by player 2 as a threat to player 1.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Nash equilibria that rely on non-credible threats or promises can be eliminated by the requirement of subgame perfection.</li>
+<li>Subgame-perfect Nash equilibrium is a refinement of Nash equilibrium, i.e.,<br>  ${$ Subgame-perfect Nash equilibria $} \subseteq{$ Nash equilibria $}$</li>
+</ul>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><ul>
+<li>We have considered dynamic games of complete information.</li>
+<li>Two basic questions:<ul>
+<li>How to describe a dynamic situation $\rightarrow$ extensive-form representation.</li>
+<li>How to solve a dynamic game? Why to introduce SPNE?</li>
+</ul>
+</li>
+<li>Backwards induction vs. SPNE.</li>
+<li>静态场景 $\rightarrow$ 静态模型 $\rightarrow$ 标准式<ul>
+<li>静态场景 $\rightarrow$ 动态模型 (带有不完美信息) $\rightarrow$ 扩展式 (没有 失去场景的特点)</li>
+</ul>
+</li>
+<li>动态场景 $\rightarrow$ 动态模型 $\rightarrow$ 扩展式<ul>
+<li>动态场景 $\rightarrow$ 静态模型 $\rightarrow$ 标准式 (失去场景的动态特点)</li>
+</ul>
+</li>
+</ul>
 
             </div>
             <hr />
@@ -591,9 +941,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《MNIST Classification with MLP》
+                    《博弈论与机制设计笔记（更新中）》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2023/03/16/mnist-classification-with-mlp/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2023/03/17/bo-yi-lun-yu-ji-zhi-she-ji-bi-ji-geng-xin-zhong/" property="cc:attributionName"
                rel="cc:attributionURL">
                 Frank Yu
             </a> 采用
@@ -655,9 +1005,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2023/03/17/bo-yi-lun-yu-ji-zhi-she-ji-bi-ji-geng-xin-zhong/">
                     <div class="card-image">
@@ -677,9 +1028,9 @@ complete information: each pl
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2023-03-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-03-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -692,6 +1043,7 @@ complete information: each pl
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -714,24 +1066,30 @@ complete information: each pl
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/03/13/guo-ji-jin-rong-shi-chang-bi-ji-geng-xin-zhong/">
+                <a href="/2023/03/16/mnist-classification-with-mlp/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230313162302.png" class="responsive-img" alt="国际金融市场笔记（更新中）">
+                        <img src="https://s2.loli.net/2023/03/11/8nTKz7lUIEvLPSg.png" class="responsive-img" alt="MNIST Classification with MLP">
                         
-                        <span class="card-title">国际金融市场笔记（更新中）</span>
+                        <span class="card-title">MNIST Classification with MLP</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            导论导论1: covid下的市场
-导论2: 国际资本流动非居民持有的本国证券资产：很好的展现国际金融市场和资本流动的方式。开曼和卢森堡：避税，外国人控制本国资产很多。中国：到21年底接近2百亿，到目前仍然没有进入前10。非居民持有的中国资产
+                            
+
+	
+    
+	
+
+
+
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-03-13
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-03-16
                             </span>
                         <span class="publish-author">
                             
@@ -748,12 +1106,8 @@ complete information: each pl
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Finance/" target="_blank">
-                        <span class="chip bg-color">Finance</span>
-                    </a>
-                    
-                    <a href="/tags/Notes/" target="_blank">
-                        <span class="chip bg-color">Notes</span>
+                    <a href="/tags/MachineLearning/" target="_blank">
+                        <span class="chip bg-color">MachineLearning</span>
                     </a>
                     
                 </div>
