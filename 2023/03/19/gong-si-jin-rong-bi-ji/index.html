@@ -369,12 +369,12 @@ Decision abo">
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/Finance/" target="_blank">
-                            <span class="chip bg-color">Finance</span>
-                        </a>
-                        
                         <a href="/tags/Notes/" target="_blank">
                             <span class="chip bg-color">Notes</span>
+                        </a>
+                        
+                        <a href="/tags/Finance/" target="_blank">
+                            <span class="chip bg-color">Finance</span>
                         </a>
                         
                     </div>
@@ -411,14 +411,14 @@ Decision abo">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.4k
+                    6.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    20 分
+                    39 分
                 </div>
                 
                 
@@ -1149,7 +1149,622 @@ Decision abo">
 </li>
 </ul>
 <hr>
-<h2 id="NPV-and-other-investment-criteria"><a href="#NPV-and-other-investment-criteria" class="headerlink" title="NPV and other investment criteria"></a>NPV and other investment criteria</h2>
+<h2 id="NPV-and-other-investment-criteria"><a href="#NPV-and-other-investment-criteria" class="headerlink" title="NPV and other investment criteria"></a>NPV and other investment criteria</h2><h3 id="NPV"><a href="#NPV" class="headerlink" title="NPV"></a>NPV</h3><p>NPV &#x3D; PV(cash inflow) - PV(cash outflow)</p>
+<ul>
+<li><p>If NPV positive, accept the project</p>
+</li>
+<li><p>choose the one with highest NPV</p>
+</li>
+<li><p>Advantages of NPV</p>
+<ul>
+<li>Account for the time value of money Account for the risk of the cash flows<ul>
+<li>For different risk levels, your required return(or the discount rate) is different.</li>
+</ul>
+</li>
+<li>Provide an indication about the increase in value</li>
+<li>NPV can be used for ranking purpose</li>
+</ul>
+</li>
+<li><p>Disadvantages of NPV</p>
+</li>
+<li><p>Require estimation of reliable future cash flows and appropriate discount rate</p>
+<ul>
+<li>It is very difficult to estimate cash flows for the distant future.</li>
+<li>It is also hard to estimate the appropriate discount rate.</li>
+</ul>
+</li>
+<li><p>Very complex, costly and time consuming</p>
+</li>
+</ul>
+<p><strong>时间不相同不能直接比较！</strong></p>
+<ul>
+<li>EAC（equivalent annual cost）<ul>
+<li>present value of costs $&#x3D;\sum_{t&#x3D;1}^T \frac{E A C}{(1+r)^t}&#x3D;E A C \times \sum_{t&#x3D;1}^T \frac{1}{(1+r)^t}$</li>
+<li>比较EAC，选择支出小的那个</li>
+</ul>
+</li>
+</ul>
+<h3 id="IRR"><a href="#IRR" class="headerlink" title="IRR"></a>IRR</h3><ul>
+<li><p>It measures the effective return on the investment.</p>
+</li>
+<li><p>the discount rate that sets NPV to zero.</p>
+</li>
+<li><p>Minimum Acceptance Criteria (for independent projects)</p>
+<ul>
+<li>Accept if the IRR exceeds the required return (or the return on other alternatives in the market with equivalent risk and maturity),内部收益率超过了要求回报率</li>
+<li>This required return is the proper discount rate (r) of the projects. </li>
+<li>Another name for this required return is “hurdle rate”</li>
+</ul>
+</li>
+<li><p>For an independent project, IRR结果与NPV相同</p>
+<ul>
+<li>independent project：这个选择与其他选择无关</li>
+</ul>
+</li>
+<li><p><strong>Mutually Exclusive Projects</strong>:  only ONE of several potential projects can be chosen</p>
+<ul>
+<li>Acceptance of any one project implies the rejection of another </li>
+<li>Decision rule: rank all alternatives and select the best one.</li>
+</ul>
+</li>
+<li><p><strong>Independent Projects</strong>: accepting or rejecting one project does not affect the decision of the other projects.</p>
+<ul>
+<li>Decision rule: accept it only if it exceeds a MINIMUM acceptance criteria.</li>
+</ul>
+</li>
+<li><p>Advantage of IRR:</p>
+<ul>
+<li>A single rate of return that summarizes the merits of a project – intuitively appealing </li>
+<li>If the IRR is high enough, you may not need to estimate a required return, which is often a difficult task. </li>
+<li>Since IRR is closely related to NPV, it will lead to identical decisions most of the time.</li>
+</ul>
+</li>
+<li><p>Disad:</p>
+<ul>
+<li>Sometimes there could be more than one IRR </li>
+<li>A single rate of return does not consider<ul>
+<li>risk level of the project</li>
+<li>Life horizon of the project</li>
+<li>Direction of cash flow</li>
+</ul>
+</li>
+<li>Cannot be used for comparison across projects! <ul>
+<li>Therefore, IRR is not used for mutually exclusive projects usually</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Generally, NPV is more reliable than IRR.</p>
+</li>
+</ul>
+<h3 id="Payback-Period-and-Discounted-Payback-Period"><a href="#Payback-Period-and-Discounted-Payback-Period" class="headerlink" title="Payback Period and Discounted Payback Period"></a>Payback Period and Discounted Payback Period</h3><h4 id="Payback-period"><a href="#Payback-period" class="headerlink" title="Payback period"></a>Payback period</h4><ul>
+<li>The number of years to recover all initial costs in a nominal sense?——不考虑钱的time value</li>
+<li>Decision Rule – Accept if the payback period is less than some preset limit<ul>
+<li>The shorter, the better.</li>
+</ul>
+</li>
+<li>Problems<ul>
+<li>没有考虑time value of money</li>
+<li>没有考虑risk</li>
+<li>Doesn’t guarantee a single answer</li>
+<li>Ignores cash flow beyond the cutoff date.</li>
+<li>随意的选择cutoff date</li>
+</ul>
+</li>
+<li>Advan<ul>
+<li>simple to understand</li>
+<li>biased towards liquidity</li>
+</ul>
+</li>
+</ul>
+<h4 id="Discounted-Payback-period"><a href="#Discounted-Payback-period" class="headerlink" title="Discounted Payback period"></a>Discounted Payback period</h4><ul>
+<li>The length of time until the sum of the discounted cash flows is equal to the initial investment.</li>
+</ul>
+<h3 id="AAR-average-accounting-return"><a href="#AAR-average-accounting-return" class="headerlink" title="AAR: average accounting return"></a>AAR: average accounting return</h3><p>会计收益率法</p>
+<ul>
+<li>AAR &#x3D; Average Net Income &#x2F; Average Book Value of Investment</li>
+<li>need a target cutoff date</li>
+<li>Decision rule<ul>
+<li>accept the project if AAR id great than a preset rate</li>
+<li>the higher, the better.</li>
+</ul>
+</li>
+<li>Disadvantages of AAR<ul>
+<li>Affected by accounting practices.<ul>
+<li>AAR changes if the way of asset depreciation changes.</li>
+</ul>
+</li>
+<li>Ignores the time value of money &amp; the risk of the cash flows </li>
+<li>Requires an arbitrary cutoff point </li>
+<li>Based on accounting net income and book values, not cash flows and market values<ul>
+<li>It is not a true rate of return.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Advantages of AAR<ul>
+<li>Easy to calculate</li>
+<li>Accounting information will almost always be available</li>
+</ul>
+</li>
+</ul>
+<h3 id="PI-profitability-index"><a href="#PI-profitability-index" class="headerlink" title="PI (profitability index)"></a>PI (profitability index)</h3><ul>
+<li>Profitability index is the present value of an investment’s future cash flows divided by its initial cost.</li>
+<li>$\begin{aligned} \mathrm{PI} &amp; \equiv \frac{\text { PV(future cash flows after initial investment) }}{\text { Initial Cost }} \ &amp; &#x3D;1+\mathrm{NPV} &#x2F; \text { Initial Cost }\end{aligned}$</li>
+<li>Decision rule<ul>
+<li>Accept only projects of PI &gt; 1</li>
+<li>If projects are mutually exclusive, choose the one with highest PI</li>
+</ul>
+</li>
+<li>Advantage<ul>
+<li>Closely related to NPV, generally leading to identical</li>
+<li>Easy to understand and communicate</li>
+<li>Mostly useful when available investment resources are limited</li>
+</ul>
+</li>
+<li>Disadvantages<ul>
+<li>May lead to incorrect decisions in comparisons of mutually exclusive investments with different scales (similar to the IRR ranking problem).</li>
+<li>With multiple resource constraints, the profitability index can break down completely.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="Making-Capital-Investment-decisions"><a href="#Making-Capital-Investment-decisions" class="headerlink" title="Making Capital Investment decisions"></a>Making Capital Investment decisions</h2><h3 id="Fundamental-Principles-of-Projected-Cash-Flows-–-Stand-alone-Principle"><a href="#Fundamental-Principles-of-Projected-Cash-Flows-–-Stand-alone-Principle" class="headerlink" title="Fundamental Principles of Projected Cash Flows – Stand-alone Principle"></a>Fundamental Principles of Projected Cash Flows – Stand-alone Principle</h3><ul>
+<li>Just focus on relevant cash flows for a project.</li>
+<li>Cash flows that occur regardless of whether the project is undertaken are NOT relevant.</li>
+<li>The changes in firm’s current and future cash flows occur if and only if the project is accepted.</li>
+</ul>
+<h3 id="Common-Pitfalls-of-Incremental-Cash-Flows"><a href="#Common-Pitfalls-of-Incremental-Cash-Flows" class="headerlink" title="Common Pitfalls of Incremental Cash Flows"></a>Common Pitfalls of Incremental Cash Flows</h3><ul>
+<li>Sunk Costs<ul>
+<li>Sunk costs are NOT incremental cash flows</li>
+<li>However, it is a well established finding in psychological and behavioral research that managers find it almost impossible to ignore sunk costs, because many people have strong misgivings about “wasting” resources (loss aversion).</li>
+</ul>
+</li>
+<li>Opportunity costs<ul>
+<li>Opportunity costs ARE incremental CFs.<ul>
+<li>No “free lunch”</li>
+</ul>
+</li>
+<li>In finance, consider opportunity cost</li>
+<li>the value of the best alternative forgone</li>
+</ul>
+</li>
+<li>Working Capital<ul>
+<li>For projects with finite life, in the last year, the investment in net working capital will be recovered.</li>
+</ul>
+</li>
+<li>Side effects<ul>
+<li>Positive side effects (synergy) – benefits to existing projects. <ul>
+<li>If synergies exist and they often do, these benefits have to be valued and shown in the initial project analysis.</li>
+</ul>
+</li>
+<li>Negative side effects (erosion) – costs to existing projects</li>
+</ul>
+</li>
+<li>Taxes<ul>
+<li>a cash outflow</li>
+<li>all cash flows must be after-tax numbers</li>
+</ul>
+</li>
+<li>Salvage Value <ul>
+<li>Assets that are no longer needed often have some salvage (or liquidation) value if the parts are sold for scrap. </li>
+<li>When an asset is liquidated, we receive cash amounting to its market value (MV) </li>
+<li>Nevertheless, any gain on asset sale is taxed.<ul>
+<li>Gain on Sale &#x3D; MV – BV</li>
+<li>BV &#x3D; Initial Cost – Cumulative Depreciation </li>
+<li>Thus, After-tax salvage value &#x3D; MV - T $\times$ (MV - BV)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Value-a-project"><a href="#Value-a-project" class="headerlink" title="Value a project"></a>Value a project</h3><p>计算每一年的CFFA，然后计算NPV，看是否大于0，或者计算IRR，和required return比较。</p>
+<hr>
+<h2 id="Project-Analysis-and-Evaluation"><a href="#Project-Analysis-and-Evaluation" class="headerlink" title="Project Analysis and Evaluation"></a>Project Analysis and Evaluation</h2><h3 id="Forecast-risk"><a href="#Forecast-risk" class="headerlink" title="Forecast risk"></a>Forecast risk</h3><ul>
+<li>Forecasting (Estimation) risk<ul>
+<li>The mistake may come from wrong forecast of future cash flows.</li>
+<li>The mistake may come from wrong estimation of cost of capital (the discount rate).</li>
+</ul>
+</li>
+<li>If our estimation are seriously in error, then discounted cash flow analysis is a classic GIGO (garbage-in, garbage-out)</li>
+</ul>
+<h3 id="Solutions-to-Forecast-Risk"><a href="#Solutions-to-Forecast-Risk" class="headerlink" title="Solutions to Forecast Risk"></a>Solutions to Forecast Risk</h3><ul>
+<li>Scenario Analysis: 概率分布 <ul>
+<li>在不同情况下的NPV，找到最大最小值</li>
+</ul>
+</li>
+<li>Sensitivity Analysis: 参数⻛险 <ul>
+<li>There are different sources of uncertainty in our project<ul>
+<li>Discountor: interest risk</li>
+<li>Price&#x2F;cost&#x2F;expense: market risk</li>
+<li>Sale quantity: policy risk</li>
+</ul>
+</li>
+<li>find out how NPV varies with these sources</li>
+<li>Useful for pointing out which variables have higher forecasting risk</li>
+<li>The greater the volatility in NPV in relation to a specific variable, the larger the forecasting risk associated with that variable and the more attention we want to pay to its estimation.</li>
+</ul>
+</li>
+<li>Break-even Analysis<ul>
+<li>Accounting break-even<ul>
+<li>No accounting net loss or net gain</li>
+<li>NI &#x3D; 0</li>
+<li>$Q_{ac} &#x3D; (D + FC)&#x2F;(P - v)$</li>
+<li><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230319220651.png" alt="break-even"></li>
+</ul>
+</li>
+<li>Financial break-even<ul>
+<li>results a zero NPV</li>
+<li>$Q_{fi} &#x3D; (OCF_{fi} + FC)&#x2F;(P - v)$</li>
+</ul>
+</li>
+<li><strong>$OCF_{fi}&gt;D$</strong></li>
+<li>operating leverage<ul>
+<li>measure of operating risk</li>
+<li>degree of operating leverage(DOL):<ul>
+<li>How sensitive is OCF with regard to sales change</li>
+<li>$DOL &#x3D; (\Delta OCF&#x2F;OCF)&#x2F;(\Delta Q&#x2F;Q)$</li>
+</ul>
+</li>
+<li>relation between DOL and FC<ul>
+<li>consider no interest and taxes</li>
+<li>OCF &#x3D; EBIT + D &#x3D; [(P-v) ×Q – FC – D] + D</li>
+<li>$DOL &#x3D; 1 + \frac{FC}{OCF}$</li>
+</ul>
+</li>
+<li>High FC causes high DOL, meaning high operating leverage(risk), leading to high forecasting risk of quantities of sales</li>
+<li>The higher the DOL, the more accurate the forecast of sales volume is needed</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="Operating-Risk-and-Industry"><a href="#Operating-Risk-and-Industry" class="headerlink" title="Operating Risk and Industry"></a>Operating Risk and Industry</h4><ul>
+<li><p>High fixed cost and low variable cost</p>
+<ul>
+<li>Entertainment industry: movie, vedio, software, gaming</li>
+</ul>
+</li>
+<li><p>Low fixed cost, high variable cost</p>
+<ul>
+<li>Industry with light assets: street stall, online teaching</li>
+</ul>
+</li>
+<li><p>The nature of the industry determines the beta (systematic risk) of the company.</p>
+<ul>
+<li>When the fixed cost is very large, it is difficult to act according to market circumstances or to switch . So the company has to be exposed to the market condition, which leaves the company a high beta or sensitivity to the macro economy.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="Risk-and-return"><a href="#Risk-and-return" class="headerlink" title="Risk and return"></a>Risk and return</h2><h3 id="Expected-return"><a href="#Expected-return" class="headerlink" title="Expected return"></a>Expected return</h3><ul>
+<li>Net return &#x3D; Income yield + capital gain （loss）<ul>
+<li>Income yield: cash payout received</li>
+<li>capital gain or loss: change in security price</li>
+</ul>
+</li>
+<li>calculating average return from historical data<ul>
+<li>arithmatic mean<ul>
+<li>application: expected return</li>
+</ul>
+</li>
+<li>geometric mean<ul>
+<li>applicaton: YTM</li>
+</ul>
+</li>
+<li>The geometric average will be less than the arithmetic average unless all the returns are equal.</li>
+<li>The estimate of arithmetic average is overly <strong>optimistic</strong> for long horizons</li>
+<li>The estimate of geometric average is overly <strong>pessimistic</strong> for short horizons</li>
+</ul>
+</li>
+<li><strong>Blume’s formula</strong> gives an unbiased estimate<ul>
+<li>Suppose we have calculate geometric and arithmetic return average from N years of data, and we wish to use these averages to form a T-year average return forecast, R（T）, where T is less than N：</li>
+<li>$$R(T)&#x3D;\frac{T-1}{N-1}* \text{Geometric average}+\frac{N-T}{N-1}*\text{Arithmetic average}$$</li>
+</ul>
+</li>
+</ul>
+<h3 id="Risk"><a href="#Risk" class="headerlink" title="Risk"></a>Risk</h3><h4 id="Define-risk"><a href="#Define-risk" class="headerlink" title="Define risk"></a>Define risk</h4><ul>
+<li><p>Uncertainty </p>
+</li>
+<li><p>Ambiguity</p>
+</li>
+<li><p>Probability of bad things (VAR)</p>
+<ul>
+<li>$\sigma^2&#x3D;\sum_{i&#x3D;1}^n p_i\left(R_i-E(R)\right)^2$</li>
+</ul>
+</li>
+<li><p>Probability of bad things+how bad they could be(ES) </p>
+<ul>
+<li>$\sigma &#x3D; \sqrt{\sigma^2}$</li>
+</ul>
+</li>
+<li><p>Variance and Standard Deviation Estimations Using Historical Data Variance:</p>
+<ul>
+<li>$$\operatorname{Var}(R)&#x3D;\sigma^2&#x3D;\frac{\sum_{t&#x3D;1}^T\left[\left(R_t-\bar{R}\right)^2\right]}{T-1}$$</li>
+<li>where $\bar{R}&#x3D;\frac{\sum_{t&#x3D;1}^T R_t}{T}$</li>
+<li>Standard deviation $&#x3D;\sqrt{\operatorname{Var}(R)}&#x3D;\sigma$</li>
+</ul>
+</li>
+</ul>
+<h3 id="Portfolios"><a href="#Portfolios" class="headerlink" title="Portfolios"></a>Portfolios</h3><ul>
+<li>A portfolio is a collection of assets or securities:<ul>
+<li>Financial assets<ul>
+<li>Bonds, Stocks, bank deposits etc.</li>
+</ul>
+</li>
+<li>Non-Financial Assets<ul>
+<li>Real estate, Fixed Assets, Human Capital etc.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The return and risk for a portfolio is measured by the portfolio’s expected return and standard deviation, just as with individual assets.</li>
+<li>Portfolio weight can be negative, which is “short sell”</li>
+</ul>
+<h4 id="Portfolio-Expected-Returns-and-Portfolio-Variance"><a href="#Portfolio-Expected-Returns-and-Portfolio-Variance" class="headerlink" title="Portfolio Expected Returns and Portfolio Variance"></a>Portfolio Expected Returns and Portfolio Variance</h4><p>$$E\left(R_P\right) &#x3D;\sum_{j&#x3D;1}^m w_j E\left(R_j\right) $$$$\operatorname{var}\left(R_P\right) &#x3D;\sum_{i&#x3D;1}^m w_i^2 \operatorname{Var}\left(R_i\right)+\sum_{i&#x3D;1}^m \sum_{j&#x3D;1}^m w_i w_j \operatorname{Cov}\left(R_i, R_j\right)$$$$\sum_{j&#x3D;1}^m w_j &#x3D;1$$</p>
+<h4 id="return-and-risks-of-portfolios"><a href="#return-and-risks-of-portfolios" class="headerlink" title="return and risks of portfolios"></a>return and risks of portfolios</h4><ul>
+<li>Fully diversifed portfolios are all on the same straight line（average return &#x2F; standard deviation）</li>
+<li>The benefit of aggregation</li>
+<li>The difference between large firms and small firms<ul>
+<li>small firms have higher risk, thus higher return</li>
+</ul>
+</li>
+<li>To what extent the risk can be diversified to<ul>
+<li>systematic risk cannot be eliminated</li>
+</ul>
+</li>
+<li><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230320114237.png" alt="1926-2011 500 Largest Stock"></li>
+<li>differentiate firm-specific risk and systematic risk</li>
+</ul>
+<h4 id="types-of-risk-in-stock-portfolios"><a href="#types-of-risk-in-stock-portfolios" class="headerlink" title="types of risk in stock portfolios"></a>types of risk in stock portfolios</h4><ul>
+<li>Firm Specific News （good or bad news about an individual company）<ul>
+<li>Example<ul>
+<li>Losing money due to poor management</li>
+<li>Warehouse caught a fire</li>
+</ul>
+</li>
+<li><strong>Diversifiable risk</strong></li>
+<li>Can be eliminated by holding other stocks with opposite risk exposure</li>
+</ul>
+</li>
+<li>Market-Wide News （news that affects all stocks） （Systematic risk）<ul>
+<li>Example<ul>
+<li>Recession</li>
+<li>Raise interest rate</li>
+<li>High inflation</li>
+</ul>
+</li>
+<li><strong>Non-Diversifiable risk</strong></li>
+<li>Market risk affects all firms</li>
+<li>However, market risk is unpredictable and cannot be hedged and insured—–have to face it!</li>
+</ul>
+</li>
+<li>The risk premium for diversifiable risk is zero. <strong>Investors are only compensated for bearing systematic risk.</strong><ul>
+<li>The expected return on a risky asset depends only on that asset systematic risk </li>
+<li>since unsystematic risk can be diversified away.</li>
+</ul>
+</li>
+</ul>
+<h5 id="systematic-risk"><a href="#systematic-risk" class="headerlink" title="systematic risk"></a>systematic risk</h5><p>$$\beta_i &#x3D; \frac{Cov(r_i,r_m)}{Var(r_m)}$$</p>
+<ul>
+<li>A beta of 1 implies the asset has the same systematic risk as the overall market.</li>
+<li>A beta &lt; 1 implies the asset has less systematic risk than the overall market.</li>
+<li>A beta &gt; 1 implies the asset has more systematic risk than the overall market.</li>
+<li>Negative beta:<ul>
+<li>procycle industry</li>
+<li>countercycle industry</li>
+</ul>
+</li>
+</ul>
+<p>Portfolio beta:<br>$$\beta_{portfolio} &#x3D; \sum_{i&#x3D;1}^n w_i\beta_i$$</p>
+<h4 id="relation-between-beta-and-risk-premium"><a href="#relation-between-beta-and-risk-premium" class="headerlink" title="relation between beta and risk premium"></a>relation between beta and risk premium</h4><p>reward-to-risk ratio:<br>$$\frac{E(R_A)-R_f}{\beta_A}$$</p>
+<h5 id="the-fundamental-result"><a href="#the-fundamental-result" class="headerlink" title="the fundamental result"></a>the fundamental result</h5><p>$$\frac{E(R_A)-R_f}{\beta_A} &#x3D; \frac{E(R_M)-R_f}{\beta_M}$$<br>therefore,<br>$$E(R_A)&#x3D;R_f+\beta_A*[E(R_M)-R_f]$$<br>this is CAPM</p>
+<h5 id="SML-security-market-line"><a href="#SML-security-market-line" class="headerlink" title="SML, security market line"></a>SML, security market line</h5><p><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230320115904.png" alt="SML"></p>
+<hr>
+<h2 id="Cost-of-Capital-融资成本"><a href="#Cost-of-Capital-融资成本" class="headerlink" title="Cost of Capital 融资成本"></a>Cost of Capital 融资成本</h2><h3 id="cost-of-equity"><a href="#cost-of-equity" class="headerlink" title="cost of equity"></a>cost of equity</h3><ul>
+<li>Approach 1: the SML （CAPM）<ul>
+<li>$E(R_i)&#x3D;R_f+\beta_i*[E(R_M)-R_f]$</li>
+<li>有效市场均衡</li>
+<li>公平定价</li>
+<li>Determine risk-free rate<ul>
+<li>We recommend a rate matching the investment horizon. </li>
+<li>Or long-term rates, which are are less volatile than short-term rates.</li>
+<li>Current Wall street practice: use the 10 or 20-yr T- bond rate. </li>
+<li>In China, we usually use 10-year China government bond rate (or 10-year bond issued by the China Development Bank).</li>
+</ul>
+</li>
+<li>Determine market risk premium<ul>
+<li>Use the historical returns of several popular market indices to capture the market portfolio’s expected return<ul>
+<li>The S&amp;P 500 is the standard portfolio used to represent the performance of the U.S. stock market.</li>
+<li>In China, it is popular to use the CSI 300 as the market portfolio.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Estimatinng Beta<ul>
+<li>for public company, run regression<ul>
+<li><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230320121038.png" alt="regression"></li>
+</ul>
+</li>
+<li>for private company<ul>
+<li>find comparable companies<ul>
+<li>same industry</li>
+</ul>
+</li>
+<li>find the underlying asset beta （see below）, and average them</li>
+<li>use average beta as the estimate of private companies’ asset beta, and re-lever it.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Approach 2: DDM （dividend discount model）<ul>
+<li>$P_0 &#x3D; D_1&#x2F;(E(R_E)-g)$</li>
+<li>thus<ul>
+<li>$E(R_E)&#x3D;D_1&#x2F;P_0+g$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="equity-beta-vs-asset-beta"><a href="#equity-beta-vs-asset-beta" class="headerlink" title="equity beta vs asset beta"></a>equity beta vs asset beta</h4><ul>
+<li>When the betas are estimated from returns on stock. They are the firm’s equity beta $\beta_E$</li>
+<li>The beta of the assets of the firm （asset beta $\beta_A$ ）  is the beta of the common stock had the firm been financed only with equity.</li>
+</ul>
+<p>$\beta_{\text {portfolio }}&#x3D;\beta_A&#x3D;\beta_{\text {Equity }} \frac{S}{S+B}+\beta_{\text {Debt }} \frac{B}{S+B}$</p>
+<ul>
+<li>公司的资本结构和公司的beta决定了 $\beta_E$</li>
+<li>beta of asset可以看成是外生的，通常由行业决定</li>
+<li>当beta of debt &#x3D; 0<ul>
+<li>即能够正常偿还债务</li>
+<li>$\beta_A&#x3D;\beta_{\text {Equity }} \frac{S}{S+B}$</li>
+<li>$\beta_{Equity}&#x3D;\beta_A(1+ \frac{B}{S})$</li>
+<li>推出：<ul>
+<li>$\beta_A \le \beta_{Equity}$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="determinants-of-beta-A"><a href="#determinants-of-beta-A" class="headerlink" title="determinants of $\beta_A$"></a>determinants of $\beta_A$</h5><ul>
+<li>industrial feature<ul>
+<li>high-tech, retailers, automotive firms fluctuate with the business cycle.</li>
+<li>utilities, railroads, food are less dependent upon cycle.</li>
+</ul>
+</li>
+<li>Operating leverage</li>
+</ul>
+<h3 id="Cost-of-Debt-and-preferred-stock"><a href="#Cost-of-Debt-and-preferred-stock" class="headerlink" title="Cost of Debt and preferred stock"></a>Cost of Debt and preferred stock</h3><h4 id="cost-of-debt"><a href="#cost-of-debt" class="headerlink" title="cost of debt"></a>cost of debt</h4><ul>
+<li><p>The cost of capital that a firm must pay on its debt.</p>
+<ul>
+<li>Before tax: $R_D$</li>
+<li>After tax: $R_D(1-T_c)$<ul>
+<li>利息可以避税</li>
+<li>1 - tax rate</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Method 1: YTM</p>
+<ul>
+<li>from the perspective of borrowers</li>
+<li>Ex-ante: Before&#x2F; When the bond is issued<ul>
+<li>compute effective annual return from price</li>
+</ul>
+</li>
+<li>Ex-post: After the bond is issued<ul>
+<li>Consider a one-year bond with an ex-ante YTM of y. </li>
+<li>For each 1 dollar invested in the bond today, the bond promised to pay (1+y)dollar in one year. </li>
+<li>Suppose, however, it is anticipated that the bond will default with probability p, in which case bond holders will receive (1+y–L)dollar, where L represents the expected loss per $1 of debt in the event of default. </li>
+<li>Then the expect return of the bond is<ul>
+<li>$r_d&#x3D;[p(1+y-L)+(1-p)(1+y)]&#x2F;1-1&#x3D;y-pL$</li>
+<li>$r_d &#x3D; YTM - Prob(\text{default}) \times \text{Expected Loss rate}$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>YTM reflects default risk and liquidity risk</strong></li>
+</ul>
+</li>
+<li><p>Method 2: CAPM</p>
+<ul>
+<li>From the perspective of bond holders when debt are held as equities. Or when bonds are sold before maturity.</li>
+<li>$r_d &#x3D; \text{risk-free rate} + \beta × \text{market risk premium}$<ul>
+<li>Since bank loans and many corporate bonds are traded infrequently if at all, it is difficult to estimate the betas of individual debt securities.</li>
+<li>Alternatively, we can approximate beta using estimates of betas of bond indices by rating category</li>
+</ul>
+</li>
+<li>$R_D$ from CAPM reflects mostly market risk&#x2F;interest risk. In another word, $R_D$ is highly correlated to Duration.<ul>
+<li>主要反应市场风险</li>
+</ul>
+</li>
+<li>For multiple bonds with different maturities, the average cost of debt is then the weighted average cost.</li>
+</ul>
+</li>
+</ul>
+<h4 id="Preferred-Stock-（优先股）"><a href="#Preferred-Stock-（优先股）" class="headerlink" title="Preferred Stock （优先股）"></a>Preferred Stock （优先股）</h4><ul>
+<li><p>Hybrid of common stock and bond</p>
+<ul>
+<li>Senior to common stock, but subordinate to bonds, upon liquidation</li>
+<li>Priority over common stock in payment of dividend</li>
+</ul>
+</li>
+<li><p>Dividends</p>
+<ul>
+<li>Normally with a fixed dividend rate of stated value</li>
+<li>Dividends can be deferred indefinitely</li>
+<li>Most dividends are cumulative: If preferred dividends are not paid in a particular year, they will be carried forward as an arrearage.</li>
+</ul>
+</li>
+<li><p>Generally do not carry voting rights</p>
+</li>
+<li><p>Preferred stock can be considered as a perpetuity</p>
+<ul>
+<li>（generally） have a constant dividend every period</li>
+<li>（expected）to pay dividends forever</li>
+</ul>
+</li>
+<li><p>Cost of preferred stock：</p>
+<ul>
+<li>$R_p&#x3D;D&#x2F;P_0$</li>
+<li>where D is the fixed dividend, $P_0$ is the current price per share</li>
+</ul>
+</li>
+</ul>
+<h3 id="Weighted-average-cost-of-Capital-（wacc）"><a href="#Weighted-average-cost-of-Capital-（wacc）" class="headerlink" title="Weighted average cost of Capital （wacc）"></a>Weighted average cost of Capital （wacc）</h3><ul>
+<li>When discounting CFFA we need the required return for the entire firm<ul>
+<li>Find the “average” cost of all types of capital </li>
+<li>The weights are determined by how much of each type of financing that we use. </li>
+<li>Note, both costs and weights are market-based.</li>
+</ul>
+</li>
+</ul>
+<h4 id="Tax"><a href="#Tax" class="headerlink" title="Tax"></a>Tax</h4><ul>
+<li>Concerned with after-tax cash flows, so consider the effect of taxes on the various costs of capital. Interest expense reduces our tax liability<ul>
+<li>This reduction in taxes reduces our cost of debt</li>
+<li>After-tax cost of debt &#x3D; $R_D(1-T_c)$</li>
+</ul>
+</li>
+<li>Dividends are not tax deductible, so there is no tax impact on the cost of equit<ul>
+<li>只有债有税后成本，只有Debt有税盾作用</li>
+</ul>
+</li>
+</ul>
+<h4 id="Capital-Structure-Weights"><a href="#Capital-Structure-Weights" class="headerlink" title="Capital Structure Weights"></a>Capital Structure Weights</h4><ul>
+<li>Notation<ul>
+<li>E（S）&#x3D; market value of equity &#x3D; outstanding shares * price per share</li>
+<li>D（B）&#x3D; market value of debt &#x3D; outstanding bonds * bond price</li>
+<li>V &#x3D; market value of the firm &#x3D; D + E</li>
+</ul>
+</li>
+<li>Weights<ul>
+<li>$w_E &#x3D; E&#x2F;V$</li>
+<li>$w_D &#x3D; D&#x2F;V$</li>
+<li>$\color{red}{\text{WACC} &#x3D; w_E \times R_E + w_D \times R_D(1-T_C) + w_P \times R_P}$</li>
+<li>$R_E$ is cost of equity, $R_D(1-T_C)$ is after-tax cost of debt, $R_P$ is cost of preferred stock</li>
+<li>当只有股权时， $\text{WACC}&#x3D;R_A&#x3D;R_E&#x3D;R_U$<ul>
+<li>$R_A$ is cost of asset, $R_U$ is unlevered</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Floatation-Cost"><a href="#Floatation-Cost" class="headerlink" title="Floatation Cost"></a>Floatation Cost</h3><p>$$f_A&#x3D;S&#x2F;V\times f_S+B&#x2F;V\times f_B$$</p>
+<hr>
+<h2 id="Financial-Leverage-and-Capital-Structure-Policy"><a href="#Financial-Leverage-and-Capital-Structure-Policy" class="headerlink" title="Financial Leverage and Capital Structure Policy"></a>Financial Leverage and Capital Structure Policy</h2><ul>
+<li>Goal of a corporation:<ul>
+<li>Creating value through capital structure choices—-minimizing WACC</li>
+</ul>
+</li>
+</ul>
+<h3 id="Capital-structure-in-a-perfect-market"><a href="#Capital-structure-in-a-perfect-market" class="headerlink" title="Capital structure in a perfect market"></a>Capital structure in a perfect market</h3><h4 id="Perfect-Capital-Markets"><a href="#Perfect-Capital-Markets" class="headerlink" title="Perfect Capital Markets"></a>Perfect Capital Markets</h4><ol>
+<li>Investors and firms can trade the same set of securities at competitive market prices equal to the present value of their future cash flows.(市场有效) </li>
+<li>There are no taxes, transaction costs, or issuance costs associated with security trading. (市场⽆摩擦) </li>
+<li>A firm’s financing decisions do not change the cash flows generated by its investments, nor do they reveal new information about them.(融资决策不改变未来EBIT)</li>
+</ol>
+<p>$\color{red}{\text{leverage ratio} &#x3D; E&#x2F;V}$</p>
+
             </div>
             <hr />
 
@@ -1403,12 +2018,12 @@ Decision abo">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Finance/" target="_blank">
-                        <span class="chip bg-color">Finance</span>
-                    </a>
-                    
                     <a href="/tags/Notes/" target="_blank">
                         <span class="chip bg-color">Notes</span>
+                    </a>
+                    
+                    <a href="/tags/Finance/" target="_blank">
+                        <span class="chip bg-color">Finance</span>
                     </a>
                     
                 </div>
@@ -1458,12 +2073,12 @@ complete information: each pl
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Notes/" target="_blank">
-                        <span class="chip bg-color">Notes</span>
-                    </a>
-                    
                     <a href="/tags/GameTheory/" target="_blank">
                         <span class="chip bg-color">GameTheory</span>
+                    </a>
+                    
+                    <a href="/tags/Notes/" target="_blank">
+                        <span class="chip bg-color">Notes</span>
                     </a>
                     
                 </div>
@@ -1637,7 +2252,7 @@ complete information: each pl
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">14.7k</span>
+            <span class="white-color">20.6k</span>
             
 
             <br>
