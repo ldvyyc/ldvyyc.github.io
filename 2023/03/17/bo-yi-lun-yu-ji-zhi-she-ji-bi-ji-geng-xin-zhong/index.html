@@ -367,12 +367,12 @@ complete information: each">
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/Notes/" target="_blank">
-                            <span class="chip bg-color">Notes</span>
-                        </a>
-                        
                         <a href="/tags/GameTheory/" target="_blank">
                             <span class="chip bg-color">GameTheory</span>
+                        </a>
+                        
+                        <a href="/tags/Notes/" target="_blank">
+                            <span class="chip bg-color">Notes</span>
                         </a>
                         
                     </div>
@@ -409,7 +409,7 @@ complete information: each">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    7.8k
+                    7.7k
                 </div>
                 
 
@@ -434,7 +434,7 @@ complete information: each">
             <div id="articleContent">
                 <h2 id="L2-Static-Games-of-Complete-Information"><a href="#L2-Static-Games-of-Complete-Information" class="headerlink" title="L2: Static Games of Complete Information"></a>L2: Static Games of Complete Information</h2><h3 id="Normal-form-games"><a href="#Normal-form-games" class="headerlink" title="Normal-form games"></a>Normal-form games</h3><ul>
 <li>Static: one shot, simultaneous move</li>
-<li>complete information: each player’s payof function is common knowledge among all players.</li>
+<li>complete information: each player’s payoff function is common knowledge among all players.</li>
 </ul>
 <h5 id="Normal-form-representation"><a href="#Normal-form-representation" class="headerlink" title="Normal-form representation"></a>Normal-form representation</h5><ul>
 <li><p>the players （参与者） in the game;</p>
@@ -540,7 +540,7 @@ complete information: each">
 <li>计算过程类似 cournot</li>
 </ul>
 <h3 id="Mixed-strategies"><a href="#Mixed-strategies" class="headerlink" title="Mixed strategies"></a>Mixed strategies</h3><h4 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h4><ul>
-<li>In a normal-form game $G&#x3D;\left\langle S_1, \ldots, S_n ; u_1, \ldots, u_n\right\rangle$, suppose $S_i&#x3D;\left{s_{i 1}, \ldots, s_{i K_i}\right}$<ul>
+<li>In a normal-form game $G&#x3D;\left\langle S_1, \ldots, S_n ; u_1, \ldots, u_n\right\rangle$, suppose $S_i&#x3D;{s_{i1}, …, s_{iK_i}}$<ul>
 <li>Each strategy $s_{i k} \in S_i$ is a pure strategy (纯策略) for player</li>
 <li>A mixed strategy (混合策略) for player $i$ is a probability distribution $p_i&#x3D;\left(p_{i 1}, \ldots, p_{i K_i}\right)$, for $k&#x3D;1, \ldots, K_i$, where $p_{i 1}+\cdots+p_{i K_i}&#x3D;1$ and $p_{i k} \geq 0$.</li>
 </ul>
@@ -564,7 +564,7 @@ complete information: each">
 <h4 id="Mixed-strategy-NE"><a href="#Mixed-strategy-NE" class="headerlink" title="Mixed strategy NE"></a>Mixed strategy NE</h4><h5 id="Definition-1"><a href="#Definition-1" class="headerlink" title="Definition"></a>Definition</h5><ul>
 <li><p>In a normal-form game $G&#x3D;\left\langle S_1, \ldots, S_n ; u_1, \ldots, u_n\right\rangle$, the mixed strategy profile $\left(p_1^*, \ldots, p_n^*\right)$ is a mixed-strategy Nash equilibrium if each player’s mixed strategy is a best response to the other players’ mixed strategies in terms of expected payoff, i.e.,</p>
 </li>
-<li><p>$$v_i\left(p_i^*, p_{-i}^<em>\right) \geq v_i\left(p_i, p_{-i}^</em>\right)$$</p>
+<li><p>$$v_(p_i^*, p_{-i}^*)\geq v_i(p_i, p_{-i}^*)$$</p>
 </li>
 <li><p>for every $p_i$ over $S_i$, and for all $i&#x3D;1, \ldots, n$.</p>
 </li>
@@ -618,15 +618,15 @@ complete information: each">
 <p>If its imperfect Information, we draw a dotted line between 2 and 2 in the tree above.</p>
 <p><strong>Note that</strong></p>
 <ul>
-<li>A2 may depend on the action a1, i.e., A2(a1).</li>
-<li>Some action a1 may even end the game, so that A2(a1) is an empty set (i.e., no choice of player 2).</li>
-<li>The action a1 is perfectly observed by player 2.</li>
+<li>$A_2$ may depend on the action a1, i.e., $A_2(a_1)$.</li>
+<li>Some action $a_1$ may even end the game, so that $A_2(a_1)$ is an empty set （i.e., no choice of player 2）.</li>
+<li>The action $a_1$ is perfectly observed by player 2.</li>
 </ul>
 <p>In the game of the farmer and the snake:<br><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230316093517.png" alt="image.png"></p>
 <h5 id="Some-key-features"><a href="#Some-key-features" class="headerlink" title="Some key features"></a>Some key features</h5><ul>
 <li>the moves occur in sequence;</li>
 <li>all previous moves are observed before the next move ischosen</li>
-<li>the players’ payofs from each combination of moves are common knowledge.</li>
+<li>the players’ payoffs from each combination of moves are common knowledge.</li>
 </ul>
 <h4 id="Backwards-Induction"><a href="#Backwards-Induction" class="headerlink" title="Backwards Induction"></a>Backwards Induction</h4><ul>
 <li>In the second stage, player 2 observes what player 1 choose and choose action to solving $$\max \limits_{a_2\in A_2}\quad u_2(a_1, a_2)$$</li>
@@ -647,15 +647,16 @@ complete information: each">
 <li>Firm 2 observes $q_1$ and then chooses a quantity $q_2 \ge 0$.</li>
 </ul>
 </li>
-<li>The payoff of firm i is the profit $$\pi_i\left(q_1, q_2\right)&#x3D;q_i[P(Q)-c]$$where $Q&#x3D;q_1+q_2$ and<br>$$<br>P(Q)&#x3D; \begin{cases}a-Q, &amp; \text { if } Q&lt;a \ 0, &amp; \text { if } Q \geq a\end{cases}<br>$$</li>
+<li>The payoff of firm i is the profit $$\pi_i\left(q_1, q_2\right)&#x3D;q_i[P(Q)-c]$$</li>
+<li>where $Q&#x3D;q_1+q_2$ and<br>$$<br>P(Q)&#x3D; \begin{cases}a-Q, &amp; \text { if } Q&lt;a \\ 0, &amp; \text { if } Q \geq a\end{cases}<br>$$</li>
 </ul>
 </li>
 </ul>
 <h5 id="Now-solve-this-game"><a href="#Now-solve-this-game" class="headerlink" title="Now solve this game."></a>Now solve this game.</h5><ul>
-<li>First, find the best response function $R_2 (q_1)$ for firm 2, i.e.for any given $q_1$, find $q_2$ that solves $$\max _{q_2 \geq 0} \pi_2\left(q_1, q_2\right)$$where<br>$$\pi_2\left(q_1, q_2\right)&#x3D; \begin{cases}q_2\left(a-q_1-q_2-c\right), &amp; \text { if } q_1+q_2&lt;a ; \ -c q_2, &amp; \text { if } q_1+q_2 \geq a .\end{cases}$$ </li>
-<li>Then we have<br>$$<br>R_2\left(q_1\right)&#x3D; \begin{cases}\frac{a-c-q_1}{2}, &amp; \text { if } q_1&lt;a-c \ 0, &amp; \text { if } q_1 \geq a-c .\end{cases}<br>$$</li>
+<li>First, find the best response function $R_2 (q_1)$ for firm 2, i.e.for any given $q_1$, find $q_2$ that solves $$\max _{q_2 \geq 0} \pi_2\left(q_1, q_2\right)$$where<br>$$\pi_2\left(q_1, q_2\right)&#x3D; \begin{cases}q_2\left(a-q_1-q_2-c\right), &amp; \text { if } q_1+q_2&lt;a ; \\ -c q_2, &amp; \text { if } q_1+q_2 \geq a .\end{cases}$$ </li>
+<li>Then we have<br>$$<br>R_2\left(q_1\right)&#x3D; \begin{cases}\frac{a-c-q_1}{2}, &amp; \text { if } q_1&lt;a-c \\ 0, &amp; \text { if } q_1 \geq a-c .\end{cases}<br>$$</li>
 <li>$R_2(q_1)$ is the same as that in the Cournot model.</li>
-<li>Second, firm 1 knows $R_2 (q_1)$ and solves$$\max \limits_{q_1 \ge 0} \quad \pi_1(q_1, R_2(q_1))$$ where$$\pi_1\left(q_1, R_2\left(q_1\right)\right)&#x3D; \begin{cases}q_1\left[a-q_1-\frac{a-q_1-c}{2}-c\right], &amp; \text { if } q_1&lt;a-c \ q_1\left[a-q_1-c\right], &amp; \text { if } a-c \leq q_1&lt;a \ -c q_1, &amp; \text { if } q_1 \geq a\end{cases}$$</li>
+<li>Second, firm 1 knows $R_2 (q_1)$ and solves$$\max \limits_{q_1 \ge 0} \quad \pi_1(q_1, R_2(q_1))$$ where$$\pi_1\left(q_1, R_2\left(q_1\right)\right)&#x3D; \begin{cases}q_1\left[a-q_1-\frac{a-q_1-c}{2}-c\right], &amp; \text { if } q_1&lt;a-c \\ q_1\left[a-q_1-c\right], &amp; \text { if } a-c \leq q_1&lt;a \\ -c q_1, &amp; \text { if } q_1 \geq a\end{cases}$$</li>
 </ul>
 <ul>
 <li>Clearly, for $q_1&gt;a-c$, firm 1’s profit is always negative.</li>
@@ -665,7 +666,7 @@ complete information: each">
 <li>The market price is<br>$$<br>P^*&#x3D;a-q_1^*-q_2^*&#x3D;c+\frac{a-c}{4} .<br>$$</li>
 <li>Firms’ profits and the total profit are<br>$$<br>\pi_1^*&#x3D;\frac{(a-c)^2}{8}, \pi_2^*&#x3D;\frac{(a-c)^2}{16}, \text { and } \Pi^*&#x3D;\frac{3(a-c)^2}{16}<br>$$</li>
 </ul>
-<h5 id="Compare-with-Cournot-Model"><a href="#Compare-with-Cournot-Model" class="headerlink" title="Compare with Cournot Model"></a>Compare with Cournot Model</h5><p>$$<br>\begin{aligned}<br>&amp;\begin{array}{ccc}<br>\text {Variable} &amp; \text{Cournot Model} &amp; \text{Stackelberg Model}\<br>\hline q_1^* &amp; \frac{a-c}{3} &amp; \frac{a-c}{2} \<br>q_2^* &amp; \frac{a-c}{3} &amp; \frac{a-c}{4} \<br>\pi_1^* &amp; \frac{(a-c)^2}{9} &amp; \frac{(a-c)^2}{8} \<br>\pi_2^* &amp; \frac{(a-c)^2}{9} &amp; \frac{(a-c)^2}{16} \<br>\Pi^* &amp; \frac{2(a-c)^2}{9} &amp; \frac{3(a-c)^2}{16} \<br>P^* &amp; c+\frac{a-c}{3} &amp; c+\frac{a-c}{4} \<br>\hline<br>\end{array}<br>\end{aligned}<br>$$</p>
+<h5 id="Compare-with-Cournot-Model"><a href="#Compare-with-Cournot-Model" class="headerlink" title="Compare with Cournot Model"></a>Compare with Cournot Model</h5><p>$$<br>\begin{aligned}<br>&amp;\begin{array}{ccc}<br>\text {Variable} &amp; \text{Cournot Model} &amp; \text{Stackelberg Model}\\<br>\hline q_1^* &amp; \frac{a-c}{3} &amp; \frac{a-c}{2} \\<br>q_2^* &amp; \frac{a-c}{3} &amp; \frac{a-c}{4} \\<br>\pi_1^* &amp; \frac{(a-c)^2}{9} &amp; \frac{(a-c)^2}{8} \\<br>\pi_2^* &amp; \frac{(a-c)^2}{9} &amp; \frac{(a-c)^2}{16} \\<br>\Pi^* &amp; \frac{2(a-c)^2}{9} &amp; \frac{3(a-c)^2}{16} \\<br>P^* &amp; c+\frac{a-c}{3} &amp; c+\frac{a-c}{4} \\<br>\hline<br>\end{array}<br>\end{aligned}<br>$$</p>
 <ul>
 <li>Note: First-move advantage:<ul>
 <li>先手有优势，比起同时的情况。</li>
@@ -686,10 +687,10 @@ complete information: each">
 </ul>
 <ul>
 <li>For each given $\left(a_1, a_2\right)$, players 3 and 4 try to find the Nash equilibrium in stage 2.</li>
-<li>Assume the second-stage game has a unique Nash equilibrium$$\left(a_3^<em>\left(a_1, a_2\right), a_4^</em>\left(a_1, a_2\right)\right)$$</li>
-<li>Then, player 1 and player 2 play a simultaneous-move game with payoffs$$<br>u_i\left(a_1, a_2, a_3^<em>\left(a_1, a_2\right), a_4^</em>\left(a_1, a_2\right)\right), \text { for } i&#x3D;1,2$$</li>
-<li>Suppose $\left(a_1^*, a_2^*\right)$ is the unique Nash equilibrium of this simultaneous-move game.</li>
-<li>Then$$\left(a_1^*, a_2^*, a_3^<em>\left(a_1^</em>, a_2^<em>\right), a_4^</em>\left(a_1^*, a_2^*\right)\right)$$is the subgame-perfect outcome (子博恋精炼结果) of the two-stage game.</li>
+<li>Assume the second-stage game has a unique Nash equilibrium$(a_3^*(a_1, a_2), a_4^*(a_1, a_2))$$</li>
+<li>Then, player 1 and player 2 play a simultaneous-move game with payoffs$$<br>u_i(a_1, a_2, a_3^*(a_1, a_2), a_4^*(a_1, a_2)), \text { for } i&#x3D;1,2$$</li>
+<li>Suppose $(a_1^*, a_2^*)$ is the unique Nash equilibrium of this simultaneous-move game.</li>
+<li>Then$$(a_1^*, a_2^*, a_3^*(a_1^*, a_2^*), a_4^*(a_1^*, a_2^*))$$is the subgame-perfect outcome （子博恋精炼结果） of the two-stage game.</li>
 </ul>
 <h5 id="Example-Bank-Run"><a href="#Example-Bank-Run" class="headerlink" title="Example: Bank Run"></a>Example: Bank Run</h5><ul>
 <li>payoff in date 1:</li>
@@ -1615,12 +1616,12 @@ complete information: each">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Finance/" target="_blank">
-                        <span class="chip bg-color">Finance</span>
-                    </a>
-                    
                     <a href="/tags/Notes/" target="_blank">
                         <span class="chip bg-color">Notes</span>
+                    </a>
+                    
+                    <a href="/tags/Finance/" target="_blank">
+                        <span class="chip bg-color">Finance</span>
                     </a>
                     
                 </div>
