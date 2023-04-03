@@ -638,7 +638,7 @@ complete information: each">
 <li>Assume it also has a unique solution, denoted by $a_1^*$.</li>
 <li>We call $(a_1, R_2(a_1^*))$ the backwards-induction outcome (逆向归纳的结果) of the game</li>
 <li>In the backwards-induction outcome, $a_1^*$ is determined by maximizing $u_1 (a_1 , R_2(a_1))$, and $a_2^* &#x3D; R_2(a_1^*)$. </li>
-<li>However, $a_1^*$ may not maximize $u_1(a_1, a_2^*)$.<br><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230316101111.png" alt="image.png"></li>
+<li>However, $a_1^*$ may not maximize $u_1(a_1, a_2^*)$.<br><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230316101111.png" alt="example"></li>
 </ul>
 <h4 id="Stackelberg-Model-of-Duopoly"><a href="#Stackelberg-Model-of-Duopoly" class="headerlink" title="Stackelberg Model of Duopoly"></a>Stackelberg Model of Duopoly</h4><p>Consider a dominant firm moving first and a follower moving second.</p>
 <ul>
@@ -915,7 +915,7 @@ complete information: each">
 </ul>
 </li>
 <li>In the Stackelberg model:<ul>
-<li>The backwards-induction outcome is $\left(q_1^*, q_2^<em>\right)$, where $q_1^</em>&#x3D;\frac{a-c}{2}$ and $q_2^*&#x3D;\frac{a-c}{4}$,</li>
+<li>The backwards-induction outcome is $(q_1^*, q_2^*)$ , where $q_1^*&#x3D;\frac{a-c}{2}$ and $q_2^*&#x3D;\frac{a-c}{4}$,</li>
 <li>while the subgame-perfect Nash equilibrium is $\left(q_1^*, R_2\left(q_1\right)\right)$, where $R_2\left(q_1\right)&#x3D;\frac{a-c-q_1}{2}$.</li>
 </ul>
 </li>
@@ -1097,7 +1097,7 @@ complete information: each">
 <li>$$q_1^* &#x3D;\frac{a-\theta q_2^*(c_H)-(1-\theta) q_2^*(c_L)-c}{2}$$</li>
 </ul>
 </li>
-<li>The <strong>equilibrium</strong> of this game is $\left(q_1^*,\left(q_2^<em>\left(c_H\right), q_2^</em>\left(c_L\right)\right)\right)$, where<ul>
+<li>The <strong>equilibrium</strong> of this game is $(q_1^*,(q_2^*(c_H), q_2^*(c_L)))$, where<ul>
 <li>$$q_1^* &#x3D;\frac{a-2 c+\theta c_H+(1-\theta) c_L}{3}$$</li>
 <li>$$q_2^*(c_H) &#x3D;\frac{a-2 c_H+c}{3}+\frac{1-\theta}{6}\left(c_H-c_L\right)$$</li>
 <li>$$q_2^*(c_L)&#x3D;\frac{a-2 c_L+c}{3}-\frac{\theta}{6}(c_H-c_L)$$</li>
@@ -1163,7 +1163,7 @@ complete information: each">
 <h5 id="Definition-8"><a href="#Definition-8" class="headerlink" title="Definition"></a>Definition</h5><ul>
 <li>In the static Bayesian game</li>
 <li>$G&#x3D;\langle A_1, \ldots, A_n ; T_1, \ldots, T_n ; p_1, \ldots, p_n ; u_1, \ldots, u_n\rangle$, the strategy profile $s^*&#x3D;(s_1^*, \ldots, s_n^*)$ are a （pure-strategy） Bayesian Nash equilibrium （贝叶斯-纳什均衡） if for each player $i$ and for each of $i$ ‘s types $t_i \in T_i, s_i^*\left(t_i\right)$ solves</li>
-<li>$$\max <em>{a_i \in A_i} \sum</em>{t_{-i} \in T_{-i}} u_i(s_{-i}^*(t_{-i}), a_i ; t_i) \cdot p_i(t_{-i} \mid t_i) .$$</li>
+<li>$$\max_{a_i \in A_i} \sum_{t_{-i} \in T_{-i}} u_i(s_{-i}^*(t_{-i}), a_i ; t_i) \cdot p_i(t_{-i} \mid t_i)$$</li>
 <li>先验分布下不同情况的收益加权。</li>
 </ul>
 <ul>
@@ -1319,7 +1319,7 @@ complete information: each">
 <ul>
 <li>Bidder $i$ ‘s strategy is a function $b_i(v_i)$ from $[0,1]$ to $[0, \infty)$.</li>
 <li>$(b_1^*(v_1), b_2^*(v_2))$ is a Bayesian Nash equilibrium if and only if for each player $i$ and each type $v_i \in[0,1], b_i^*\left(v_i\right)$ solves</li>
-<li>$$\begin{aligned}<br>&amp; \max <em>{b_i \geq 0} \mathbf{E}</em>{v_j} u_i(b_i, b_j^*(v_j) ; v_i) \\<br>&#x3D; &amp; \max _{b_i \geq 0}{eft(v_i-b_i) \operatorname{Prob}[b_i&gt;b_j^*(v_j)]+\frac{v_i-b_i}{2} \operatorname{Prob}[b_i&#x3D;b_j^*(v_j)]} .<br>\end{aligned}$$</li>
+<li>$$\begin{aligned}<br>&amp; \max <em>{b_i \geq 0} \mathbf{E}</em>{v_j} u_i(b_i, b_j^*(v_j) ; v_i) \\<br>&#x3D; &amp; \max _{b_i \geq 0}{(v_i-b_i) Prob[b_i&gt;b_j^*(v_j)]+\frac{v_i-b_i}{2} Prob[b_i&#x3D;b_j^*(v_j)]} \end{aligned}$$</li>
 </ul>
 <h4 id="Linear-Bayesian-NE"><a href="#Linear-Bayesian-NE" class="headerlink" title="Linear Bayesian NE"></a>Linear Bayesian NE</h4><ul>
 <li>可能会有许多纳什均衡，现在只考虑线性情况<ul>
@@ -1363,7 +1363,7 @@ complete information: each">
 </ul>
 <ul>
 <li>There are three cases:</li>
-<li>$$[0,1] \subseteq{\begin{array}{l}<br>(-\infty, a_j] \\<br>{[a_j, a_j+2 c_j]} \\<br>{[a_j+2 c_j, \infty)}<br>\end{array}.$$<ul>
+<li>$$[0,1] \subseteq\begin{cases}(-\infty, a_j] \\<br>{[a_j, a_j+2 c_j]} \\<br>{[a_j+2 c_j, \infty)}<br>\end{cases}$$<ul>
 <li>第一种情况不满足a小于1</li>
 <li>第三种情况不满足c大于0</li>
 <li>因此只能是第二种情况，$b_i&#x3D;\frac{v_i+a_j}{2}$</li>
