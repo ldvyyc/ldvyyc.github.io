@@ -367,12 +367,12 @@ complete information: each">
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/GameTheory/" target="_blank">
-                            <span class="chip bg-color">GameTheory</span>
-                        </a>
-                        
                         <a href="/tags/Notes/" target="_blank">
                             <span class="chip bg-color">Notes</span>
+                        </a>
+                        
+                        <a href="/tags/GameTheory/" target="_blank">
+                            <span class="chip bg-color">GameTheory</span>
                         </a>
                         
                     </div>
@@ -409,14 +409,14 @@ complete information: each">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    7.7k
+                    7.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    45 分
+                    44 分
                 </div>
                 
                 
@@ -613,7 +613,7 @@ complete information: each">
 <li><p>Draw game trees.</p>
 </li>
 </ul>
-<h3 id="Games-of-Perfect-Information"><a href="#Games-of-Perfect-Information" class="headerlink" title="Games of Perfect Information"></a>Games of Perfect Information</h3><p><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230316092735.png" alt="image.png"><br><em>an example of dynamic games of complete and perfect information</em></p>
+<h3 id="Games-of-Perfect-Information"><a href="#Games-of-Perfect-Information" class="headerlink" title="Games of Perfect Information"></a>Games of Perfect Information</h3><p><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230316092735.png" alt="example of dynamic games of complete and perfect information"></p>
 <p>Player 2 choose after he knows what player 1 choose.</p>
 <p>If its imperfect Information, we draw a dotted line between 2 and 2 in the tree above.</p>
 <p><strong>Note that</strong></p>
@@ -622,7 +622,7 @@ complete information: each">
 <li>Some action $a_1$ may even end the game, so that $A_2(a_1)$ is an empty set （i.e., no choice of player 2）.</li>
 <li>The action $a_1$ is perfectly observed by player 2.</li>
 </ul>
-<p>In the game of the farmer and the snake:<br><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230316093517.png" alt="image.png"></p>
+<p>In the game of the farmer and the snake:<br><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230316093517.png" alt="农夫与蛇"></p>
 <h5 id="Some-key-features"><a href="#Some-key-features" class="headerlink" title="Some key features"></a>Some key features</h5><ul>
 <li>the moves occur in sequence;</li>
 <li>all previous moves are observed before the next move ischosen</li>
@@ -694,10 +694,26 @@ complete information: each">
 </ul>
 <h5 id="Example-Bank-Run"><a href="#Example-Bank-Run" class="headerlink" title="Example: Bank Run"></a>Example: Bank Run</h5><ul>
 <li>payoff in date 1:</li>
-<li>|          | Withdraw | Don’t      |</li>
-</ul>
-<p>| ——– | ——– | ———- |<br>| <strong>Withdraw</strong> | 4,4      | 5,3        |<br>| <strong>Don’t</strong>    | 3,5      | next stage |</p>
-<ul>
+<li><table>
+<thead>
+<tr>
+<th></th>
+<th>Withdraw</th>
+<th>Don’t</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Withdraw</strong></td>
+<td>4,4</td>
+<td>5,3</td>
+</tr>
+<tr>
+<td><strong>Don’t</strong></td>
+<td>3,5</td>
+<td>next stage</td>
+</tr>
+</tbody></table>
+</li>
 <li>payoff in date 2</li>
 <li><table>
 <thead>
@@ -720,8 +736,9 @@ complete information: each">
 </tbody></table>
 </li>
 </ul>
-<h6 id="Solve-backwards"><a href="#Solve-backwards" class="headerlink" title="Solve: backwards"></a>Solve: backwards</h6><p>date2, both obtain 8 in nash equilibrium.<br>Thus, in date1, they play the following game:</p>
-<ul>
+<h6 id="Solve-backwards"><a href="#Solve-backwards" class="headerlink" title="Solve: backwards"></a>Solve: backwards</h6><ul>
+<li>date2, both obtain 8 in nash equilibrium.</li>
+<li>Thus, in date1, they play the following game:</li>
 <li><table>
 <thead>
 <tr>
@@ -752,7 +769,7 @@ complete information: each">
 <li>what each player knows at each of his or her opportunities to move; *</li>
 <li>the payoffs received by each player for each combination of moves that could be chosen by the players<br><strong>the three * part describes strategies of each player in detail.</strong></li>
 </ul>
-<p>use trees for extensive-form representations.<br><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230316110447.png" alt="image.png"></p>
+<p>use trees for extensive-form representations.<br><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230316110447.png" alt="extensive-form representation"></p>
 <h4 id="Information-Set"><a href="#Information-Set" class="headerlink" title="Information Set"></a>Information Set</h4><ul>
 <li>Complete and perfect information<ul>
 <li>A dynamic game of complete and perfect information is a game in which the players move in sequence, all previous moves are observed before the next move is chosen, and payoffs are common knowledge. </li>
@@ -784,7 +801,7 @@ complete information: each">
 </ul>
 </li>
 </ul>
-<p>Prisoners Dilemma<br><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230316113717.png" alt="image.png"></p>
+<p>Prisoners Dilemma<br><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230316113717.png" alt="prisoners dilemma"></p>
 <h4 id="Strategy"><a href="#Strategy" class="headerlink" title="Strategy"></a>Strategy</h4><h5 id="Definition-2"><a href="#Definition-2" class="headerlink" title="Definition"></a>Definition</h5><p>A strategy (策略) for a player is a complete plan of actions. It specifies a feasible action for the player in every contingency in which the player might be called on to act.</p>
 <ul>
 <li>For dynamic games with complete information: <ul>
@@ -794,7 +811,7 @@ complete information: each">
 </li>
 <li>An action and a strategy do not make a big diference in static games, while they do in dynamic games.</li>
 </ul>
-<h5 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h5><p><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230316111235.png" alt="image.png"></p>
+<h5 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h5><p><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230316111235.png" alt="example"></p>
 <ul>
 <li>Player 1 has 2 actions (and also 2 strategies): L and R. Player 2 has 2 actions: L′ and R′, but 4 strategies:$$(L^\prime, L^\prime); (L^\prime, R^\prime); (R^\prime, L^\prime); (R^\prime, R^\prime)$$</li>
 <li>For example, the strategy $(L^\prime, R^\prime)$ means:<ul>
@@ -803,7 +820,7 @@ complete information: each">
 </ul>
 </li>
 </ul>
-<h3 id="Subgame-perfect-Nash-Equilibrium"><a href="#Subgame-perfect-Nash-Equilibrium" class="headerlink" title="Subgame-perfect Nash Equilibrium"></a>Subgame-perfect Nash Equilibrium</h3><h5 id="Question-how-to-represent-this-game-in-normal-form"><a href="#Question-how-to-represent-this-game-in-normal-form" class="headerlink" title="Question: how to represent this game in normal form?"></a>Question: how to represent this game in normal form?</h5><p><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230316111235.png" alt="image.png"></p>
+<h3 id="Subgame-perfect-Nash-Equilibrium"><a href="#Subgame-perfect-Nash-Equilibrium" class="headerlink" title="Subgame-perfect Nash Equilibrium"></a>Subgame-perfect Nash Equilibrium</h3><h5 id="Question-how-to-represent-this-game-in-normal-form"><a href="#Question-how-to-represent-this-game-in-normal-form" class="headerlink" title="Question: how to represent this game in normal form?"></a>Question: how to represent this game in normal form?</h5><p><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230316111235.png" alt="same game"></p>
 <ul>
 <li><table>
 <thead>
@@ -831,30 +848,30 @@ complete information: each">
 </tr>
 </tbody></table>
 </li>
-<li>there are two NE: ($L, R^\prime R^\prime$), ($R, R^\prime L^\prime$)</li>
+<li>there are two NE: $(L, R^\prime R^\prime)$, $(R, R^\prime L^\prime)$</li>
 </ul>
 <h5 id="Interpret"><a href="#Interpret" class="headerlink" title="Interpret"></a>Interpret</h5><ul>
-<li>NE ($R, R^\prime L^\prime$)seems okay. It respects the spirit of backwards induction.</li>
-<li>NE ($L, R^\prime R^\prime$) has a problem: No matter which action is chosen by Player 1, player 2 must choose L′ at the right node. </li>
-<li><strong>Interpretation: Player 2 tells player 1: if you choose R, I will choose R′ (threat), then each of us will get 0.</strong> </li>
+<li>NE $(R, R^\prime L^\prime)$ seems okay. It respects the spirit of backwards induction.</li>
+<li>NE $(L, R^\prime R^\prime)$ has a problem: No matter which action is chosen by Player 1, player 2 must choose L′ at the right node. </li>
+<li><strong>Interpretation: Player 2 tells player 1: if you choose R, I will choose R′ （threat）, then each of us will get 0.</strong> </li>
 <li>This threat is non-creditable: Player 1 should not believe that player 2 will choose R′ after observing R. </li>
 <li>Key: Ignorance of dynamic feature.</li>
 </ul>
 <h4 id="Subgame"><a href="#Subgame" class="headerlink" title="Subgame"></a>Subgame</h4><h6 id="Defination-1"><a href="#Defination-1" class="headerlink" title="Defination"></a>Defination</h6><ul>
 <li><p>A subgame (子博弈) in an extensive-form game</p>
 <ul>
-<li>begins at a decision node n that is a singleton information set (but is not the game’s initial node); </li>
-<li>includes all the decision and terminal nodes following node n in the game tree (but no nodes that do not follow n); </li>
-<li>does not cut any information sets (i.e., if a decision node n′ follows n in the game tree, then all other nodes in the information set containing n′ must also follow n, and so must be included in the subgame).</li>
+<li>begins at a decision node n that is a singleton information set （but is not the game’s initial node）; </li>
+<li>includes all the decision and terminal nodes following node n in the game tree （but no nodes that do not follow n）; </li>
+<li>does not cut any information sets （i.e., if a decision node n′ follows n in the game tree, then all other nodes in the information set containing n′ must also follow n, and so must be included in the subgame）.</li>
 <li><strong>只能从一个singleton的decision node节点切出来，并且不能把任何information set切断</strong></li>
 </ul>
 </li>
 <li><p>When focus on a subgame, we shall only consider the relevant part of the strategy profile s. </p>
 </li>
-<li><p>Relevant part of s specifies the “complete” plans (or strategy profile) for the players in that subgame.</p>
+<li><p>Relevant part of s specifies the “complete” plans （or strategy profile） for the players in that subgame.</p>
 </li>
 </ul>
-<h6 id="Example-1"><a href="#Example-1" class="headerlink" title="Example"></a>Example</h6><p><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230317150643.png" alt="image.png"></p>
+<h6 id="Example-1"><a href="#Example-1" class="headerlink" title="Example"></a>Example</h6><p><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230317150643.png" alt="example"></p>
 <ul>
 <li>We have a strategy profile $\left(L,\left(L^{\prime}, R^{\prime}\right),\left(L^{\prime \prime}, R^{\prime \prime}, R^{\prime \prime}, L^{\prime \prime}\right)\right)$.</li>
 <li>We turn to the subgame beginning at player 2’s right decision node.</li>
@@ -903,10 +920,10 @@ complete information: each">
 </ul>
 </li>
 <li>For the two-stage game of complete but imperfect information<ul>
-<li>Then the subgame-perfect outcome is<br>$$<br>\left(a_1^*, a_2^*, a_3^<em>\left(a_1^</em>, a_2^<em>\right), a_4^</em>\left(a_1^*, a_2^*\right)\right) .<br>$$</li>
+<li>Then the subgame-perfect outcome is<br>$$(a_1^*, a_2^*, a_3^*(a_1^*, a_2^*), a_4^*(a_1^*, a_2^*)) .<br>$$</li>
 </ul>
 <ul>
-<li>The subgame-perfect Nash equilibrium is<br>$$<br>\left(a_1^*, a_2^*, a_3^<em>\left(a_1, a_2\right), a_4^</em>\left(a_1, a_2\right)\right) .<br>$$</li>
+<li>The subgame-perfect Nash equilibrium is$$(a_1^*, a_2^*, a_3^*(a_1, a_2), a_4^*(a_1, a_2)) .$$</li>
 </ul>
 </li>
 </ul>
@@ -921,7 +938,7 @@ complete information: each">
 </ul>
 <ul>
 <li>Nash equilibria that rely on non-credible threats or promises can be eliminated by the requirement of subgame perfection.</li>
-<li>Subgame-perfect Nash equilibrium is a refinement of Nash equilibrium, i.e.,<br>  ${$ Subgame-perfect Nash equilibria $} \subseteq{$ Nash equilibria $}$</li>
+<li>Subgame-perfect Nash equilibrium is a refinement of Nash equilibrium, i.e.,<br>  ${ \text{Subgame-perfect Nash equilibria} } \subseteq{ \text{Nash equilibria} }$</li>
 </ul>
 <h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><ul>
 <li>We have considered dynamic games of complete information.</li>
@@ -932,11 +949,11 @@ complete information: each">
 </li>
 <li>Backwards induction vs. SPNE.</li>
 <li>静态场景 $\rightarrow$ 静态模型 $\rightarrow$ 标准式<ul>
-<li>静态场景 $\rightarrow$ 动态模型 (带有不完美信息) $\rightarrow$ 扩展式 (没有 失去场景的特点)</li>
+<li>静态场景 $\rightarrow$ 动态模型 （带有不完美信息） $\rightarrow$ 扩展式 （没有失去场景的特点）</li>
 </ul>
 </li>
 <li>动态场景 $\rightarrow$ 动态模型 $\rightarrow$ 扩展式<ul>
-<li>动态场景 $\rightarrow$ 静态模型 $\rightarrow$ 标准式 (失去场景的动态特点)</li>
+<li>动态场景 $\rightarrow$ 静态模型 $\rightarrow$ 标准式 （失去场景的动态特点）</li>
 </ul>
 </li>
 </ul>
@@ -1075,20 +1092,20 @@ complete information: each">
 </ul>
 </li>
 <li>一阶导数：<ul>
-<li>$$q_2^<em>\left(c_H\right) &#x3D;\frac{a-q_1^</em>-c_H}{2}$$</li>
-<li>$$q_2^<em>\left(c_L\right)&#x3D;\frac{a-q_1^</em>-c_L}{2}$$</li>
-<li>$$q_1^* &#x3D;\frac{a-\theta q_2^<em>\left(c_H\right)-(1-\theta) q_2^</em>\left(c_L\right)-c}{2}$$</li>
+<li>$$q_2^*(c_H) &#x3D;\frac{a-q_1^*-c_H}{2}$$</li>
+<li>$$q_2^*(c_L)&#x3D;\frac{a-q_1^*-c_L}{2}$$</li>
+<li>$$q_1^* &#x3D;\frac{a-\theta q_2^*(c_H)-(1-\theta) q_2^*(c_L)-c}{2}$$</li>
 </ul>
 </li>
 <li>The <strong>equilibrium</strong> of this game is $\left(q_1^*,\left(q_2^<em>\left(c_H\right), q_2^</em>\left(c_L\right)\right)\right)$, where<ul>
 <li>$$q_1^* &#x3D;\frac{a-2 c+\theta c_H+(1-\theta) c_L}{3}$$</li>
-<li>$$q_2^*\left(c_H\right) &#x3D;\frac{a-2 c_H+c}{3}+\frac{1-\theta}{6}\left(c_H-c_L\right)$$</li>
-<li>$$q_2^*\left(c_L\right)&#x3D;\frac{a-2 c_L+c}{3}-\frac{\theta}{6}\left(c_H-c_L\right)$$</li>
+<li>$$q_2^*(c_H) &#x3D;\frac{a-2 c_H+c}{3}+\frac{1-\theta}{6}\left(c_H-c_L\right)$$</li>
+<li>$$q_2^*(c_L)&#x3D;\frac{a-2 c_L+c}{3}-\frac{\theta}{6}(c_H-c_L)$$</li>
 </ul>
 </li>
 </ul>
 <ul>
-<li>We know $q_2^<em>\left(c_H\right)&lt;q_2^</em>\left(c_L\right) \Rightarrow$ firm 2 produces less when its marginal cost increases.</li>
+<li>We know $q_2^*(c_H)&lt;q_2^*(c_L) \Rightarrow$ firm 2 produces less when its marginal cost increases.</li>
 </ul>
 <ul>
 <li>Firm 2 knows firm 1’s payoff function, while firm 1 does not know firm 2’s payoff functions but only knows the probability distribution. </li>
@@ -1110,12 +1127,12 @@ complete information: each">
 <h5 id="Example-2"><a href="#Example-2" class="headerlink" title="Example"></a>Example</h5><ul>
 <li>In the Cournot game with asymmetric information,<ul>
 <li>$A_{\ell}&#x3D;A_2&#x3D;[0, \infty)$</li>
-<li>$T_1&#x3D;{c}$, and $T_2&#x3D;\left{c_H, c_L\right}$<ul>
+<li>$T_1&#x3D;{c}$, and $T_2&#x3D;{c_H, c_L}$<ul>
 <li>至少是singleton</li>
 </ul>
 </li>
 <li>$p_1\left(c_H \mid c\right)&#x3D;\theta, p_1\left(c_L \mid c\right)&#x3D;1-\theta$, and $p_2\left(c \mid c_H\right)&#x3D;p_2\left(c \mid c_L\right)&#x3D;1$</li>
-<li>Payoff functions are<br>$$<br>\begin{aligned}<br>\pi_1\left(q_1, q_2 ; c\right) &amp; &#x3D;\left(a-q_1-q_2-c\right) q_1 \<br>\pi_2\left(q_1, q_2 ; c_L\right) &amp; &#x3D;\left(a-q_1-q_2-c_L\right) q_2 \<br>\pi_2\left(q_1, q_2 ; c_H\right) &amp; &#x3D;\left(a-q_1-q_2-c_H\right) q_2<br>\end{aligned}<br>$$</li>
+<li>Payoff functions are<br>$$<br>\begin{aligned}<br>\pi_1\left(q_1, q_2 ; c\right) &amp; &#x3D;\left(a-q_1-q_2-c\right) q_1 \\<br>\pi_2\left(q_1, q_2 ; c_L\right) &amp; &#x3D;\left(a-q_1-q_2-c_L\right) q_2 \\<br>\pi_2\left(q_1, q_2 ; c_H\right) &amp; &#x3D;\left(a-q_1-q_2-c_H\right) q_2<br>\end{aligned}<br>$$</li>
 </ul>
 </li>
 </ul>
@@ -1145,12 +1162,12 @@ complete information: each">
 </ul>
 <h5 id="Definition-8"><a href="#Definition-8" class="headerlink" title="Definition"></a>Definition</h5><ul>
 <li>In the static Bayesian game</li>
-<li>$G&#x3D;\left\langle A_1, \ldots, A_n ; T_1, \ldots, T_n ; p_1, \ldots, p_n ; u_1, \ldots, u_n\right\rangle$, the strategy profile $s^*&#x3D;\left(s_1^*, \ldots, s_n^<em>\right)$ are a （pure-strategy） Bayesian Nash equilibrium （贝叶斯-纳什均衡） if for each player $i$ and for each of $i$ ‘s types $t_i \in T_i, s_i^</em>\left(t_i\right)$ solves</li>
-<li>$$\max <em>{a_i \in A_i} \sum</em>{t_{-i} \in T_{-i}} u_i\left(s_{-i}^*\left(t_{-i}\right), a_i ; t_i\right) \cdot p_i\left(t_{-i} \mid t_i\right) .$$</li>
+<li>$G&#x3D;\langle A_1, \ldots, A_n ; T_1, \ldots, T_n ; p_1, \ldots, p_n ; u_1, \ldots, u_n\rangle$, the strategy profile $s^*&#x3D;(s_1^*, \ldots, s_n^*)$ are a （pure-strategy） Bayesian Nash equilibrium （贝叶斯-纳什均衡） if for each player $i$ and for each of $i$ ‘s types $t_i \in T_i, s_i^*\left(t_i\right)$ solves</li>
+<li>$$\max <em>{a_i \in A_i} \sum</em>{t_{-i} \in T_{-i}} u_i(s_{-i}^*(t_{-i}), a_i ; t_i) \cdot p_i(t_{-i} \mid t_i) .$$</li>
 <li>先验分布下不同情况的收益加权。</li>
 </ul>
 <ul>
-<li>In a general finite static Bayesian game (finite players, finite actions, and finite types), a Bayesian Nash equilibrium exists, perhaps in mixed strategies.</li>
+<li>In a general finite static Bayesian game （finite players, finite actions, and finite types）, a Bayesian Nash equilibrium exists, perhaps in mixed strategies.</li>
 </ul>
 <ul>
 <li>In a Bayesian Nash equilibrium, each player’s strategy is a best response to other players’ strategies. </li>
@@ -1204,9 +1221,9 @@ complete information: each">
 </li>
 <li><p>The normal-form representation of this static Bayesian game is $G&#x3D;\left\langle A_h, A_w ; T_h, T_p ; p_h, p_w ; u_h, u_w\right\rangle$ :</p>
 <ul>
-<li>$A_h&#x3D;A_w&#x3D;{$ Opera, Football $}$;</li>
+<li>$A_h&#x3D;A_w&#x3D;{ \text{Opera, Football} }$;</li>
 <li>$T_h&#x3D;T_w&#x3D;[0, x]$</li>
-<li>The husband believes that $t_w$ (the wife believes that $t_h$ ) is uniformly distributed on $[0, x]$;</li>
+<li>The husband believes that $t_w$ （the wife believes that $t_h$ ） is uniformly distributed on $[0, x]$;</li>
 <li>$u_h$ and $u_w$ are given before.</li>
 </ul>
 </li>
@@ -1219,7 +1236,7 @@ complete information: each">
 </li>
 </ul>
 <h5 id="解"><a href="#解" class="headerlink" title="解"></a>解</h5><ul>
-<li>Given the wife’s strategy, the husband’s expected payoffs of choosing Opera and Football are<br>$$<br>\begin{aligned}<br>u_h\left(\text { Opera, } s_w^* \mid t_h\right) &amp; &#x3D;\operatorname{Pr}\left(s_w^*&#x3D;\text { Opera }\right) \cdot 1+\operatorname{Pr}\left(s_w^*&#x3D;\text { Football }\right) \cdot 0 \<br>&amp; &#x3D;\left(1-\frac{\bar{t}_w}{x}\right) \cdot 1+\frac{\bar{t}_w}{x} \cdot 0&#x3D;1-\frac{\bar{t}_w}{x},<br>\end{aligned}<br>$$<br>and<br>$$<br>u_h\left(\text { Football, } s_w^* \mid t_h\right)&#x3D;\left(1-\frac{\bar{t}_w}{x}\right) \cdot 0+\frac{\bar{t}_w}{x} \cdot\left(2+t_h\right)&#x3D;\frac{\bar{t}_w}{x}\left(2+t_h\right) .<br>$$</li>
+<li>Given the wife’s strategy, the husband’s expected payoffs of choosing Opera and Football are<br>$$<br>\begin{aligned}<br>u_h\left(\text { Opera, } s_w^* \mid t_h\right) &amp; &#x3D;\operatorname{Pr}\left(s_w^*&#x3D;\text { Opera }\right) \cdot 1+\operatorname{Pr}\left(s_w^*&#x3D;\text { Football }\right) \cdot 0 \\<br>&amp; &#x3D;\left(1-\frac{\bar{t}_w}{x}\right) \cdot 1+\frac{\bar{t}_w}{x} \cdot 0&#x3D;1-\frac{\bar{t}_w}{x},<br>\end{aligned}<br>$$<br>and<br>$$<br>u_h\left(\text { Football, } s_w^* \mid t_h\right)&#x3D;\left(1-\frac{\bar{t}_w}{x}\right) \cdot 0+\frac{\bar{t}_w}{x} \cdot\left(2+t_h\right)&#x3D;\frac{\bar{t}_w}{x}\left(2+t_h\right) .<br>$$</li>
 <li>Thus, choosing Opera is optimal iff<br>$$<br>1-\frac{\bar{t}_w}{x} \geq \frac{\bar{t}_w}{x}\left(2+t_h\right) \Longleftrightarrow t_h \leq \frac{x}{\bar{t}_w}-3&#x3D;\bar{t}_h .<br>$$</li>
 </ul>
 <ul>
@@ -1295,14 +1312,14 @@ complete information: each">
 <li>$T_1&#x3D;T_2&#x3D;[0,1]$, and each valuation is $v_i \in T_i$;</li>
 <li>Player $i$ believes that $v_j$ is uniformly distributed on $[0,1]$;</li>
 <li>The payoff $u_i\left(b_i, b_j ; v_i\right)$ is</li>
-<li>$$u_i\left(b_i, b_j ; v_i\right)&#x3D; \begin{cases}v_i-b_i, &amp; \text { if } b_i&gt;b_j \ \frac{1}{2}\left(v_i-b_i\right), &amp; \text { if } b_i&#x3D;b_j \ 0, &amp; \text { if } b_i&lt;b_j\end{cases}$$</li>
+<li>$$u_i(b_i, b_j ; v_i)&#x3D; \begin{cases}v_i-b_i, &amp; \text { if } b_i&gt;b_j \\ \frac{1}{2}(v_i-b_i), &amp; \text { if } b_i&#x3D;b_j \\ 0, &amp; \text { if } b_i&lt;b_j\end{cases}$$</li>
 </ul>
 </li>
 </ul>
 <ul>
-<li>Bidder $i$ ‘s strategy is a function $b_i\left(v_i\right)$ from $[0,1]$ to $[0, \infty)$.</li>
-<li>$\left(b_1^<em>\left(v_1\right), b_2^</em>\left(v_2\right)\right)$ is a Bayesian Nash equilibrium if and only if for each player $i$ and each type $v_i \in[0,1], b_i^*\left(v_i\right)$ solves</li>
-<li>$$\begin{aligned}<br>&amp; \max <em>{b_i \geq 0} \mathbf{E}</em>{v_j} u_i\left(b_i, b_j^<em>\left(v_j\right) ; v_i\right) \<br>&#x3D; &amp; \max _{b_i \geq 0}\left{\left(v_i-b_i\right) \operatorname{Prob}\left[b_i&gt;b_j^</em>\left(v_j\right)\right]+\frac{v_i-b_i}{2} \operatorname{Prob}\left[b_i&#x3D;b_j^*\left(v_j\right)\right]\right} .<br>\end{aligned}$$</li>
+<li>Bidder $i$ ‘s strategy is a function $b_i(v_i)$ from $[0,1]$ to $[0, \infty)$.</li>
+<li>$(b_1^*(v_1), b_2^*(v_2))$ is a Bayesian Nash equilibrium if and only if for each player $i$ and each type $v_i \in[0,1], b_i^*\left(v_i\right)$ solves</li>
+<li>$$\begin{aligned}<br>&amp; \max <em>{b_i \geq 0} \mathbf{E}</em>{v_j} u_i(b_i, b_j^*(v_j) ; v_i) \\<br>&#x3D; &amp; \max _{b_i \geq 0}{eft(v_i-b_i) \operatorname{Prob}[b_i&gt;b_j^*(v_j)]+\frac{v_i-b_i}{2} \operatorname{Prob}[b_i&#x3D;b_j^*(v_j)]} .<br>\end{aligned}$$</li>
 </ul>
 <h4 id="Linear-Bayesian-NE"><a href="#Linear-Bayesian-NE" class="headerlink" title="Linear Bayesian NE"></a>Linear Bayesian NE</h4><ul>
 <li>可能会有许多纳什均衡，现在只考虑线性情况<ul>
@@ -1339,14 +1356,14 @@ complete information: each">
 <li>即 $a_j \leq v_i \leq a_j+2 c_j$.</li>
 </ul>
 </li>
-<li>The best response function of bidder $i$ is<br>$$<br>b_i\left(v_i\right)&#x3D; \begin{cases}a_j, &amp; \text { if } v_i \leq a_j \ \frac{1}{2}\left(v_i+a_j\right), &amp; \text { if } a_j&lt;v_i \leq a_j+2 c_j \ a_j+c_j, &amp; \text { if } v_i&gt;a_j+2 c_j .\end{cases}<br>$$</li>
+<li>The best response function of bidder $i$ is<br>$$<br>b_i\left(v_i\right)&#x3D; \begin{cases}a_j, &amp; \text { if } v_i \leq a_j \\ \frac{1}{2}\left(v_i+a_j\right), &amp; \text { if } a_j&lt;v_i \leq a_j+2 c_j \\ a_j+c_j, &amp; \text { if } v_i&gt;a_j+2 c_j .\end{cases}<br>$$</li>
 </ul>
 <ul>
 <li>We want the equilibrium bid $b_i\left(v_i\right)$ to be a linear function on $[0,1]$.</li>
 </ul>
 <ul>
 <li>There are three cases:</li>
-<li>$$[0,1] \subseteq\left{\begin{array}{l}<br>\left(-\infty, a_j\right] \<br>{\left[a_j, a_j+2 c_j\right]} \<br>{\left[a_j+2 c_j, \infty\right)}<br>\end{array}\right.$$<ul>
+<li>$$[0,1] \subseteq{\begin{array}{l}<br>(-\infty, a_j] \\<br>{[a_j, a_j+2 c_j]} \\<br>{[a_j+2 c_j, \infty)}<br>\end{array}.$$<ul>
 <li>第一种情况不满足a小于1</li>
 <li>第三种情况不满足c大于0</li>
 <li>因此只能是第二种情况，$b_i&#x3D;\frac{v_i+a_j}{2}$</li>
@@ -1359,7 +1376,7 @@ complete information: each">
 <ul>
 <li>Then we have$$a_i&#x3D;\frac{1}{2} a_j, \text { and } c_i&#x3D;\frac{1}{2}$$for $i, j&#x3D;1,2$ and $i \neq j$.</li>
 <li>Therefore,<br>$$<br>a_1&#x3D;a_2&#x3D;0, \text { and } c_1&#x3D;c_2&#x3D;\frac{1}{2} .<br>$$</li>
-<li>The unique linear Bayesian Nash equilibrium is<br>$$<br>b_1^<em>\left(v_1\right)&#x3D;\frac{1}{2} v_1, \text { and } b_2^</em>\left(v_2\right)&#x3D;\frac{1}{2} v_2<br>$$</li>
+<li>The unique linear Bayesian Nash equilibrium is$$b_1^*(v_1)&#x3D;\frac{1}{2} v_1, \text { and } b_2^*(v_2)&#x3D;\frac{1}{2} v_2$$</li>
 </ul>
 <ul>
 <li><strong>如果能直接猜出这个解，就可以直接验证。</strong></li>
@@ -1616,12 +1633,12 @@ complete information: each">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Notes/" target="_blank">
-                        <span class="chip bg-color">Notes</span>
-                    </a>
-                    
                     <a href="/tags/Finance/" target="_blank">
                         <span class="chip bg-color">Finance</span>
+                    </a>
+                    
+                    <a href="/tags/Notes/" target="_blank">
+                        <span class="chip bg-color">Notes</span>
                     </a>
                     
                 </div>
@@ -1850,7 +1867,7 @@ complete information: each">
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">46.9k</span>
+            <span class="white-color">46.8k</span>
             
 
             <br>
