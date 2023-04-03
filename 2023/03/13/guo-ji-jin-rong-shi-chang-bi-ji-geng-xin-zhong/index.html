@@ -408,14 +408,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    8.7k
+                    13.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    31 分
+                    48 分
                 </div>
                 
                 
@@ -1077,6 +1077,385 @@
 </ul>
 </li>
 </ul>
+<h4 id="国际风险分散-International-Risk-Diversification"><a href="#国际风险分散-International-Risk-Diversification" class="headerlink" title="国际风险分散 International Risk Diversification"></a>国际风险分散 International Risk Diversification</h4><ul>
+<li>与在国内分散投资组合相同，投资者可以通过持有不完全相关的证券来降低投资组合风险</li>
+<li>国际多元化在投资组合风险多元化方面具有特殊意义<ul>
+<li>与一个国家内部相比，国家间证券回报的相关性要低得多</li>
+<li>这是非常直观的，因为影响证券回报的金融、经济、政治和制度因素往往在不同国家有很大差异，导致国际证券之间的相关性相对较低<ul>
+<li>现在有改变，相关性变强了</li>
+<li>国际投资使得相关性变强</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230327142310.png" alt="全球风险因子"></li>
+<li>存在一个全球风险因子</li>
+<li>可以用Markovitz投资组合构造，具体方法见 #投资学 <ul>
+<li>我们可以将每个国家的市场（local market Index）视为一只股票，然后将投资分配到不同国家的市场组合</li>
+<li>Markowitz Portfolio Selection 在国际市场上的应用 </li>
+<li>我们在不同市场（市场投资组合）上选择最佳投资组合权重 </li>
+<li>需要的数据：每个市场的预期回报和波动性，以及市场之间的协方差（相关性） </li>
+<li>最终我们将通过优化每个的市场权重来构建一个最优的“全球（国际）市场”投资组合</li>
+</ul>
+</li>
+</ul>
+<h4 id="汇率的影响"><a href="#汇率的影响" class="headerlink" title="汇率的影响"></a>汇率的影响</h4><ul>
+<li>在之前投资组合模型中，我们没有考虑汇率的影响</li>
+<li>投资境外市场实现的收益不仅取决于境外市场收益，还取决于本外币汇率的变化 </li>
+<li>外国投资&#x2F;多元化的成功取决于外国证券市场和外汇的表现</li>
+<li>例如，对于一个美国投资者，投资于国外市场 i 的美元回报率由下式给出<ul>
+<li>$$R_{i$}&#x3D;(1+R_i)(1+e_i)-1&#x3D;R_i+e_i+R_ie_i$$</li>
+<li>e 是美元和外币之间的汇率变化率（例如，美元兑外币）</li>
+</ul>
+</li>
+<li>短期内，交叉项可以忽略<ul>
+<li>$$\bar{R_{i$}}&#x3D;\bar{R_i}+\bar{e_i}$$</li>
+<li>风险<ul>
+<li>$$Var(R_{i$})&#x3D;Var(R_i)+Var(e_i)+2Cov(R_i,e_i)$$</li>
+</ul>
+</li>
+<li>不同地区间投资收益相关性：<ul>
+<li>$$Cov(R_{i$},R_{j$})&#x3D;Cov(R_i,R_j)+Cov(e_i,e_j)+Cov(R_i,e_j)+Cov(R_j,e_i)$$</li>
+</ul>
+</li>
+<li><strong>在某些市场时，不能忽视汇率带来的风险</strong></li>
+</ul>
+</li>
+</ul>
+<h5 id="如何应对汇率风险"><a href="#如何应对汇率风险" class="headerlink" title="如何应对汇率风险"></a>如何应对汇率风险</h5><p>对冲&#x2F;不对冲（享受潜在的外汇市场风险溢价）</p>
+<h4 id="国际投资中的问题：投资者本土偏好"><a href="#国际投资中的问题：投资者本土偏好" class="headerlink" title="国际投资中的问题：投资者本土偏好"></a>国际投资中的问题：投资者本土偏好</h4><ul>
+<li>多项研究发现，投资者可以从国际多元化中获益良多 </li>
+<li>然而，投资者实际持有的投资组合与国际证券投资理论所预测的投资组合大相径庭</li>
+<li>与理论预测相比，大多数国家的个人和机构仅持有少量外国股权</li>
+<li>这就是众所周知的本土偏好之谜 （Home Bias Puzzle）</li>
+<li>自2000年代以来，本土偏好在缓慢下降</li>
+</ul>
+<h5 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h5><ul>
+<li>预期偏向（ Biased expectation）：自信<ul>
+<li>投资者对本国股票的回报过于自信，以至于他们对本国股票的预期回报高到足以证明对本国股票的超配是合理的</li>
+</ul>
+</li>
+<li>熟悉度偏差（Familiarity bias）：舒服<ul>
+<li>投资者通常对本国市场感觉更舒服并相应地分配投资，即使这会导致其投资组合的风险回报权衡较差</li>
+</ul>
+</li>
+<li>外国投资者外商投资本地公司股份的制度和法律限制<ul>
+<li>但在发达国家，这很难证明是合理的，因为它们可以相对容易地交易全球市场投资组合，例如 iShare ETF（即不需要直接持有外国股票）</li>
+</ul>
+</li>
+<li>外国证券的税收和交易&#x2F;信息成本会抑制跨境投资，导致本土偏好<ul>
+<li>许多市场相对缺乏流动性</li>
+</ul>
+</li>
+</ul>
+<p><strong>然而，国际投资也存在风险，在危机时刻国际市场的相关性反而高，全部是系统性风险，很难分散风险</strong></p>
+<p>遭受的风险反而更大了，还有国际风险</p>
+<h4 id="如何投资？"><a href="#如何投资？" class="headerlink" title="如何投资？"></a>如何投资？</h4><h5 id="包含小型公司股票"><a href="#包含小型公司股票" class="headerlink" title="包含小型公司股票"></a>包含小型公司股票</h5><ul>
+<li>为实现国际多元化，大盘股在基金配置中占据主导地位<ul>
+<li>国外市场投资组合（价值加权）往往由知名的大型跨国公司主导，尤其是在新兴市场</li>
+</ul>
+</li>
+<li>投资者也倾向于直接持有国际知名公司，这些公司或多或少是大型跨国公司<ul>
+<li>“熟悉度偏差”</li>
+</ul>
+</li>
+<li>因此，如果所在国家&#x2F;地区的市场投资组合已经包含许多大盘股，那么持有也以大盘股为主的外国市场投资组合可能无法提供良好的多元化<ul>
+<li>在中国，我们的上证综合指数由中石化、中石油、工商银行、中国银行等大公司主导。</li>
+</ul>
+</li>
+<li>$\color{red}{投资中小公司可能带来不错的投资回报}$<ul>
+<li>没有被指数覆盖，因此没有被大量公司持有</li>
+<li>风险暴露度不高</li>
+</ul>
+</li>
+<li>在各个国家地区，投资于小市值公司的基金也普遍能够产生较好的收益</li>
+</ul>
+<h5 id="考虑行业因素"><a href="#考虑行业因素" class="headerlink" title="考虑行业因素"></a>考虑行业因素</h5><ul>
+<li>对跨多个行业部门（例如美国市场）多元化的国内市场，投资从国外多元化中获益较少，更多的是考虑规模因素</li>
+<li>另一方面，如果国内市场的一个或几个行业占比较高，全球多元化可能会带来更大的好处，因为这些部门的相对影响可能会减轻<ul>
+<li>例如，持有澳大利亚市场投资组合（其中采矿和原材料是主要行业组成部分）的投资者如果决定持有巴西基金，则不太可能获得多元化收益</li>
+</ul>
+</li>
+</ul>
+<h4 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h4><ul>
+<li>目前USD在世界经济中处于统治地位，很多交易都以美元计价，各国的外汇储备也以美元为主。</li>
+<li>造成的问题是相关性上升，美国国内的风险会传导到全世界，造成世界经济不稳定。</li>
+<li>需要讨论本国的经济稳定性，以及本国的货币政策、财政政策等会不会受到USD的影响<ul>
+<li>“不可能三角”<ul>
+<li>一个国家不可能同时实现资本流动自由，货币政策的独立性和汇率的稳定性。</li>
+</ul>
+</li>
+<li>特别是对于浮动汇率国家</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="International-Cost-of-Capital"><a href="#International-Cost-of-Capital" class="headerlink" title="International Cost of Capital"></a>International Cost of Capital</h2><h3 id="Cost-of-Capital"><a href="#Cost-of-Capital" class="headerlink" title="Cost of Capital"></a>Cost of Capital</h3><ul>
+<li>见 #投资学 与 #公司金融 </li>
+<li>计算公司融资成本的主要困难在于权益资本成本（Cost of Equity），在实践中，经常使用资本资产定价模型（CAPM） 估算股权成本</li>
+<li>在国际金融市场中，CAPM存在的问题：<ul>
+<li>CAPM模型是否大致正确？</li>
+<li>是否考虑其他因子？ </li>
+<li>基于现状，很多经济体是半开放状态，如何考虑模型？</li>
+</ul>
+</li>
+</ul>
+<h4 id="分割市场与统一市场-Segmented-vs-Integrated"><a href="#分割市场与统一市场-Segmented-vs-Integrated" class="headerlink" title="分割市场与统一市场 Segmented vs Integrated"></a>分割市场与统一市场 Segmented vs Integrated</h4><ul>
+<li><p>CAPM中的市场该应用哪个市场？</p>
+</li>
+<li><p><strong>取决于市场的国际多元化水平</strong> </p>
+</li>
+<li><p>假设国际金融市场是分割的细分市场，投资者只能在国内分散投资</p>
+<ul>
+<li>那么 CAPM 中的市场组合 （M） 将代表国内市场组合</li>
+<li>资产定价的相关风险度量将是相对于国内市场组合的beta</li>
+</ul>
+</li>
+<li><p>在分割的资本市场中，相同的未来现金流可能在不同国家定价（贴现）不同</p>
+<ul>
+<li>不同国家的投资者有不同的系统性风险</li>
+</ul>
+</li>
+<li><p>假设国际金融市场完全一体化，投资者可以在国际上分散投资</p>
+</li>
+<li><p>那么 CAPM 中的市场组合将是包含世界上所有资产的“世界”市场组合</p>
+<ul>
+<li>应根据世界市场投资组合衡量相关风险指标beta</li>
+</ul>
+</li>
+<li><p>在一体化的国际金融市场中，相同的未来现金流将在任何地方以相同的方式定价（贴现）</p>
+<ul>
+<li>$\color{red}{\text{ 平均而言，投资者要求一体化下的证券预期回报低于分割下的证券，因为他们可以在整合下更好地分散风险}}$</li>
+</ul>
+</li>
+<li><p><strong>国际金融市场处于部分一体化状态（partially integrated）</strong></p>
+<ul>
+<li>因此不同国家的资金成本可能不同</li>
+</ul>
+</li>
+<li><p>几个因素</p>
+<ul>
+<li>跨境资本流动</li>
+<li>跨境上市</li>
+<li>本土偏见等。</li>
+</ul>
+</li>
+</ul>
+<h4 id="股票跨境上市"><a href="#股票跨境上市" class="headerlink" title="股票跨境上市"></a>股票跨境上市</h4><ul>
+<li>公司可以降低股权成本</li>
+<li>上市通常导致的负面股价反应会减少</li>
+</ul>
+<h5 id="不寻求海外上市的原因"><a href="#不寻求海外上市的原因" class="headerlink" title="不寻求海外上市的原因"></a>不寻求海外上市的原因</h5><ul>
+<li><p>满足监管机构规定的披露和上市要求可能代价高昂</p>
+</li>
+<li><p>一旦一家公司的股票在海外市场交易，这些市场就会出现波动溢出效应</p>
+<ul>
+<li>例如，本国的经济金融风险，叠加上市地区国家的经济金融风险</li>
+<li>双重风险</li>
+</ul>
+</li>
+<li><p>一旦一家公司的股票可供外国人使用，他们可能会获得控股权并挑战公司在国内的控制权（不受欢迎的敌意收购）</p>
+</li>
+<li><p><strong>在具有正NPV的情况下才会选择外国上市</strong></p>
+</li>
+</ul>
+<h5 id="实证研究"><a href="#实证研究" class="headerlink" title="实证研究"></a>实证研究</h5><ul>
+<li>在广泛的文献调查中，Karolyi (1996) 发现：<ul>
+<li>股价对跨境上市反应良好</li>
+<li>上市后总交易量平均增加，而且，对于许多股票，国内市场交易量也增加</li>
+<li>股票交易流动性整体改善</li>
+<li>股票对国内市场风险的敞口显着降低，与全球市场风险的小幅增加有关<ul>
+<li>整体风险降低（风险分散）</li>
+<li>本地风险与外部风险可能抵消一部分</li>
+</ul>
+</li>
+<li>跨境上市导致股本成本平均净减少1.4% </li>
+<li><strong>看起来平均而言股票对跨境上市是正NPV项目</strong></li>
+</ul>
+</li>
+<li>Lau、Ng 和 Zhang（2010） 记录了不同国家的股权资本成本确实存在很大差异<ul>
+<li>他们首先计算一个国家的本土偏见程度（home bias）</li>
+<li>然后计算所谓的“隐性资本成本”（ICOC）作为该国资本成本的替代指标，同时考虑本土偏见的程度</li>
+<li>然后将该国所有样本公司的价值加权 ICOC 估计用作该国的ICOC<ul>
+<li>没有通过CAPM计算，而是通过分析师研报计算</li>
+</ul>
+</li>
+<li><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230403144907.png" alt="很强的正相关性"></li>
+<li>资本的隐性成本与本土偏向程度呈正相关。更高的本土偏见与更高的资本成本相关</li>
+<li>当一个国家表现出高度的本土偏见时，全球风险分担机制就会受到阻碍，从而增加该国的资本成本</li>
+<li>在完美的市场中，公司对在国外还是在国内筹集资金无差异<ul>
+<li>当市场不完善时，国际融资可以降低公司的资本成本</li>
+</ul>
+</li>
+<li>这表明公司可以通过股权结构国际化来降低股权成本</li>
+</ul>
+</li>
+</ul>
+<h3 id="International-CAPM"><a href="#International-CAPM" class="headerlink" title="International CAPM"></a>International CAPM</h3><h4 id="CAPM回顾"><a href="#CAPM回顾" class="headerlink" title="CAPM回顾"></a>CAPM回顾</h4><ul>
+<li>$$R_i&#x3D;\beta_iR_M&#x3D;\frac{R_M}{Var(R_M)}cov(R_i,R_M)&#x3D;\lambda_Mcov(R_i,R_M)$$<ul>
+<li>$R_i$ : asset i’s risk premium</li>
+<li>$\lambda_M$ : the price of market risk.市场风险价格水平。<ul>
+<li>Merton （1980） argues that $\lambda_M$ is a measure of the representative investor’s relative risk aversion.</li>
+<li>平均投资者风险厌恶程度。</li>
+</ul>
+</li>
+<li>注：<ul>
+<li>$$\color{red}{E(R_M)&#x3D;\bar{A}\sigma_M^2}$$</li>
+<li>这里的 $\bar{A}$ 就是 $\lambda_M$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="International-CAPM-1"><a href="#International-CAPM-1" class="headerlink" title="International CAPM"></a>International CAPM</h4><ul>
+<li><p>正如从投资组合理论MPT到CAPM模型的演化，在国际金融市场，同样有必要了解资产在不同市场制度环境下的定价方式</p>
+</li>
+<li><p>所以我们需要一个模型 – International CAPM</p>
+</li>
+<li><p>假设，在这个世界上一些资产可以国际交易而另一些则不能</p>
+<ul>
+<li>例如，交叉上市资产是国际可交易资产，而所有其他资产是国际不可交易资产（只能在国内交易）</li>
+</ul>
+</li>
+<li><p>假设世界上有两个国家，本国和外国</p>
+</li>
+<li><p><strong>在完全分割的资本市场中</strong></p>
+<ul>
+<li>没有资产可以国际交易，所有资产都根据各自国家的系统风险定价 </li>
+<li>本国资产 i：$R_i&#x3D;\lambda_Dcov(R_i,R_D)$<ul>
+<li>“D” 表示本国市场组合</li>
+</ul>
+</li>
+<li>外国资产 j: $R_j&#x3D;\lambda_Fcov(R_i,R_F)$<ul>
+<li>“F” 表示外国市场组合</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>假设两国利率相同</p>
+</li>
+<li><p><strong>在所有资产都可以国际交易的完全一体化的世界资本市场中</strong></p>
+<ul>
+<li>所有资产都将根据世界系统性风险定价 </li>
+<li>对于国内和国外资产，$R_i&#x3D;\lambda_Wcov(R_i,R_W)$<ul>
+<li>其中“W” 表示世界市场（投资组合）</li>
+<li>上一讲讨论了使用MSCI index作为世界市场投资组合</li>
+<li>国际市场的融资成本要比国内市场低</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>在部分一体化的世界金融市场中</strong></p>
+<ul>
+<li>国际可交易资产（internationally tradable）的定价就像世界金融市场完全一体化一样。</li>
+<li>如果一项资产可以在国际上交易，那么它的特殊风险可以在世界市场投资组合中分散</li>
+<li>对于本国的非国际化交易资产（non-tradable assets），定价关系为 $\color{red}{R_i&#x3D;\lambda_Wcov(R_i,R_W)+R_i&#x3D;\lambda_D(cov(R_i,R_D)-cov^*(R_i,R_D))}$</li>
+<li>$cov^*(R_i,R_D)$ 是间接协方差，通过可国际交易资产产生<ul>
+<li>$cov^*(R_i, R_D) &#x3D; \sigma_i\sigma_D\rho_{iT}\rho_{TD}$</li>
+<li>$\rho_{iT}$ 是资产 i 与可交易资产组合T的相关性</li>
+<li>$\rho_{TD}$ 是资产组合T与市场组合D的相关性</li>
+</ul>
+</li>
+<li>即，不可交易资产的定价包括两部分：间接的世界市场风险和本国市场风险除去间接部分。</li>
+<li>尽管不可交易资产仅在国内交易，但它们是根据间接世界系统性风险以及特定国家的系统性风险定价的</li>
+<li>不可交易资产的这种部分国际定价是由于课交易资产的定价溢出效应<ul>
+<li>使之相关了</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>尽管不可交易资产仅由国内投资者持有，但由于可交易资产的溢出效应，它们的定价也受国际市场风险影响</p>
+</li>
+<li><p>因此只有当它们与交易资产完全不相关时，非交易资产不会受到溢出效应的影响</p>
+</li>
+<li><p>另一方面，如果可以使用可交易资产准确复制国内和国外市场投资组合，所有资产都等同于在国际市场上定价，就好像世界金融市场完全一体化一样</p>
+</li>
+<li><p>对国际资产上市的影响：</p>
+<ul>
+<li>国际上市，资产可流通，直接接轨国际资本市场</li>
+<li>拥有不可交易资产的公司基本上可以从拥有可交易资产的公司那里搭便车，因为它可以从较低资本成本的溢出效应中获益，而不会产生任何相关成本</li>
+</ul>
+</li>
+<li><p>定价溢出效应表明，为了最大限度地从资本市场的部分一体化中获益，一个国家应该选择在国际上交叉上市那些与国内市场投资组合相关性最高的资产。当然，这很困难</p>
+</li>
+</ul>
+<h4 id="Case-Study"><a href="#Case-Study" class="headerlink" title="Case Study"></a>Case Study</h4><ul>
+<li><p>在这个案例研究中，我们想说明，即使交叉上市，公司股票的定价（和回报）也可能不像国际 CAPM 所建议的那样简单 </p>
+</li>
+<li><p>可能存在所谓的“Siamese Twins”现象：同一只股票在不同地方交易产生两个不同“版本” </p>
+</li>
+<li><p>Royal Dutch Shell plc （RDS），俗称壳牌，是一家总部位于荷兰并在英国注册成立的英荷跨国石油和天然气公司， RDS 于 1907 年由荷兰皇家石油公司和英国壳牌运输贸易公司合并而成，他们同意以 60:40 的比例合并他们的权益</p>
+</li>
+<li><p>荷兰皇家股票主要在美国 （NYSE） 和荷兰交易，壳牌股票主要在伦敦 （LSE） 和美国 （NYSE）交易</p>
+</li>
+<li><p>由于交叉上市，荷兰皇家和壳牌的股价（总市值）在根据汇率差异和已发行股票总数进行调整后，应该以 60:40 的相同比例交易</p>
+</li>
+<li><p><strong>最终的结果就是看起来存在套利机会，价差存在超过10个百分点的情况</strong></p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230403160315.png" alt="stock price of RD relative to shell"></p>
+</li>
+<li><p>为什么存在这种套利机会？</p>
+</li>
+<li><p>制度因素</p>
+<ul>
+<li>税收政策</li>
+<li>股息的自由裁量权<ul>
+<li>两家公司均未将所有已分配的集团收益作为股东股息支付。</li>
+</ul>
+</li>
+<li>母公司支出之间的差异<ul>
+<li>如果支出与 60&#x2F;40 比率大幅偏离，则股东的净收入也会偏离</li>
+</ul>
+</li>
+<li>汇率波动<ul>
+<li>股息由双方在同一天宣布。届时，荷兰皇家（壳牌）的股息分配将按现行即期汇率转换为本地货币。在公告日期和支付日期之间，汇率的波动会改变支付给荷兰皇家和壳牌股东的股息的相对价值。</li>
+</ul>
+</li>
+<li><strong>均不能显著解释差异</strong></li>
+</ul>
+</li>
+<li><p>地域因素</p>
+<ul>
+<li>标准普尔 500 指数与其他国际市场相比的强劲表现可能解释了部分溢价<ul>
+<li>荷兰皇家在标准普尔 500 指数中，壳牌在富时 100 指数中 1995 年期间，标准普尔 500 指数的总回报率为 37.84%，富时 100 指数的总回报率为 17.58%</li>
+</ul>
+</li>
+<li>但如果是这种情况，则意味着 RDS 交易的市场只是部分整合<ul>
+<li>即使交叉上市，RDS 股票也没有按照国际 CAPM 预测，在国际 CAPM 中，交叉上市股票的定价就好像世界市场完全整合一样</li>
+<li>这实际上表明，RDS 股票在部分一体化的全球市场中更接近于非流通股</li>
+</ul>
+</li>
+<li><strong>需要检验CAPM</strong><ul>
+<li>原假设：“双胞胎”公司价格应该与本地市场因素都不相关</li>
+<li>另一种假设是，市场是分割的，因此本地市场冲击可以解释价格差异，这被称为“过度联动（Excess Comovement）”</li>
+</ul>
+</li>
+<li>实证结果强烈拒绝交叉上市和国际 CAPM 所暗示的完美整合假设</li>
+<li><strong>几乎所有系数结果都符合分割市场的条件</strong></li>
+</ul>
+</li>
+<li><p>那么，如何解释存在交叉上市且没有可以防止套利的明确制度因素的明显分割市场呢？</p>
+<ul>
+<li>一种解释是，追踪标准普尔 500 指数的美国指数共同基金被迫购买更昂贵的荷兰皇家，甚至表现与标准普尔500 指数相比较的活跃的大型美国共同基金经理可能倾向于拥有皇家荷兰而不是更便宜的双胞胎公司-壳牌<ul>
+<li><strong>存在大量被动投资者只购买指数，因此超买S&amp;P500，导致这些公司相关性过强</strong></li>
+<li>不能解释为什么套利者没有试图通过套利来消除持续的偏差，因为不存在卖空障碍或对套利者行为的其他限制</li>
+</ul>
+</li>
+<li>第二种解释是，除了这些制度因素外，套利也有局限性<ul>
+<li>通常，对于套利者（对冲基金），他们的表现是在短期内衡量的，例如1个月或3个月 • 但定价偏差的逆转可能需要更长的时间才能发生， 例如在 6 个月的时间内，这比套利者的可容忍（投资）期限更长</li>
+<li>因为要立即套利掉偏差，套利者需要协调行动，如果他们在不同国家（美国、英国、荷兰），这可能会很困难</li>
+<li>因此，如果一位套利者单独行动，可能什么都不会发生，如果他这样做并且价格没有恢复，他&#x2F;她就会亏钱</li>
+<li>因此，如果没有协调，套利者可能根本不想单独行动</li>
+</ul>
+</li>
+<li>第三种解释是投资者情绪的变化（行为偏差）<ul>
+<li>不同时期，投资者对本地股票有不同的兴奋点</li>
+<li>因此，在 90 年代，人们对美国股票过于兴奋，只是认为美国股票（荷兰皇家）的表现将大大优于英国股票（壳牌），而忽略了基本面（即使 RDS 的现金流相同）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
             </div>
             <hr />
@@ -1566,7 +1945,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">37.2k</span>
+            <span class="white-color">42.2k</span>
             
 
             <br>
