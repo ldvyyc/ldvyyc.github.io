@@ -367,12 +367,12 @@ Estimating economic relations">
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/Notes/" target="_blank">
-                            <span class="chip bg-color">Notes</span>
-                        </a>
-                        
                         <a href="/tags/Finance/" target="_blank">
                             <span class="chip bg-color">Finance</span>
+                        </a>
+                        
+                        <a href="/tags/Notes/" target="_blank">
+                            <span class="chip bg-color">Notes</span>
                         </a>
                         
                     </div>
@@ -758,7 +758,7 @@ Estimating economic relations">
 <h4 id="Interpretation"><a href="#Interpretation" class="headerlink" title="Interpretation"></a>Interpretation</h4><ul>
 <li><p>The coeicient of $x_i$ represents holding fixed other factors, the change in y when $x_i$ increases by one unit.</p>
 </li>
-<li><p>$$\Delta\hat{y}&#x3D;\hat{\beta}<em>{1}\Delta x</em>{1}+\hat{\beta}<em>{2}\Delta x</em>{2}+\ldots+\hat{\beta}<em>{k}\Delta x</em>{k}.$$</p>
+<li><p>$$\Delta\hat{y}&#x3D;\hat{\beta}_1 \Delta x_1+\hat{\beta}_2 \Delta x_2+\cdots+\hat{\beta}_k \Delta x_k$$</p>
 </li>
 <li><p>求 $\hat{\beta_j}$: Frisch-Waugh-Lovell Theorem</p>
 <ul>
@@ -851,13 +851,34 @@ Estimating economic relations">
 </li>
 </ul>
 <h3 id="Practical-issues"><a href="#Practical-issues" class="headerlink" title="Practical issues"></a>Practical issues</h3><h4 id="Omitted-bias"><a href="#Omitted-bias" class="headerlink" title="Omitted bias"></a>Omitted bias</h4><ul>
-<li>假设有两个自变量，但只对其中一个进行回归，那么得到的$\hat{\beta}$ 与实际值有一个误差。</li>
-<li>$E(\tilde{\beta}<em>{1})&#x3D;\beta</em>{1},+,\beta_{2}\tilde{\delta}_{1}.$</li>
-<li>thus, $Bias(\tilde{\beta_1})&#x3D;\beta_{2}\tilde{\delta}_{1}$<br>|     | $Corr(x_1,x_2)&gt;0$   | $Corr(x_1,x_2)&lt;0$   |</li>
-</ul>
-<p>| — | ——————- | ——————- |<br>| $\beta_2&gt;0$    | Positive Bias | Negative Bias |<br>| $\beta_2&lt;0$    | Negative Bias | Positive Bias |</p>
-<ul>
-<li>影响无偏性</li>
+<li><p>假设有两个自变量，但只对其中一个进行回归，那么得到的$\hat{\beta}$ 与实际值有一个误差。</p>
+</li>
+<li><p>$E(\tilde{\beta}_1)&#x3D;\beta_1+\beta_2\tilde{\delta}_1$</p>
+</li>
+<li><p>thus, $Bias(\tilde{\beta_1})&#x3D;\beta_{2}\tilde{\delta}_{1}$</p>
+</li>
+<li><table>
+<thead>
+<tr>
+<th></th>
+<th>$Corr(x_1,x_2)&gt;0$</th>
+<th>$Corr(x_1,x_2)&lt;0$</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$\beta_2&gt;0$</td>
+<td>Positive Bias</td>
+<td>Negative Bias</td>
+</tr>
+<tr>
+<td>$\beta_2&lt;0$</td>
+<td>Negative Bias</td>
+<td>Positive Bias</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>影响无偏性</p>
+</li>
 </ul>
 <h4 id="including-irrelavent"><a href="#including-irrelavent" class="headerlink" title="including irrelavent"></a>including irrelavent</h4><ul>
 <li>不影响无偏性，但方差会变大</li>
@@ -883,12 +904,12 @@ Estimating economic relations">
 </li>
 <li><p>在CLM条件下，$\beta$ 服从正态分布</p>
 <ul>
-<li>$$\frac{\hat{\beta}<em>{j}-\beta</em>{j}}{sd(\hat{\beta}_{j})}\sim Normal(0,1)$$</li>
+<li>$$\frac{\hat{\beta}_j-\beta_j}{sd(\hat{\beta}_j)}\sim Normal(0,1)$$</li>
 </ul>
 </li>
 <li><p>但由于实际中标准差不知道，需要用标准误来算。</p>
 <ul>
-<li>$$\frac{\hat{\beta_{j}}-\beta_{j}}{s e(\hat{\beta}<em>{j})}\ \sim\ t</em>{N-k-1}\ &#x3D;\ t_{d f},$$</li>
+<li>$$\frac{\hat{\beta_j}-\beta_j}{s e(\hat{\beta}<em>j)}\sim t</em>{N-k-1}&#x3D; t_{d f},$$</li>
 <li>服从t分布，N-k-1是自由度，N是多少个样本，k是回归里面有多少个x</li>
 </ul>
 </li>
@@ -911,11 +932,10 @@ Estimating economic relations">
 </li>
 <li>我们的想法是先固定一个significance level，确定对type 1 error 的容忍度，然后再最小化 type 2 error</li>
 </ul>
-<p>$$<br>\frac{\hat{\beta{J}}<em>{j}-\beta</em>{j}}{s e(\hat{\beta}_{j})}<br>$$</p>
 <h4 id="Testing-Against-One-Sided-Alternatives"><a href="#Testing-Against-One-Sided-Alternatives" class="headerlink" title="Testing Against One-Sided Alternatives"></a>Testing Against One-Sided Alternatives</h4><ul>
 <li>Suppose we are interested in testing<br>$$<br>\begin{array}{ll}<br>H_0: &amp; \beta_j&#x3D;0 . \\<br>H_1: &amp; \beta_j&gt;0 .<br>\end{array}<br>$$</li>
 <li>Consider a test statistic:$$\frac{\hat{\beta}_j-\beta_j}{\operatorname{se(}(\hat{\beta}_j)}$$</li>
-<li>When $H_0$ is true, the test statistic is:$$\frac{\hat{\beta}<em>j}{s e(\hat{\beta}<em>j)} \sim t</em>{N-k-1}&#x3D;t</em>{d f} .$$</li>
+<li>When $H_0$ is true, the test statistic is: $$\frac{\hat{\beta}<em>j}{s e(\hat{\beta}<em>j)} \sim t</em>{N-k-1}&#x3D;t</em>{df}$$</li>
 </ul>
 <ol>
 <li>It depends on the data.</li>
@@ -2104,12 +2124,12 @@ Estimating economic relations">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Notes/" target="_blank">
-                        <span class="chip bg-color">Notes</span>
-                    </a>
-                    
                     <a href="/tags/Finance/" target="_blank">
                         <span class="chip bg-color">Finance</span>
+                    </a>
+                    
+                    <a href="/tags/Notes/" target="_blank">
+                        <span class="chip bg-color">Notes</span>
                     </a>
                     
                 </div>
@@ -2156,12 +2176,12 @@ Estimating economic relations">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Notes/" target="_blank">
-                        <span class="chip bg-color">Notes</span>
-                    </a>
-                    
                     <a href="/tags/Finance/" target="_blank">
                         <span class="chip bg-color">Finance</span>
+                    </a>
+                    
+                    <a href="/tags/Notes/" target="_blank">
+                        <span class="chip bg-color">Notes</span>
                     </a>
                     
                 </div>
