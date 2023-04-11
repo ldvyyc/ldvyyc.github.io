@@ -1332,15 +1332,15 @@ Estimating economic relations">
 <ul>
 <li>Let $\mathbf{x}$ denote all the explanatory variables. Conditional on $\mathbf{x}, E\left(u_i &#x2F; \sqrt{h_i} \mid \mathbf{x}\right)&#x3D;E\left(u_i \mid \mathbf{x}\right) &#x2F; \sqrt{h_i}&#x3D;0$.</li>
 <li>$\operatorname{Var}\left(u_i &#x2F; \sqrt{h_i} \mid \mathbf{x}\right)&#x3D;\sigma^2$, satisfying homoskedasticity.</li>
-<li>Denote the OLS estimator after the transformation as $\left{\beta_j^*\right}$</li>
-<li>We can prove that $\left{\beta_j^*\right}$ minimizes$$\sum_{i&#x3D;1}^N\left(y_i-b_0-b_1 x_{i 1}-\ldots-b_k x_{i k}\right)^2 &#x2F; h_i$$</li>
+<li>Denote the OLS estimator after the transformation as ${\beta_j^*}$</li>
+<li>We can prove that ${\beta_j^*}$ minimizes$$\sum_{i&#x3D;1}^N(y_i-b_0-b_1 x_{i 1}-\cdots-b_k x_{i k})^2 &#x2F; h_i$$</li>
 <li>Weighted least squares estimator（WLS）: <ul>
 <li>the weight for each $\hat{u}_i$ is $1 &#x2F; h_i$. We give less weight for observations with higher variance. Intuitively, they provide less information.</li>
 </ul>
 </li>
-<li>$\left{\beta_j^*\right}$ is still one estimator for the original model, and have the same interpretation</li>
-<li>Because $\left{\beta_j^*\right}$ satisfies MLR.1-MLR.5, so it is BLUE under heteroskedasticity with the form $\sigma_i^2&#x3D;\sigma^2 h_i$</li>
-<li>$\left{\beta_j^*\right}$ is also called generalized least squares estimators （GLS）</li>
+<li>${\beta_j^*}$ is still one estimator for the original model, and have the same interpretation</li>
+<li>Because ${\beta_j^*}$ satisfies MLR.1-MLR.5, so it is BLUE under heteroskedasticity with the form $\sigma_i^2&#x3D;\sigma^2 h_i$</li>
+<li>${\beta_j^*}$ is also called generalized least squares estimators （GLS）</li>
 </ul>
 <h4 id="Feasible-Generalized-Least-Squares-（FGLS）"><a href="#Feasible-Generalized-Least-Squares-（FGLS）" class="headerlink" title="Feasible Generalized Least Squares （FGLS）"></a>Feasible Generalized Least Squares （FGLS）</h4><ul>
 <li>实际中需要估计 $h_i$</li>
@@ -1369,7 +1369,7 @@ Estimating economic relations">
 </ul>
 <ul>
 <li>two solutions for heteroskedasticity:<ul>
-<li>Use OLS to estiamte the model, calculate the robust standard errors (or use the max of the conventional s.e. and robust s.e.)</li>
+<li>Use OLS to estiamte the model, calculate the robust standard errors （or use the max of the conventional s.e. and robust s.e.）</li>
 <li>Use FGLS to estimate the model, report conventional s.e. or robust s.e.</li>
 </ul>
 </li>
@@ -1400,7 +1400,7 @@ Estimating economic relations">
 <li>random sampling is often violated</li>
 </ul>
 <h4 id="Classical-Assumptions-about-Time-Series-Data"><a href="#Classical-Assumptions-about-Time-Series-Data" class="headerlink" title="Classical Assumptions about Time Series Data"></a>Classical Assumptions about Time Series Data</h4><ol>
-<li>The stochastic process $\left{\left(x_{t 1}, \ldots, x_{t k}, y_t\right): t&#x3D;1,2, \ldots, T\right}$ follows the linear model:$$y_t&#x3D;\beta_0+\beta_1 x_{t 1}+\ldots+\beta_k x_{t k}+u_t$$</li>
+<li>The stochastic process ${(x_{t 1}, \ldots, x_{t k}, y_t): t&#x3D;1,2, \ldots, T}$ follows the linear model:$$y_t&#x3D;\beta_0+\beta_1 x_{t 1}+\ldots+\beta_k x_{t k}+u_t$$</li>
 <li>No perfect collinearity.</li>
 <li>Zero conditional mean.$$E(u_t \mid \mathbf{X})&#x3D;0, t&#x3D;1,2, \ldots, T$$<ul>
 <li>where $\mathbf{X}$ is the explanatory variables for all time periods.</li>
@@ -1449,19 +1449,19 @@ Estimating economic relations">
 </ul>
 <ol>
 <li>Estimate the model using OLS and obtain the OLS residuals $\hat{u}_t$</li>
-<li>Use OLS to estimate $\hat{u}<em>t \sim \hat{u}</em>{t-1}$ and obtain $\hat{\rho}$.</li>
-<li>Calculate $\tilde{y}<em>t&#x3D;y_t-\hat{\rho} y</em>{t-1}$ and $\tilde{x}<em>t&#x3D;x_t-\hat{\rho} x</em>{t-1}$, then use OLS to regress $\tilde{y}_t$ on $\tilde{x}_t$.</li>
+<li>Use OLS to estimate $\hat{u_t} \sim \hat{u_{t-1}}$ and obtain $\hat{\rho}$.</li>
+<li>Calculate $\tilde{y_t}&#x3D;y_t-\hat{\rho} y_{t-1}$ and $\tilde{x_t}&#x3D;x_t-\hat{\rho} x_{t-1}$, then use OLS to regress $\tilde{y_t}$ on $\tilde{x_t}$.</li>
 </ol>
 <h5 id="Serial-Correlation-Robust-Inference-after-OLS"><a href="#Serial-Correlation-Robust-Inference-after-OLS" class="headerlink" title="Serial Correlation-Robust Inference after OLS"></a>Serial Correlation-Robust Inference after OLS</h5><ul>
 <li>了解即可，记住HAC（heteroskedasticity and auto-correlation consistent）</li>
-<li>We can show that$$A \operatorname{Var}(\hat{\beta}<em>1)&#x3D;(\sum</em>{t&#x3D;1}^T E(r_t^2))^{-2} \operatorname{Var}(\sum_{t&#x3D;1}^T r_t u_t)$$where $r_t$ is the error term in $x_{t 1}&#x3D;\delta_0+\delta_2 x_{t 2}+\ldots+\delta_k x_{t k}+r_t$. We want to find and estimator for $A \operatorname{Var}(\hat{\beta}_1)$.</li>
+<li>We can show that$$AVar(\hat{\beta_1})&#x3D;(\sum_{t&#x3D;1}^T E(r_t^2))^{-2} Var(\sum_{t&#x3D;1}^T r_t u_t)$$where $r_t$ is the error term in $x_{t 1}&#x3D;\delta_0+\delta_2 x_{t 2}+\ldots+\delta_k x_{t k}+r_t$. We want to find and estimator for $A \operatorname{Var}(\hat{\beta}_1)$.</li>
 <li>Let $\hat{r}_t$ denote the residuals from regressing $x_1$ on all other independent variables, and $\hat{u}_t$ as the OLS residual from regressing $y$ on all $x$.</li>
-<li>Define$$\hat{\nu}&#x3D;\sum_{t&#x3D;1}^T \hat{a}<em>t^2+2 \sum</em>{h&#x3D;1}^g[1-h &#x2F;(g+1)](\sum_{t&#x3D;h+1}^T \hat{a}_t \hat{a}_{t-h}),$$where $\hat{a}_t&#x3D;\hat{r}_t \hat{u}_t$.</li>
-<li>Then$$s e(\hat{\beta}_1)&#x3D;[s e_c(\hat{\beta}_1) &#x2F; \hat{\sigma}]^2 \sqrt{\hat{\nu}}$$where $s e_c\left(\hat{\beta}_1\right)$ is the conventional standard error of $\hat{\beta}_1$, and $\hat{\sigma}$ is the square root of the sum of the OLS residual squared.</li>
+<li>Define$$\hat{\nu}&#x3D;\sum_{t&#x3D;1}^T \hat{a_t}^2+2 \sum_{h&#x3D;1}^g[1-h &#x2F;(g+1)](\sum_{t&#x3D;h+1}^T \hat{a_t} \hat{a_{t-h}}),$$where $\hat{a_t}&#x3D;\hat{r_t} \hat{u_t}$.</li>
+<li>Then$$s e(\hat{\beta_1})&#x3D;[se_c(\hat{\beta_1}) &#x2F; \hat{\sigma}]^2 \sqrt{\hat{\nu}}$$where $se_c(\hat{\beta_1})$ is the conventional standard error of $\hat{\beta}_1$, and $\hat{\sigma}$ is the square root of the sum of the OLS residual squared.</li>
 <li>We use $g$ to capture how much serial correlation we are allowing in computing the standard error.</li>
 <li>For annual data, choose $g&#x3D;1$ or $g&#x3D;2$</li>
 <li>Use a larger $g$ for larger sample size.</li>
-<li>When $g&#x3D;1$,$$\hat{\nu}&#x3D;\sum_{t&#x3D;1}^T \hat{a}<em>t^2+\sum</em>{t&#x3D;2}^T(\hat{a}<em>t \hat{a}</em>{t-1})$$</li>
+<li>When $g&#x3D;1$,$$\hat{\nu}&#x3D;\sum_{t&#x3D;1}^T \hat{a_t}^2+\sum_{t&#x3D;2}^T(\hat{a_t} \hat{a_{t-1}})$$</li>
 <li>This formula is robust to arbitrary serial correlation and arbitrary heteroskedasticity. So people sometimes call this heteroskedasticity and auto-correlation consistent, or HAC, standard errors.</li>
 </ul>
 <h3 id="Spatial-Correlation"><a href="#Spatial-Correlation" class="headerlink" title="Spatial Correlation"></a>Spatial Correlation</h3><h4 id="Data-with-group-structure"><a href="#Data-with-group-structure" class="headerlink" title="Data with group structure"></a>Data with group structure</h4><ul>
