@@ -409,7 +409,7 @@ Estimating economic relations">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    13.4k
+                    13.3k
                 </div>
                 
 
@@ -935,7 +935,7 @@ Estimating economic relations">
 <h4 id="Testing-Against-One-Sided-Alternatives"><a href="#Testing-Against-One-Sided-Alternatives" class="headerlink" title="Testing Against One-Sided Alternatives"></a>Testing Against One-Sided Alternatives</h4><ul>
 <li>Suppose we are interested in testing<br>$$<br>\begin{array}{ll}<br>H_0: &amp; \beta_j&#x3D;0 . \\<br>H_1: &amp; \beta_j&gt;0 .<br>\end{array}<br>$$</li>
 <li>Consider a test statistic:$$\frac{\hat{\beta}_j-\beta_j}{\operatorname{se(}(\hat{\beta}_j)}$$</li>
-<li>When $H_0$ is true, the test statistic is: $$\frac{\hat{\beta}<em>j}{s e(\hat{\beta}<em>j)} \sim t</em>{N-k-1}&#x3D;t</em>{df}$$</li>
+<li>When $H_0$ is true, the test statistic is: $$\frac{\hat{\beta_j}}{s e(\hat{\beta_j})} \sim t_{N-k-1}&#x3D;t_{df}$$</li>
 </ul>
 <ol>
 <li>It depends on the data.</li>
@@ -1185,7 +1185,7 @@ Estimating economic relations">
 <li>Therefore, the variance of the prediction error (conditional on all in-sample values of the independent variables) is:<br>$$<br>\operatorname{Var}(\hat{e}^0)&#x3D;\operatorname{Var}(\hat{y}^0)+\operatorname{Var}(u^0)&#x3D;\operatorname{Var}(\hat{y}^0)+\sigma^2 .<br>$$</li>
 </ul>
 <ul>
-<li>The standard error of $\hat{e}^0$ is:<br>$$<br>\operatorname{se}\left(\hat{e}^0\right)&#x3D;\left{\left[\operatorname{se}\left(\hat{y}^0\right)\right]^2+\hat{\sigma}^2\right}^{1 &#x2F; 2} .<br>$$</li>
+<li>The standard error of $\hat{e}^0$ is:$$se(\hat{e}^0)&#x3D;{[se(\hat{y}^0)]^2+\hat{\sigma}^2}^{1 &#x2F; 2}$$</li>
 <li>The prediction interval for $y^0$ is<br>$$<br>\sqrt{\hat{y}^0 \pm c \cdot s e\left(\hat{e}^0\right)}<br>$$</li>
 </ul>
 <h2 id="Ch7-Multiple-Regression-Analysis-with-Qualitative-Information"><a href="#Ch7-Multiple-Regression-Analysis-with-Qualitative-Information" class="headerlink" title="Ch7 Multiple Regression Analysis with Qualitative Information"></a>Ch7 Multiple Regression Analysis with Qualitative Information</h2><h3 id="A-Single-Dummy-Independent-Variable"><a href="#A-Single-Dummy-Independent-Variable" class="headerlink" title="A Single Dummy Independent Variable"></a>A Single Dummy Independent Variable</h3><ul>
@@ -1195,7 +1195,7 @@ Estimating economic relations">
 </li>
 <li><p>假设 $$\text { wage }&#x3D;\beta_0+\delta_0 \text { female }+u$$</p>
 </li>
-<li><p>If we estimate the model using OLS$$\begin{aligned}<br>&amp; \hat{\beta}<em>0&#x3D;\overline{w a g e}</em>{m e n} \\<br>&amp; \hat{\delta}<em>0&#x3D;\overline{w a g e}</em>{\text {women }}-\overline{w a g e}_{m e n} .<br>\end{aligned}$$</p>
+<li><p>If we estimate the model using OLS$$\begin{aligned}<br>&amp; \hat{\beta_0}&#x3D;\overline{w a g e}<em>{m e n} \\<br>&amp; \hat{\delta_0}&#x3D;\overline{w a g e}</em>{women}-\overline{w a g e}_{m e n}\end{aligned}$$</p>
 </li>
 <li><p>If we regress $y$ on a dummy variable $x$, then the OLS estimate of the intercept represents the sample average of $y$ when $x&#x3D;0$, the OLS estimate of the slope coefficient represents the difference between the sample average of $y$ when $x&#x3D;1$ and $x&#x3D;0$.</p>
 </li>
@@ -1233,8 +1233,8 @@ Estimating economic relations">
 <li><p>注意如果一个变量只能在几个离散值之间选择，最好把每个值的情况独立成一个哑元，否则相当于暗示了斜率变化是线性的。</p>
 <ul>
 <li>例如CR可以取0，1，2，3，4</li>
-<li>$$M B R&#x3D;\beta_0+\beta_1 C R+\text { other factors }+u \text {. }$$</li>
-<li>$$M B R&#x3D;\beta_0+\delta_1 C R 1+\delta_2 C R 2+\delta_3 C R 3+\delta_4 C R 4+\text{other factors}+u$$</li>
+<li>$$MBR&#x3D;\beta_0+\beta_1 C R+\text { other factors }+u \text {. }$$</li>
+<li>$$MBR&#x3D;\beta_0+\delta_1 C R 1+\delta_2 C R 2+\delta_3 C R 3+\delta_4 C R 4+\text{other factors}+u$$</li>
 <li>第二种模型更好。</li>
 </ul>
 </li>
@@ -1248,7 +1248,7 @@ Estimating economic relations">
 </ul>
 <ul>
 <li>We want to test whether all the coefficients are the same for men and women.</li>
-<li>We can include interactive terms for all variables:$$<br>\begin{aligned}<br>\text { wage }&#x3D; &amp; \beta_0+\delta_0 \text { female }+\beta_1 \text { educ }+\delta_1 \text { educ } \cdot \text { female }+ \<br>&amp; \beta_2 \text { exper }+\delta_2 \text { exper } \cdot \text { female }+ \<br>&amp; \beta_3 \text { tenure }+\delta_3 \text { tenure } \cdot \text { female }+u .<br>\end{aligned}$$</li>
+<li>We can include interactive terms for all variables:$$<br>\begin{aligned}<br>\text { wage }&#x3D; &amp; \beta_0+\delta_0 \text { female }+\beta_1 \text { educ }+\delta_1 \text { educ } \cdot \text { female }+ \\<br>&amp; \beta_2 \text { exper }+\delta_2 \text { exper } \cdot \text { female }+ \\<br>&amp; \beta_3 \text { tenure }+\delta_3 \text { tenure } \cdot \text { female }+u .<br>\end{aligned}$$</li>
 </ul>
 <ul>
 <li>The null hypothesis:$$H_0: \delta_0&#x3D;0, \delta_1&#x3D;0, \delta_2&#x3D;0, \delta_3&#x3D;0$$We can use F test to test the hypothesis: estiamte the unrestricted and restricted model, and then calculate the F-stat.</li>
@@ -1298,9 +1298,9 @@ Estimating economic relations">
 <li>We don’t know the exact functional form of $\sigma_i^2$, it can be any function of $x$</li>
 </ul>
 <h4 id="Estimating-operatorname-Var-left-hat-beta-j-right-under-Heteroskedasticity"><a href="#Estimating-operatorname-Var-left-hat-beta-j-right-under-Heteroskedasticity" class="headerlink" title="Estimating $\operatorname{Var}\left(\hat{\beta}_j\right)$ under Heteroskedasticity"></a>Estimating $\operatorname{Var}\left(\hat{\beta}_j\right)$ under Heteroskedasticity</h4><ul>
-<li>One valid estimator （White,1980）:$$\widehat{\operatorname{Var}}(\hat{\beta}<em>1)&#x3D;\frac{\sum</em>{i&#x3D;1}^N(x_i-\bar{x})^2 \hat{u}<em>i^2}{[\sum</em>{i&#x3D;1}^N(x_i-\bar{x})^2]^2} \equiv \frac{\sum_{i&#x3D;1}^N(x_i-\bar{x})^2 \hat{u}<em>i^2}{S S T_x^2}$$where $S S T_x&#x3D;\sum</em>{i&#x3D;1}^N(x_i-\bar{x})^2$.</li>
-<li>For multiple regression model:$$\begin{gathered}y_i&#x3D;\beta_0+\beta_1 x_{i 1}+\beta_2 x_{i 2}+\ldots+\beta_k x_{i k}+u_i . \\ \operatorname{Var}\hat{\beta}<em>j)&#x3D;\frac{\sum</em>{i&#x3D;1}^N \hat{r}<em>{i j}^2 \sigma_i^2}{[\sum</em>{i&#x3D;1}^N \hat{r}<em>{i j}^2]^2} \equiv \frac{\sum</em>{i&#x3D;1}^N \hat{r}<em>{i j}^2 \sigma_i^2}{S S R_j^2}\end{gathered}$$The estimator:$$\widehat{\operatorname{Var}}(\hat{\beta}<em>j)&#x3D;\frac{\sum</em>{i&#x3D;1}^N \hat{r}</em>{i j}^2 \hat{u}<em>i^2}{[\sum</em>{i&#x3D;1}^N \hat{r}<em>{i j}^2]^2}&#x3D;\frac{\sum</em>{i&#x3D;1}^N \hat{r}_{i j}^2 \hat{u}_i^2}{S S R_j^2}$$<ul>
-<li>$\hat{r}_{i j}$ is the residual from regressing $x_j$ on all other independent variables</li>
+<li>One valid estimator （White,1980）:$$\widehat{\operatorname{Var}}(\hat{\beta_1})&#x3D;\frac{\sum_{i&#x3D;1}^N(x_i-\bar{x})^2 \hat{u_i}^2}{[\sum_{i&#x3D;1}^N(x_i-\bar{x})^2]^2} \equiv \frac{\sum_{i&#x3D;1}^N(x_i-\bar{x})^2 \hat{u_i}^2}{SST_x^2}$$where $$SST_x&#x3D;\sum_{i&#x3D;1}^N(x_i-\bar{x})^2$$.</li>
+<li>For multiple regression model:$$\begin{gathered}y_i&#x3D;\beta_0+\beta_1 x_{i 1}+\beta_2 x_{i 2}+\ldots+\beta_k x_{i k}+u_i . \\ \operatorname{Var}(\hat{\beta_j})&#x3D;\frac{\sum_{i&#x3D;1}^N \hat{r_{ij}}^2 \sigma_i^2}{[\sum_{i&#x3D;1}^N \hat{r_{ij}}^2]^2} \equiv \frac{\sum_{i&#x3D;1}^N \hat{r_{ij}}^2 \sigma_i^2}{SSR_j^2}\end{gathered}$$The estimator:$$\widehat{\operatorname{Var}}(\hat{\beta_j})&#x3D;\frac{\sum_{i&#x3D;1}^N \hat{r_{ij}}^2 \hat{u_i}^2}{[\sum_{i&#x3D;1}^N \hat{r_{ij}}^2]^2}&#x3D;\frac{\sum_{i&#x3D;1}^N \hat{r_{ij}}^2 \hat{u_i}^2}{SSR_j^2}$$<ul>
+<li>$\hat{r_{ij}}$ is the residual from regressing $x_j$ on all other independent variables</li>
 <li>$S S R_j$ is the sum of residual squared of this regression</li>
 <li>The square root of $\widehat{\operatorname{Var}}\left(\hat{\beta}_j\right)$ is called the heteroskedasticity-robust standard error, or simply, robust standard errors.</li>
 </ul>
@@ -1308,8 +1308,8 @@ Estimating economic relations">
 <li>Robust-standard error 是一致的</li>
 </ul>
 <h4 id="Compare-the-variance-formula"><a href="#Compare-the-variance-formula" class="headerlink" title="Compare the variance formula"></a>Compare the variance formula</h4><ul>
-<li>Under homoskedasticity, $\operatorname{Var}(\hat{\beta}<em>1)$ is simplified as$$\operatorname{Var}(\hat{\beta}<em>j)&#x3D;\frac{\sum</em>{i&#x3D;1}^N \hat{r}</em>{i j}^2 \sigma_i^2}{S S R_j^2}&#x3D;\frac{\sigma^2}{S S R_j}$$</li>
-<li>Under heteroskedasticity,$$\operatorname{Var}(\hat{\beta}<em>j)&#x3D;\frac{\sum</em>{i&#x3D;1}^N r_{i j}^2 \sigma_i^2}{S S R_j^2}&#x3D;\frac{1}{S S R_j} \sum_{i&#x3D;1}^N \frac{\hat{r}<em>{i j}^2}{S S R_j} \sigma_i^2&#x3D;\frac{1}{S S R_j} \sum</em>{i&#x3D;1}^N w_{i j} \sigma_i^2$$where $w_{i j}&#x3D;\frac{\hat{\tau}<em>{i j}^2}{S S R_j}$. We know that $w</em>{i j}&gt;0$ and $\sum_{i&#x3D;1}^N w_{i j}&#x3D;1$.</li>
+<li>Under homoskedasticity, $\operatorname{Var}(\hat{\beta_1})$ is simplified as$$\operatorname{Var}(\hat{\beta_j})&#x3D;\frac{\sum_{i&#x3D;1}^N \hat{r_{ij}}^2 \sigma_i^2}{SSR_j^2}&#x3D;\frac{\sigma^2}{SSR_j}$$</li>
+<li>Under heteroskedasticity,$$\operatorname{Var}(\hat{\beta_j})&#x3D;\frac{\sum_{i&#x3D;1}^N r_{i j}^2 \sigma_i^2}{SSR_j^2}&#x3D;\frac{1}{SSR_j} \sum_{i&#x3D;1}^N \frac{\hat{r_{ij}}^2}{SSR_j} \sigma_i^2&#x3D;\frac{1}{SSR_j} \sum_{i&#x3D;1}^N w_{ij} \sigma_i^2$$where $w_{ij}&#x3D;\frac{\hat{\tau_{ij}}^2}{S S R_j}$. We know that $w_{ij}&gt;0$ and $\sum_{i&#x3D;1}^N w_{ij}&#x3D;1$.</li>
 <li>即，进行了加权平均。</li>
 <li>Robust standard errors can be either larger or smaller than the usual standard errors.</li>
 </ul>
@@ -2355,7 +2355,7 @@ Estimating economic relations">
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">63.6k</span>
+            <span class="white-color">63.5k</span>
             
 
             <br>
