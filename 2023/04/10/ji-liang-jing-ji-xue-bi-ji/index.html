@@ -693,13 +693,13 @@ Estimating economic relations">
 </ol>
 <p>在上面5个条件成立时，可以求方差：</p>
 <ul>
-<li>$$Var(\hat{\beta}<em>{1}|x)&#x3D;\frac{\sigma^2}{\sum</em>{i&#x3D;1}^N(x_i-\bar{x})^2}&#x3D;\frac{\sigma^2}{SST_x}$$<ul>
+<li>$$Var(\hat{\beta_1}|x)&#x3D;\frac{\sigma^2}{\sum_{i&#x3D;1}^N(x_i-\bar{x})^2}&#x3D;\frac{\sigma^2}{SST_x}$$<ul>
 <li>其中 $\sigma$ 是 u 的标准差</li>
 <li>当 $\sigma$ 大时$V a r(\hat{\beta}_{1}|x)$ 方差大</li>
 <li>当 x 的方差大时 $V a r(\hat{\beta}_{1}|x)$ 小</li>
 </ul>
 </li>
-<li>$$V a r(\hat{\beta}<em>{0}|x)&#x3D;\frac{\sigma^2\sum</em>{i&#x3D;1}^Nx_i^2}{N\sum_{i&#x3D;1}^N(x_i-\bar{x})^2}$$</li>
+<li>$$V a r(\hat{\beta_0}|x)&#x3D;\frac{\sigma^2\sum_{i&#x3D;1}^Nx_i^2}{N\sum_{i&#x3D;1}^N(x_i-\bar{x})^2}$$</li>
 </ul>
 <h5 id="估计-sigma"><a href="#估计-sigma" class="headerlink" title="估计$\sigma$"></a>估计$\sigma$</h5><ul>
 <li>需要用sample来估计 $\sigma^2$</li>
@@ -749,8 +749,8 @@ Estimating economic relations">
 <h4 id="OLS"><a href="#OLS" class="headerlink" title="OLS"></a>OLS</h4><ul>
 <li>$$H\equiv\sum_{i&#x3D;1}^n\hat{u_i}^2&#x3D;\sum(y_i-b_0-b_1x_{i1}-\cdots-b_kx_{i k})^2$$</li>
 <li>求最小值，得一阶条件：<ul>
-<li>$$\frac{\partial H}{\partial b_0}&#x3D;-\sum_{i&#x3D;1}^n2(y_i-\hat{\beta}_0-\hat{\beta}<em>1x</em>{i1}-\cdots-\hat{\beta}<em>kx</em>{ik})&#x3D;0$$</li>
-<li>$${\frac{\partial H}{\partial b_{j}}}&#x3D;-\sum_{i&#x3D;1}^{n}2x_{i j}(y_{i}-{\hat{\beta}<em>{0}}-{\hat{\beta}</em>{1}}x_{i1}-\cdots-{\hat{\beta}<em>{k}}x</em>{i k})&#x3D;0,\forall j&#x3D;1,2,…,k.$$</li>
+<li>$$\frac{\partial H}{\partial b_0}&#x3D;-\sum_{i&#x3D;1}^n2(y_i-\hat{\beta_0}-\hat{\beta_1}x_{i1}-\cdots-\hat{\beta_k}x_{ik})&#x3D;0$$</li>
+<li>$${\frac{\partial H}{\partial b_{j}}}&#x3D;-\sum_{i&#x3D;1}^{n}2x_{i j}(y_{i}-{\hat{\beta_0}}-{\hat{\beta_1}}x_{i1}-\cdots-{\hat{\beta_k}}x_{i k})&#x3D;0,\forall j&#x3D;1,2,…,k.$$</li>
 </ul>
 </li>
 <li>OLS and sample analogue give the same answer.</li>
@@ -909,7 +909,7 @@ Estimating economic relations">
 </li>
 <li><p>但由于实际中标准差不知道，需要用标准误来算。</p>
 <ul>
-<li>$$\frac{\hat{\beta_j}-\beta_j}{s e(\hat{\beta}<em>j)}\sim t</em>{N-k-1}&#x3D; t_{d f},$$</li>
+<li>$$\frac{\hat{\beta_j}-\beta_j}{s e(\hat{\beta_j})}\sim t_{N-k-1}&#x3D; t_{d f},$$</li>
 <li>服从t分布，N-k-1是自由度，N是多少个样本，k是回归里面有多少个x</li>
 </ul>
 </li>
@@ -947,7 +947,7 @@ Estimating economic relations">
 <li>$t_{\hat{\beta}_j}$ has the same sign as $\hat{\beta}_j$, because $\operatorname{se}(\hat{\beta}_j)&gt;0$.</li>
 </ul>
 <ul>
-<li>直觉上, 当 $t_{\hat{\beta}<em>j}$ 足够大的时候拒绝 $H_0$ :  $t</em>{\hat{\beta}_i}$ 越大,  $H_0$ 是真的可能性越低,  $H_1$ 是真的可能性越高。</li>
+<li>直觉上, 当 $t_\hat{\beta_j}$ 足够大的时候拒绝 $H_0$ :  $t_\hat{\beta_i}$ 越大,  $H_0$ 是真的可能性越低,  $H_1$ 是真的可能性越高。</li>
 </ul>
 <ul>
 <li>多大算足够大？<ul>
@@ -961,7 +961,7 @@ Estimating economic relations">
 <h5 id="The-idea-of-test"><a href="#The-idea-of-test" class="headerlink" title="The idea of test"></a>The idea of test</h5><ol>
 <li>Fix a significance level $\alpha$. That is, decide our level of “tolerence” for the type I error.</li>
 <li>Find the critical value associated with $\alpha$. For $H_1: \beta_j&gt;0$, this means finding the $(1-\alpha)$-th percentile of the $\mathrm{t}$ distribution with $d f&#x3D;N-k-1$.</li>
-<li>Reject $H_0$ if$t_{\hat{\beta}_j}&gt;c$</li>
+<li>Reject $H_0$ if  $t_{\hat{\beta}_j}&gt;c$</li>
 </ol>
 <ul>
 <li>通常第一类错误和第二类错误是不能同时缩小的。需要取舍。</li>
@@ -990,7 +990,7 @@ Estimating economic relations">
 </li>
 </ul>
 <h4 id="Other-Hypothesis"><a href="#Other-Hypothesis" class="headerlink" title="Other Hypothesis"></a>Other Hypothesis</h4><ul>
-<li>If the null is stated as:<br>$$<br>H_0: \beta_j&#x3D;a_j<br>$$<br>Then the t-statistic is$$\frac{\hat{\beta}_j-a_j}{\operatorname{se}(\hat{\beta}<em>j)} \sim t</em>{N-k-1}$$<br>We can use the general t statistic to test against one-sided or two-sided alternatives.</li>
+<li>If the null is stated as:<br>$$<br>H_0: \beta_j&#x3D;a_j<br>$$<br>Then the t-statistic is$$\frac{\hat{\beta_j}-a_j}{\operatorname{se}(\hat{\beta_j})} \sim t_{N-k-1}$$<br>We can use the general t statistic to test against one-sided or two-sided alternatives.</li>
 </ul>
 <h4 id="p-Values-for-t-Tests"><a href="#p-Values-for-t-Tests" class="headerlink" title="p-Values for t Tests"></a>p-Values for t Tests</h4><ul>
 <li>Given the observed value of the t statistic, what is the smallest significance level at which the null hypothesis would be rejected? </li>
@@ -1062,7 +1062,7 @@ Estimating economic relations">
 </ul>
 <ul>
 <li>$L M$ statistic</li>
-<li>First estimate the restricted model:$$y&#x3D;\tilde{\beta}<em>0+\tilde{\beta}<em>1 x_1+\ldots+\tilde{\beta}</em>{k-q} x</em>{k-q}+\tilde{u}$$If the coefficients of the excluded independent variables $x_{k-q+1}$ to $x_k$ are truly zero in the population model, then they should be uncorrelated to $\tilde{u}$.</li>
+<li>First estimate the restricted model:$$y&#x3D;\tilde{\beta_0}+\tilde{\beta_1} x_1+\cdots+\tilde{\beta_{k-q}} x_{k-q}+\tilde{u}$$If the coefficients of the excluded independent variables $x_{k-q+1}$ to $x_k$ are truly zero in the population model, then they should be uncorrelated to $\tilde{u}$.</li>
 <li>So regress $\tilde{u}$ on all $x$$$\tilde{u} \sim x_1, x_2, \ldots, x_k$$Let $R_u^2$ denote the R-squared of this regression. The smaller the $R_u^2$, the more likely $H_0$ is true. So a large $R_u^2$ provides evidence against $H_0$.</li>
 <li>$L M&#x3D;N \cdot R_u^2$. We can show that $L M$ follows chi-square distribution with $q$ degrees of freedom: $\mathcal{X}_q^2$.<ul>
 <li>Reject $H_0$ if $L M&gt;$ critical value $(p&lt;$ significance level)</li>
