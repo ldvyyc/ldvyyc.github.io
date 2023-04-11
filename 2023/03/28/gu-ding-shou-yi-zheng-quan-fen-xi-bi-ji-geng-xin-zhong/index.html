@@ -371,12 +371,12 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/Finance/" target="_blank">
-                            <span class="chip bg-color">Finance</span>
-                        </a>
-                        
                         <a href="/tags/Notes/" target="_blank">
                             <span class="chip bg-color">Notes</span>
+                        </a>
+                        
+                        <a href="/tags/Finance/" target="_blank">
+                            <span class="chip bg-color">Finance</span>
                         </a>
                         
                     </div>
@@ -413,14 +413,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    8.3k
+                    9.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    44 分
+                    52 分
                 </div>
                 
                 
@@ -987,7 +987,7 @@
 <li>the term structure reflects the market’s expectations of future interest rates.</li>
 </ul>
 </li>
-<li>Preferred habitat theory: <ul>
+<li>Preferred habitat theory: 优先偏好理论<ul>
 <li>different bond investors prefer a particular maturity length over another, and they are only willing to buy bonds outside of their maturity preference if risk premia for other maturity ranges are available.</li>
 </ul>
 </li>
@@ -1754,6 +1754,7 @@
 </li>
 <li>Forward rate is the interest rate for a loan between two future dates contracted today:<ul>
 <li>$$(1+s_n)^n&#x3D;(1+f_{0,1})(1+f_{1,2})(1+f_{2,3}) \ldots(1+f_{n-1, n})$$</li>
+<li><strong>从这个式子来看，spot rate 可以看成是 forward rate 的一个 weighted average</strong></li>
 </ul>
 </li>
 <li>Generally, we have<ul>
@@ -1764,6 +1765,7 @@
 <h4 id="implied-spot-rates-one-year-forward"><a href="#implied-spot-rates-one-year-forward" class="headerlink" title="implied spot rates one year forward"></a>implied spot rates one year forward</h4><ul>
 <li><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230404204348.png" alt="implied spot rates one year forward"><ul>
 <li>隐含的一年后的spot rate</li>
+<li>只通过current spot rate就能推出来</li>
 </ul>
 </li>
 <li>如果 implied spot rates one year forward 全部实现，那么对于所有的 government bond，在 year 1的 holding period return 都一样<ul>
@@ -1773,6 +1775,182 @@
 </li>
 <li>The forwards tell how much the yield of a longer-term bond needs to change to offset its initial yield advantage over the short-term rate.</li>
 <li>Alternatively, the forwards tell how much a given point on the spot curve has to shift to equate holding-period returns across bonds.</li>
+</ul>
+<h4 id="Implications，将bond-yield分层"><a href="#Implications，将bond-yield分层" class="headerlink" title="Implications，将bond yield分层"></a>Implications，将bond yield分层</h4><h5 id="Pure-Expectations-Hypothesis-（PEH）"><a href="#Pure-Expectations-Hypothesis-（PEH）" class="headerlink" title="Pure Expectations Hypothesis （PEH）"></a>Pure Expectations Hypothesis （PEH）</h5><ul>
+<li>tells that any yield differences across bonds must imply future rate changes in expectation-implied spot rate one year forward is the result of aggregate expectations.<ul>
+<li>Implication 1: all government bonds have the same near-term expected return $(S_1)$ regardless of their maturities.</li>
+<li>Implication 2: expected capital gains or losses offset the initial yield differences.</li>
+</ul>
+<p>	</p>
+</li>
+<li><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230411190451.png" alt="PEH"></li>
+<li><strong>这一部分是在期望假设下的回报率</strong></li>
+<li>例子：<ul>
+<li>假设3年期债券 zero-coupon</li>
+<li>$$P_0&#x3D;\frac{1}{(1+s_3)^3}$$</li>
+<li>$$P_1&#x3D;\frac{1}{(1+f_{1,3})^2}$$</li>
+<li>$$\text{thus, }\frac{P_1}{P_0}&#x3D;\frac{(1+s_3)^3}{(1+f_{1,3})^2}&#x3D;1+s_1$$</li>
+<li>这里就是一年期spot rate</li>
+</ul>
+</li>
+</ul>
+<h5 id="Risk-Premium-Hypothesis-（RPH）"><a href="#Risk-Premium-Hypothesis-（RPH）" class="headerlink" title="Risk Premium Hypothesis （RPH）"></a>Risk Premium Hypothesis （RPH）</h5><ul>
+<li>the forward rate reflects a bond’s expected return （due to embedded risks）<ul>
+<li>Implication 1: there are no expected changes in the spot rates.</li>
+<li>Implication 2: An $n$-year bond will receive a one-year return of $f_{n-1, n}$, called rolling yield.</li>
+</ul>
+</li>
+<li><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230411190621.png" alt="RPH"></li>
+<li><strong>这一部分是在term structure不变的情况下的收益率</strong></li>
+<li>例子：<ul>
+<li>假设5年期债券，term structure 不变</li>
+<li>$$P_0&#x3D;\frac{1}{(1+s_5)^5}$$</li>
+<li>$$P_1&#x3D;\frac{1}{(1+s_4)^4}$$</li>
+<li>$$\text{thus, }\frac{P_1}{P_0}&#x3D;\frac{(1+s_5)^5}{(1+s_4)^4}&#x3D;1+f_{4,5}$$</li>
+<li>这就是 rolling yield</li>
+</ul>
+</li>
+</ul>
+<h5 id="put-together"><a href="#put-together" class="headerlink" title="put together"></a>put together</h5><ul>
+<li>The yield change implied by forwards can be split to an expected change in the $n-1$-year spot rate over the next year $E\left(\Delta S_{n-1}\right)$ and a bond risk premium $B R P_n$ :$$f_{1, n}-s_{n-1}&#x3D;E(\Delta S_{n-1})+B R P_n$$where $B R P_n$ is the expected return of an $n$-year bond during the next year over the riskless one-year rate.</li>
+<li>The PEH assumes $B R P_n&#x3D;0$.</li>
+<li>The RPH assumes $E(\Delta S_{n-1})&#x3D;0$.</li>
+</ul>
+<ul>
+<li>将收益率拆分成了两部分</li>
+</ul>
+<h5 id="Impact-of-Convexity"><a href="#Impact-of-Convexity" class="headerlink" title="Impact of Convexity"></a>Impact of Convexity</h5><ul>
+<li>Convexity differentials across bonds tend to make the Treasury yield curve inverted or “humped.”</li>
+</ul>
+<h6 id="Convexity-Bias"><a href="#Convexity-Bias" class="headerlink" title="Convexity Bias"></a>Convexity Bias</h6><ul>
+<li>Convexity-Adjusted Expected Return $&#x3D;$ Rolling Yield + Convexity Value,<ul>
+<li>Rolling Yield $&#x3D;f_{n-1, n}$;</li>
+<li>Convexity Value $\approx-0.5 \times$ convexity $\times(\operatorname{Vol}(\Delta y))^2$.</li>
+<li><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230411193742.png" alt="Convexity Bias"></li>
+</ul>
+</li>
+</ul>
+<h6 id="Implications-of-Convexity"><a href="#Implications-of-Convexity" class="headerlink" title="Implications of Convexity"></a>Implications of Convexity</h6><ul>
+<li>If an investor wants to assess a barbell-bullet trade’s relative cheapness, she needs to trade off the rolling yield give-up versus the convexity pick-up. The convexity-adjusted expected return provides a single number to measure the attractiveness of these trades.</li>
+<li>Typical barbell-bullet trades are more curve flatting trades than convexity trades. It is more likely that a given rolling yield disadvantage is offset by curve flattening than by the barbell’s convexity advantage.</li>
+</ul>
+<h5 id="Put-all-together"><a href="#Put-all-together" class="headerlink" title="Put all together"></a>Put all together</h5><ul>
+<li>$$\text{Rolling Yield} &#x3D;\text{Short-Term Rate} + \text{Bond Risk Premium} + \text{Duration} \times E(\Delta s_{n-1})+ \text{Convexity Bias}$$where</li>
+</ul>
+<ul>
+<li>Rolling Yield $&#x3D;f_{n-1, n}$;</li>
+<li>Short-Term Rate $&#x3D;s_1$;</li>
+<li>Bond Risk Premium $&#x3D;E(h_n-s_1)$;</li>
+<li>Convexity Bias $&#x3D;-0.5 \times$ convexity $\times(\operatorname{Vol}(\Delta s_{n-1}))^2$;</li>
+</ul>
+<ul>
+<li><ul>
+<li><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230411211622.png" alt="relationship"></li>
+</ul>
+</li>
+<li><p><strong>将yield分层。</strong></p>
+</li>
+<li><p>其中duration和convexity是泰勒展开项。</p>
+</li>
+<li><p>每一项都是可计算的，quantifiable。</p>
+</li>
+</ul>
+<hr>
+<h2 id="L7-Interest-rate-modeling"><a href="#L7-Interest-rate-modeling" class="headerlink" title="L7: Interest rate modeling"></a>L7: Interest rate modeling</h2><ul>
+<li>Why interest rating modeling?<ul>
+<li>定价现金流量取决于未来利率的变动的固定收益证券。</li>
+</ul>
+</li>
+<li>Which rate to model?<ul>
+<li>Most interest rate models are based on the （hypothetical） instantaneous spot rate—<strong>short rate</strong>. </li>
+<li>It can be thought of as a very short-term spot rate （e.g., overnight）, though formally, it is for an instantaneous maturity.</li>
+<li>Some models work with forward rates, such as Heath, Jarrow, and Morton</li>
+</ul>
+</li>
+</ul>
+<p>The short rate is usually assumed to follow a stochastic process （Brownian motion）:</p>
+<ul>
+<li><strong>一个随机游走过程</strong></li>
+<li>$$d r_t&#x3D;\mu(t) d t+\sigma(t) d W_t$$</li>
+</ul>
+<h3 id="Primer-on-Stochastic-process"><a href="#Primer-on-Stochastic-process" class="headerlink" title="Primer on Stochastic process"></a>Primer on Stochastic process</h3><ul>
+<li><p>We consider a random variable $W$ whose value changes continuously.</p>
+</li>
+<li><p>In discrete-time, the change in $W$ in a small interval of time $\Delta t$ is $\Delta W$</p>
+</li>
+<li><p>We say that the variable $W$ follows a Wiener process （standard Brownian motion） if</p>
+<ul>
+<li>$\Delta W&#x3D;\varepsilon \sqrt{\Delta t}$, where $\varepsilon$ is a random draw from a standard normal distribution $N(0,1)$;</li>
+<li>the values of $\Delta W$ in two different time intervals are independent.</li>
+</ul>
+</li>
+<li><p>Then we have the following properties:$$\begin{aligned}E[W(T)-W(t)] &amp; &#x3D;0 \\ V A R[W(T)-W(t)] &amp; &#x3D;T-t\end{aligned}$$</p>
+<ul>
+<li>where $t$ and $T$ denote the current and future time, respectively.</li>
+</ul>
+</li>
+<li><p>A Wiener process $W$ has a drift rate of 0 and a variance rate of 1 .</p>
+</li>
+<li><p>In general, if a random variable $x$ follows a generalized Wiener process, stochastic process, or Brownian motion:$$\Delta x&#x3D;\mu \Delta t+\sigma \Delta W&#x3D;\mu \Delta t+\sigma \mathcal{E} \sqrt{\Delta t}$$where the drift $\mu$ and the volatility $\sigma$ can be constants.</p>
+</li>
+<li><p><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230411200311.png" alt="Brownian process"></p>
+</li>
+<li><p>We have the following properties:$$\begin{aligned}E[\Delta x] &amp; &#x3D;\mu \Delta t \\ \operatorname{Var}(\Delta x) &amp; &#x3D;\sigma^2 \Delta t \end{aligned}$$</p>
+</li>
+</ul>
+<h4 id="这个随机过程的目的"><a href="#这个随机过程的目的" class="headerlink" title="这个随机过程的目的"></a>这个随机过程的目的</h4><ul>
+<li>We intend to build a realistic model to describe the underlying source of risk, e.g., interest rate fluctuation （default risk later）;</li>
+</ul>
+<ul>
+<li>The model provides us with the probability distribution of outcomes at an important future time, e.g., expiration date of an option;<ul>
+<li>If we assume stock price follow a geometric brownian motion, which means the return following a Brownian motion</li>
+</ul>
+</li>
+<li>This probability distribution will allow us to compute the expected value of a security&#x2F;derivative at the future time and subsequently its present value (price) via discounting.</li>
+</ul>
+<ul>
+<li><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230411201057.png" alt="期权定价"></li>
+</ul>
+<h4 id="Various-short-rate-process"><a href="#Various-short-rate-process" class="headerlink" title="Various short rate process"></a>Various short rate process</h4><ul>
+<li>Long-term trend and negative interest rates:$$r_t&#x3D;\mu(t) d t+\sigma(t) d W_t$$<ul>
+<li>正常的随机游走</li>
+</ul>
+</li>
+<li>Mean reversion （the Ornstein-Uhlenbeck process）:$$d r_t&#x3D;\kappa(\mu-r_t) d t+\sigma d W_t$$<ul>
+<li>其中 $\mu$ 是长期interest rate， $\kappa$ 是回归长期的速度，这种process随着时间变化总是围绕着长期利率波动</li>
+</ul>
+</li>
+<li>Mean reversion and non-negative interest rate:$$d r_t&#x3D;\kappa(\mu-r_t) d t+\sigma \sqrt{r} d W_t$$<ul>
+<li>在diffusion中添加了控制项，这样在 r 趋近于0时，波动项也趋近于0，只剩下了主项，这个过程中r永远非负。</li>
+</ul>
+</li>
+<li>Geometric Brownian motion with time-varying drift and volatility:$$d \ln r(t)&#x3D;[\theta(t)-\frac{\partial \sigma(t) &#x2F; \partial t}{\sigma(t)} \ln r(t)] d t+\sigma(t) d W_t$$</li>
+</ul>
+<ul>
+<li>每一种不同的process会有不同的数学性质，产生不同的解</li>
+<li>首先需要明确采用什么随机过程</li>
+<li>可能有解析解或者只能数值解</li>
+</ul>
+<h4 id="Desirable-properties-of-an-interest-rate-model"><a href="#Desirable-properties-of-an-interest-rate-model" class="headerlink" title="Desirable properties of an interest rate model"></a>Desirable properties of an interest rate model</h4><ul>
+<li>Economic soundness,<ul>
+<li>例如：non-negativity of interest rate, mean reversion;</li>
+</ul>
+</li>
+<li>Reasonable distribution of spot rates at a given maturity;</li>
+<li>Correlation structure between interest rates of different maturities;</li>
+<li>Volatility structure of interest rates, <ul>
+<li>e.g., rate level-dependent volatility;</li>
+</ul>
+</li>
+<li>Tractability （analytical solution versus numerical solution）.<ul>
+<li>更倾向于有解析解的，更方便</li>
+</ul>
+</li>
+</ul>
+<h4 id="Trade-offs"><a href="#Trade-offs" class="headerlink" title="Trade-offs"></a>Trade-offs</h4><ul>
+<li>All these desirable properties will never fit into one model!</li>
+<li>Which of these properties are necessary to squeeze into one model depends on the application.</li>
+<li>For example, it is more important to get the volatility structure right for pricing short-term derivatives rather than properly capturing mean reversion.</li>
 </ul>
 
             </div>
@@ -2026,12 +2204,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Finance/" target="_blank">
-                        <span class="chip bg-color">Finance</span>
-                    </a>
-                    
                     <a href="/tags/Notes/" target="_blank">
                         <span class="chip bg-color">Notes</span>
+                    </a>
+                    
+                    <a href="/tags/Finance/" target="_blank">
+                        <span class="chip bg-color">Finance</span>
                     </a>
                     
                 </div>
@@ -2078,12 +2256,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Finance/" target="_blank">
-                        <span class="chip bg-color">Finance</span>
-                    </a>
-                    
                     <a href="/tags/Notes/" target="_blank">
                         <span class="chip bg-color">Notes</span>
+                    </a>
+                    
+                    <a href="/tags/Finance/" target="_blank">
+                        <span class="chip bg-color">Finance</span>
                     </a>
                     
                 </div>
@@ -2257,7 +2435,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">63.4k</span>
+            <span class="white-color">64.8k</span>
             
 
             <br>
