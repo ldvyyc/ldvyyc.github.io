@@ -409,14 +409,14 @@ Estimating economic relations">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    13.3k
+                    13.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    76 分
+                    75 分
                 </div>
                 
                 
@@ -1584,7 +1584,7 @@ Estimating economic relations">
 <ul>
 <li>Plug in $x_1^*&#x3D;x_1-e_1$$$y&#x3D;\beta_0+\beta_1 x_1+(u-\beta_1 e_1)$$</li>
 <li>To derive the properties of the OLS estimators, we need assumptions.</li>
-<li>First, assume that:$$E(u \mid x_1^*, x_1)&#x3D;0$$This implies $E\left(y \mid x_1^*, x_1\right)&#x3D;E\left(y \mid x_1^<em>\right): x_1$ does not affect $y$ after $x_1^</em>$ has been controlled for.</li>
+<li>First, assume that:$$E(u \mid x_1^*, x_1)&#x3D;0$$This implies $E(y \mid x_1^*, x_1)&#x3D;E(y \mid x_1^*): x_1$ does not affect $y$ after $x_1^*$ has been controlled for.</li>
 </ul>
 <ul>
 <li>Next, we consider two (mutually exclusive) cases about how the measurement error is correlated with $x$</li>
@@ -1606,14 +1606,14 @@ Estimating economic relations">
 <li>Then$$\operatorname{Cov}(u-\beta_1 e_1, x_1)&#x3D;-\beta_1 \operatorname{Cov}(x_1, e_1)&#x3D;-\beta_1 \sigma_{e_1}^2 \neq 0$$</li>
 <li>此时一致性和无偏性都破坏了</li>
 <li>The probability limit of $\hat{\beta}_1$<ul>
-<li>$$\operatorname{plim}(\hat{\beta}<em>1) &#x3D;\beta_1+\frac{\operatorname{Cov}(x_1, u-\beta_1 e_1)}{\operatorname{Var}(x_1)}&#x3D;\beta_1-\frac{\beta_1 \sigma</em>{e_1}^2}{\sigma_{x_1}^{2 *}+\sigma_{e_1}^2}&#x3D;\beta_1(\frac{\sigma_{x_1}^{2 *}}{\sigma_{x_1}^{2 *}+\sigma_{e_1}^2}) $$</li>
+<li>$$\operatorname{plim}(\hat{\beta_1}) &#x3D;\beta_1+\frac{\operatorname{Cov}(x_1, u-\beta_1 e_1)}{\operatorname{Var}(x_1)}&#x3D;\beta_1-\frac{\beta_1 \sigma_{e_1}^2}{\sigma_{x_1}^{2 *}+\sigma_{e_1}^2}&#x3D;\beta_1(\frac{\sigma_{x_1}^{2 *}}{\sigma_{x_1}^{2 *}+\sigma_{e_1}^2}) $$</li>
 <li>$\operatorname{plim}(\hat{\beta}_1)$ is closer to zero than $\beta_1$.</li>
 </ul>
 </li>
 <li>This is called the attenuation bias in OLS due to CEV</li>
 <li>If the variance of $x_1^*$ is large relative to the variance in the measurement error, then the inconsistency in OLS will be small.</li>
 </ul>
-<h5 id="Case-2：-operatorname-Cov-x-1-e-1-x3D-0-text-and-operatorname-Cov-x-1-e-1-x3D-0"><a href="#Case-2：-operatorname-Cov-x-1-e-1-x3D-0-text-and-operatorname-Cov-x-1-e-1-x3D-0" class="headerlink" title="Case 2：$\operatorname{Cov}(x_1, e_1)&#x3D;0 \text{ and } \operatorname{Cov}(x_1^*, e_1)&#x3D;0$"></a>Case 2：$\operatorname{Cov}(x_1, e_1)&#x3D;0 \text{ and } \operatorname{Cov}(x_1^*, e_1)&#x3D;0$</h5><ul>
+<h5 id="Case-3：-operatorname-Cov-x-1-e-1-x3D-0-text-and-operatorname-Cov-x-1-e-1-x3D-0"><a href="#Case-3：-operatorname-Cov-x-1-e-1-x3D-0-text-and-operatorname-Cov-x-1-e-1-x3D-0" class="headerlink" title="Case 3：$\operatorname{Cov}(x_1, e_1)&#x3D;0 \text{ and } \operatorname{Cov}(x_1^*, e_1)&#x3D;0$"></a>Case 3：$\operatorname{Cov}(x_1, e_1)&#x3D;0 \text{ and } \operatorname{Cov}(x_1^*, e_1)&#x3D;0$</h5><ul>
 <li>这种情况下，OLS几乎一定会造成无偏性和一致性失效。</li>
 </ul>
 <h2 id="Ch15-Instrumental-Variable"><a href="#Ch15-Instrumental-Variable" class="headerlink" title="Ch15 Instrumental Variable"></a>Ch15 Instrumental Variable</h2><h3 id="IV-Estimator"><a href="#IV-Estimator" class="headerlink" title="IV Estimator"></a>IV Estimator</h3><h4 id="Omitted-Variable-bias"><a href="#Omitted-Variable-bias" class="headerlink" title="Omitted Variable bias"></a>Omitted Variable bias</h4><ul>
@@ -1626,7 +1626,7 @@ Estimating economic relations">
 <li>Note that $E(u \mid e d u c)&#x3D;E\left(\beta_2 a b i l+e \mid e d u c\right)&#x3D;\beta_2 E(a b i l \mid e d u c)$. If $E(a b i l)$ changes when educ changes, then the zero conditional mean assumption is not satisfied.</li>
 </ul>
 <ul>
-<li>$$\begin{aligned}<br>\hat{\beta}<em>{O L S} &amp; &#x3D;\frac{\sum</em>{i&#x3D;1}^N\left(y_i-\bar{y}\right)\left(x_i-\bar{x}\right)}{\sum_{i&#x3D;1}^N\left(x_i-\bar{x}\right)^2} &#x3D;\beta+\frac{\sum_{i&#x3D;1}^N\left(x_i-\bar{x}\right) u_i}{\sum_{i&#x3D;1}^N\left(x_i-\bar{x}\right)^2} \\<br>\hat{\beta}_{O L S} &amp; \stackrel{p l i m}{\longrightarrow} \beta+\frac{\operatorname{cov}(x, u)}{\operatorname{var}(x)} .<br>\end{aligned}$$</li>
+<li>$$\begin{aligned}<br>\hat{\beta_{OLS}} &amp; &#x3D;\frac{\sum_{i&#x3D;1}^N(y_i-\bar{y})(x_i-\bar{x})}{\sum_{i&#x3D;1}^N(x_i-\bar{x})^2} &#x3D;\beta+\frac{\sum_{i&#x3D;1}^N(x_i-\bar{x}) u_i}{\sum_{i&#x3D;1}^N(x_i-\bar{x})^2} \\<br>\hat{\beta_{OLS}} &amp; \stackrel{plim}{\longrightarrow} \beta+\frac{\operatorname{cov}(x, u)}{\operatorname{var}(x)} .<br>\end{aligned}$$</li>
 <li>Since $E(u \mid x) \neq 0, E\left(\hat{\beta}_{O L S}\right) \neq \beta$, OLS is not unbiased</li>
 <li>Since $\operatorname{cov}(x, u) \neq 0$, OLS is not consistent.</li>
 <li><strong>此时无偏性和一致性都不满足</strong></li>
@@ -1644,9 +1644,9 @@ Estimating economic relations">
 </li>
 </ul>
 <ul>
-<li><p>Use $E(u z)&#x3D;0$ and $E(u)&#x3D;0$ to find the sample analogue, $$\begin{aligned} &amp; E(u z)&#x3D;0 \quad \frac{1}{N} \sum_{i&#x3D;1}^N z_i \hat{u}<em>i&#x3D;0 \\ &amp; E(u)&#x3D;0 \quad \frac{1}{N} \sum</em>{i&#x3D;1}^N \hat{u}_i&#x3D;0\end{aligned}$$and solve the equations.</p>
+<li><p>Use $E(u z)&#x3D;0$ and $E(u)&#x3D;0$ to find the sample analogue, $$E(u z)&#x3D;0 \quad \frac{1}{N} \sum_{i&#x3D;1}^N z_i \hat{u_i}&#x3D;0 $$$$E(u)&#x3D;0 \quad \frac{1}{N} \sum_{i&#x3D;1}^N \hat{u_i}&#x3D;0$$and solve the equations.</p>
 </li>
-<li><p>$$\begin{aligned}<br>\hat{\beta}<em>1^{I V} &amp; &#x3D;\frac{\sum</em>{i&#x3D;1}^N\left(y_i-\bar{y}\right)\left(z_i-\bar{z}\right)}{\sum_{i&#x3D;1}^N\left(x_i-\bar{x}\right)\left(z_i-\bar{z}\right)} \\<br>\hat{\beta}_0^{I V} &amp; &#x3D;\bar{y}-\hat{\beta}_1^{I V} \bar{x}<br>\end{aligned}$$</p>
+<li><p>$$\begin{aligned}<br>\hat{\beta_1}^{I V} &amp; &#x3D;\frac{\sum_{i&#x3D;1}^N\left(y_i-\bar{y}\right)\left(z_i-\bar{z}\right)}{\sum_{i&#x3D;1}^N\left(x_i-\bar{x}\right)\left(z_i-\bar{z}\right)} \\<br>\hat{\beta_0}^{I V} &amp; &#x3D;\bar{y}-\hat{\beta_1}^{I V} \bar{x}<br>\end{aligned}$$</p>
 </li>
 <li><p>把这个叫做 IV estimator</p>
 </li>
@@ -1670,15 +1670,15 @@ Estimating economic relations">
 <h3 id="Properties-and-Inference-with-the-IV-Estimator"><a href="#Properties-and-Inference-with-the-IV-Estimator" class="headerlink" title="Properties and Inference with the IV Estimator"></a>Properties and Inference with the IV Estimator</h3><ul>
 <li>一致性满足</li>
 <li>无偏性不满足<ul>
-<li>consider the expectation of $\hat{\beta}<em>1^{I V}$ conditional on $z$$$E(\hat{\beta}<em>1^{I V})&#x3D;\beta+E(\frac{\sum</em>{i&#x3D;1}^N(z_i-\bar{z}) u_i}{\sum</em>{i&#x3D;1}^N(x_i-\bar{x})(z_i-\bar{z})})&#x3D;\beta+E(E[\frac{\sum_{i&#x3D;1}^n(z_i-\bar{z}) u_i}{\sum_{i&#x3D;1}^N(x_i-\bar{x})(z_i-\bar{z})} \mid z])$$</li>
+<li>consider the expectation of $\hat{\beta_1}^{IV}$ conditional on $z$$$E(\hat{\beta_1}^{I V})&#x3D;\beta+E(\frac{\sum_{i&#x3D;1}^N(z_i-\bar{z}) u_i}{\sum_{i&#x3D;1}^N(x_i-\bar{x})(z_i-\bar{z})})&#x3D;\beta+E(E[\frac{\sum_{i&#x3D;1}^n(z_i-\bar{z}) u_i}{\sum_{i&#x3D;1}^N(x_i-\bar{x})(z_i-\bar{z})} \mid z])$$</li>
 <li>由于x不是常数，因此不能进一步化简</li>
 </ul>
 </li>
 <li>方差：<ul>
 <li>增加假设$$E[u^2 \mid z]&#x3D;\sigma^2$$</li>
-<li>在如上假设情况下：$$A V a r(\hat{\beta}<em>1^{I V})&#x3D;\frac{\sigma^2}{N \sigma_x^2 \rho</em>{x, z}^2}$$</li>
+<li>在如上假设情况下：$$AVar(\hat{\beta_1}^{IV})&#x3D;\frac{\sigma^2}{N \sigma_x^2 \rho_{x, z}^2}$$</li>
 <li>其中 $\sigma_x^2$ 是总体x的方差，$\sigma^2$ 是总体u的方差， $\rho_{x,z}^2$ 是总体x和z的相关性</li>
-<li>The asymptotic variance of $\hat{\beta}<em>1^{I V}$ is $$\widehat{A V a r}(\hat{\beta}<em>1^{I V})&#x3D;\frac{\hat{\sigma}^2}{S S T_x R</em>{x, z}^2}$$where $S S T_x&#x3D;\sum</em>{i&#x3D;1}^n\left(x_i-\bar{x}\right)^2$, and $R_{x, z}^2$ is the R-squared of $x_i$ on $z_i$.</li>
+<li>The asymptotic variance of $\hat{\beta}<em>1^{I V}$ is $$\widehat{AVar}(\hat{\beta_1}^{I V})&#x3D;\frac{\hat{\sigma}^2}{S S T_x R</em>{x, z}^2}$$where $S S T_x&#x3D;\sum_{i&#x3D;1}^n\left(x_i-\bar{x}\right)^2$, and $R_{x, z}^2$ is the R-squared of $x_i$ on $z_i$.</li>
 </ul>
 <ul>
 <li>Note that the variance of the OLS estimator is$$\widehat{\operatorname{Var}}(\hat{\beta}_1^{O L S})&#x3D;\frac{\hat{\sigma}^2}{S S T_x}$$</li>
@@ -1711,14 +1711,14 @@ Estimating economic relations">
 <ul>
 <li><p>考虑有两个内生变量的模型:$$y&#x3D;\beta_0+\beta_1 x_1+\beta_2 x_2+\beta_3 x_3+u$$where $x_1$ and $x_2$ are endogenous （whose IV are $z_1$ and $z_2$）, $x_3$ is exogenous.</p>
 </li>
-<li><p>In the first stage, we need to include all instruments and exogenous variables on the right hand side$$\begin{aligned}</p>
+<li><p>In the first stage, we need to include all instruments and exogenous variables on the right hand side</p>
+</li>
+<li><p>$$x_1&#x3D;\alpha_0+\alpha_1 z_1+\alpha_2 z_2+\alpha_3 x_3+v$$$$x_2&#x3D;\gamma_0+\gamma_1 z_1+\gamma_2 z_2+\gamma_3 x_3+v$$</p>
 </li>
 </ul>
 </li>
-</ul>
-<p>&amp; x_1&#x3D;\alpha_0+\alpha_1 z_1+\alpha_2 z_2+\alpha_3 x_3+v . \\<br>&amp; x_2&#x3D;\gamma_0+\gamma_1 z_1+\gamma_2 z_2+\gamma_3 x_3+v .\end{aligned}$$</p>
-<ul>
-<li><strong>IV的数量应该大于等于内生变量的数量</strong></li>
+<li><p><strong>IV的数量应该大于等于内生变量的数量</strong></p>
+</li>
 </ul>
 <h3 id="Issues-with-IV"><a href="#Issues-with-IV" class="headerlink" title="Issues with IV"></a>Issues with IV</h3><h4 id="Sample-size"><a href="#Sample-size" class="headerlink" title="Sample size"></a>Sample size</h4><ul>
 <li>需要一个大样本，因为在2SLS的第一步中，$x&#x3D;\alpha_0+\alpha_1z+e$</li>
@@ -1816,11 +1816,11 @@ Estimating economic relations">
 <li>这种方法和OLS比的弱点在于这个偏导数的前项g取决于x</li>
 <li>解决办法：<ol>
 <li>找特殊点，例如均值点。<ul>
-<li>Partial effect at the average:$$g(\hat{\beta}<em>0+\overline{\boldsymbol{x}}\hat{\beta}</em>{\mathbf{1}})&#x3D;g(\hat{\beta}_0+\hat{\beta}_1 \bar{x}_1+\hat{\beta}_2 \bar{x}_2+\cdot+\hat{\beta}_k \bar{x}_k)$$</li>
+<li>Partial effect at the average:$$g(\hat{\beta_0}+\overline{\boldsymbol{x}}\hat{\beta_{\mathbf{1}}})&#x3D;g(\hat{\beta_0}+\hat{\beta_1} \bar{x_1}+\hat{\beta_2} \bar{x_2}+\cdot+\hat{\beta_k} \bar{x_k})$$</li>
 </ul>
 </li>
 <li>求偏导的均值<ul>
-<li>Average marginal effect:$$[N^{-1} \sum_{i&#x3D;1}^N g(\hat{\beta}<em>0+\boldsymbol{x}</em>{\boldsymbol{i}} \hat{\boldsymbol{\beta}}_{\mathbf{1}})] \hat{\beta}_j$$</li>
+<li>Average marginal effect:$$[N^{-1} \sum_{i&#x3D;1}^N g(\hat{\beta_0}+\boldsymbol{x}<em>{\boldsymbol{i}} \hat{\boldsymbol{\beta}</em>{\mathbf{1}}})] \hat{\beta_j}$$</li>
 </ul>
 </li>
 </ol>
@@ -1841,11 +1841,11 @@ Estimating economic relations">
 </li>
 </ul>
 <ul>
-<li>Maximum likelihood estimation (MLE): maximize the probability that we observe the data:$$\max <em>{\boldsymbol{\beta}} f({y_1, \ldots, y_N} \mid \beta x_i)&#x3D;\max <em>{\boldsymbol{\beta}} \prod</em>{i&#x3D;1}^N[G(\beta x_i)]^{y_i}[1-G(\beta \boldsymbol{x}</em>{\boldsymbol{i}})]^{(1-y_i)}$$</li>
+<li>Maximum likelihood estimation (MLE): maximize the probability that we observe the data:$$\max_{\boldsymbol{\beta}} f({y_1, \ldots, y_N} \mid \beta x_i)&#x3D;\max_{\boldsymbol{\beta}} \prod_{i&#x3D;1}^N[G(\beta x_i)]^{y_i}[1-G(\beta \boldsymbol{x}_{\boldsymbol{i}})]^{(1-y_i)}$$</li>
 </ul>
 <ul>
 <li>Take the natural logarithm and define:$$\ell_i(\beta)&#x3D;\log ([G(\beta x_i)]^{y_i}[1-G(\beta x_i)]^{(1-y_i)})&#x3D;y_i \log [G( x_i)]+(1-y_i) \log [1-G(\beta x_i)]$$</li>
-<li>Then we can equivalently write:$$\max <em>\beta \sum</em>{i&#x3D;1}^N \ell_i(\beta)&#x3D;\max <em>{\boldsymbol{\beta}} \sum</em>{y_i&#x3D;1} \log [G(\beta x_{\boldsymbol{i}})]+\sum_{y_i&#x3D;0} \log [1-G(\beta x_{\boldsymbol{i}})]$$</li>
+<li>Then we can equivalently write:$$\max_\beta \sum_{i&#x3D;1}^N \ell_i(\beta)&#x3D;\max_{\boldsymbol{\beta}} \sum_{y_i&#x3D;1} \log [G(\beta x_{\boldsymbol{i}})]+\sum_{y_i&#x3D;0} \log [1-G(\beta x_{\boldsymbol{i}})]$$</li>
 <li><strong>MLE is consistent and asymptotically efficient.</strong></li>
 </ul>
 <h4 id="MLE-and-OLS"><a href="#MLE-and-OLS" class="headerlink" title="MLE and OLS"></a>MLE and OLS</h4><ul>
@@ -2355,7 +2355,7 @@ Estimating economic relations">
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">63.5k</span>
+            <span class="white-color">63.4k</span>
             
 
             <br>
