@@ -693,13 +693,13 @@ Estimating economic relations">
 </ol>
 <p>在上面5个条件成立时，可以求方差：</p>
 <ul>
-<li>$$Var(\hat{\beta}<em>1|x)&#x3D;\frac{\sigma^2}{\sum</em>{i&#x3D;1}^N(x_i-\bar{x})^2}&#x3D;\frac{\sigma^2}{SST_x}$$<ul>
+<li>$$Var(\hat{\beta}<em>{1}|x)&#x3D;\frac{\sigma^2}{\sum</em>{i&#x3D;1}^N(x_i-\bar{x})^2}&#x3D;\frac{\sigma^2}{SST_x}$$<ul>
 <li>其中 $\sigma$ 是 u 的标准差</li>
 <li>当 $\sigma$ 大时$V a r(\hat{\beta}_{1}|x)$ 方差大</li>
 <li>当 x 的方差大时 $V a r(\hat{\beta}_{1}|x)$ 小</li>
 </ul>
 </li>
-<li>$$V a r(\hat{\beta}<em>0|x)&#x3D;\frac{\sigma^2\sum</em>{i&#x3D;1}^Nx_i^2}{N\sum_{i&#x3D;1}^N(x_i-\bar{x})^2}$$</li>
+<li>$$V a r(\hat{\beta}<em>{0}|x)&#x3D;\frac{\sigma^2\sum</em>{i&#x3D;1}^Nx_i^2}{N\sum_{i&#x3D;1}^N(x_i-\bar{x})^2}$$</li>
 </ul>
 <h5 id="估计-sigma"><a href="#估计-sigma" class="headerlink" title="估计$\sigma$"></a>估计$\sigma$</h5><ul>
 <li>需要用sample来估计 $\sigma^2$</li>
@@ -723,8 +723,8 @@ Estimating economic relations">
 </li>
 </ul>
 </li>
-<li>Fitted value: $$\hat{y}<em>{i}&#x3D;\hat{\beta}</em>{0}+\hat{\beta}<em>{1}x</em>{i1}+\ldots+\hat{\beta}<em>{k}x</em>{i k}.$$</li>
-<li>residual: $$\hat{u}<em>{i}&#x3D; y</em>{i}-\hat{y}_{i}$$</li>
+<li>Fitted value: $$\hat{y_i}&#x3D;\hat{\beta_0}+\hat{\beta_1}x_{i1}+\cdots+\hat{\beta_k}x_{i k}$$</li>
+<li>residual: $$\hat{u_i}&#x3D; y_{i}-\hat{y_i}$$</li>
 </ul>
 <h4 id="Sample-analog"><a href="#Sample-analog" class="headerlink" title="Sample analog"></a>Sample analog</h4><table>
 <thead>
@@ -747,7 +747,7 @@ Estimating economic relations">
 </tr>
 </tbody></table>
 <h4 id="OLS"><a href="#OLS" class="headerlink" title="OLS"></a>OLS</h4><ul>
-<li>$$H\equiv\sum_{i&#x3D;1}^{n}\hat{u}<em>{i}^{2}&#x3D;\sum(y</em>{i}-b_{0}-b_{1}x_{i1}-\ldots-,b_{k}x_{i k})^{2}$$</li>
+<li>$$H\equiv\sum_{i&#x3D;1}^n\hat{u_i}^2&#x3D;\sum(y_i-b_0-b_1x_{i1}-\cdots-b_kx_{i k})^2$$</li>
 <li>求最小值，得一阶条件：<ul>
 <li>$$\frac{\partial H}{\partial b_0}&#x3D;-\sum_{i&#x3D;1}^n2(y_i-\hat{\beta}_0-\hat{\beta}<em>1x</em>{i1}-\cdots-\hat{\beta}<em>kx</em>{ik})&#x3D;0$$</li>
 <li>$${\frac{\partial H}{\partial b_{j}}}&#x3D;-\sum_{i&#x3D;1}^{n}2x_{i j}(y_{i}-{\hat{\beta}<em>{0}}-{\hat{\beta}</em>{1}}x_{i1}-\cdots-{\hat{\beta}<em>{k}}x</em>{i k})&#x3D;0,\forall j&#x3D;1,2,…,k.$$</li>
@@ -2355,7 +2355,7 @@ Estimating economic relations">
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">63.7k</span>
+            <span class="white-color">63.6k</span>
             
 
             <br>
