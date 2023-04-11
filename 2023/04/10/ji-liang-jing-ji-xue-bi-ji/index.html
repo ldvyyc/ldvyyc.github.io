@@ -416,7 +416,7 @@ Estimating economic relations">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    77 分
+                    76 分
                 </div>
                 
                 
@@ -1124,7 +1124,7 @@ Estimating economic relations">
 <li>$\hat{\beta}_0^*$ and $\hat{\beta}_0$, and $\hat{\beta}_1^*$ and $\hat{\beta}_1$ 的关系是？<ul>
 <li>$$\hat{\beta}_0^*&#x3D;w_1 \hat{\beta}_0, \quad \hat{\beta}_1^*&#x3D;\frac{w_1}{w_2} \hat{\beta}_1$$</li>
 <li>$$\operatorname{se}(\hat{\beta}_0^*) &#x3D;w_1 \operatorname{se}(\hat{\beta}_0), \quad\operatorname{se}(\hat{\beta}_1^*) &#x3D;\frac{w_1}{w_2}\operatorname{se}(\hat{\beta}_1)$$</li>
-<li>$$t_{\hat{\beta}<em>0^*}&#x3D;t</em>{\hat{\beta}<em>0} \quad t</em>{\hat{\beta}<em>1^*} &#x3D;t</em>{\hat{\beta}_1}$$</li>
+<li>$$t_\hat{\beta_0}^*&#x3D;t_\hat{\beta_0} \quad t_\hat{\beta_1}^* &#x3D;t_\hat{\beta_1}$$</li>
 <li>$$R^{2*}&#x3D;R^2$$</li>
 <li>the statistical signiicance does not change.</li>
 </ul>
@@ -1135,15 +1135,15 @@ Estimating economic relations">
 </ul>
 <h4 id="Beta-Coefficients"><a href="#Beta-Coefficients" class="headerlink" title="Beta Coefficients"></a>Beta Coefficients</h4><ul>
 <li>Sometimes, it’s useful to obtain regression results when all variables are standardized: subtracting off its mean and dividing by its standard deviation.</li>
-<li>$$<br>\begin{aligned}<br>y_i &amp; &#x3D;\hat{\beta}_0+\hat{\beta}<em>1 x</em>{i 1}+\ldots+\hat{\beta}<em>k x</em>{i k}+\hat{u}_i . \\<br>(y_i-\bar{y}) &#x2F; \hat{\sigma}_y &amp; &#x3D;(\hat{\sigma}_1 &#x2F; \hat{\sigma}_y) \hat{\beta}<em>1[(x</em>{i 1}-\bar{x}_1) &#x2F; \hat{\sigma}_1]+\ldots \\<br>&amp; +(\hat{\sigma}_k &#x2F; \hat{\sigma}_y) \hat{\beta}<em>k[(x</em>{i k}-\bar{x}_k) &#x2F; \hat{\sigma}_k]+(\hat{u}_i &#x2F; \hat{\sigma}_y) . \\<br>z_y &amp; &#x3D;\hat{b}_1 z_1+\ldots+\hat{b}_k z_k+\text { error }<br>\end{aligned}<br>$$</li>
+<li>$$<br>\begin{aligned}<br>y_i &amp; &#x3D;\hat{\beta_0}+\hat{\beta_1} x_{i 1}+\cdots+\hat{\beta_k} x_{i k}+\hat{u_i} . \\<br>(y_i-\bar{y}) &#x2F; \hat{\sigma_y} &amp; &#x3D;(\hat{\sigma_1} &#x2F; \hat{\sigma_y}) \hat{\beta_1}[(x_{i 1}-\bar{x_1}) &#x2F; \hat{\sigma_1}]+\cdots \\<br>&amp; +(\hat{\sigma_k} &#x2F; \hat{\sigma_y}) \hat{\beta_k}[(x_{i k}-\bar{x_k}) &#x2F; \hat{\sigma_k}]+(\hat{u_i} &#x2F; \hat{\sigma_y}) \\<br>z_y &amp; &#x3D;\hat{b_1} z_1+\cdots+\hat{b_k} z_k+\text { error }<br>\end{aligned}<br>$$</li>
 <li>where $z_y$ denotes the z-score of $y$. The new coefficients are$$\hat{b}_j&#x3D;(\hat{\sigma}_j &#x2F; \hat{\sigma}_y) \hat{\beta}_j$$</li>
 <li>If $x_1$ increases by one standard deviation, then $\hat{y}$ changes by $\hat{b}_1$ standard deviation.</li>
 <li>归一化了</li>
 </ul>
 <h3 id="More-on-Functional-Form"><a href="#More-on-Functional-Form" class="headerlink" title="More on Functional Form"></a>More on Functional Form</h3><ul>
 <li>对于log形式 $$z&#x3D;log(y)&#x3D;\beta_0+\beta_1 x+u$$<ul>
-<li>当x变化$\Delta$ 时，$$%\Delta E(y|x)&#x3D;100[exp(\beta_1\Delta)-1]$$</li>
-<li>当 $\Delta$ 趋近0时，$$%\Delta E(y|x)\approx 100\beta_1\Delta$$</li>
+<li>当x变化$\Delta$ 时，$$\%\Delta E(y|x)&#x3D;100[exp(\beta_1\Delta)-1]$$</li>
+<li>当 $\Delta$ 趋近0时，$$\%\Delta E(y|x)\approx 100\beta_1\Delta$$</li>
 </ul>
 </li>
 <li>对于x取值小于0的，可以使用 inverse hyperbolic sine: $$IRS(x)&#x3D;arcsinh(x)&#x3D;log(x+\sqrt{x^2+1})$$</li>
