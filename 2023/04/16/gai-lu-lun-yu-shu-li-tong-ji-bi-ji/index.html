@@ -393,7 +393,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    10.8k
+                    10.7k
                 </div>
                 
 
@@ -696,13 +696,18 @@
 <ul>
 <li>令 $z&#x3D;0$, 得 $g^{(j)}(0)&#x3D;j ! a_j$, 或 $a_j&#x3D;\frac{1}{j !} g^{(j)}(0)$, 故从 $g$ 可得 $a_j$ 的值, 生成函数和分布两者一一对应。</li>
 <li>令 $z&#x3D;1$, 得<ul>
+<li>$$g^\prime(1)&#x3D;\sum_{n&#x3D;1}^\infty n a_n&#x3D;E(X)$$</li>
+<li>$$g^{\prime \prime}(1)&#x3D;\sum_{n&#x3D;2}^\infty n(n-1) a_n&#x3D;\sum_{n&#x3D;0}^\infty n^2 a_n-\sum_{n&#x3D;0}^\infty n a_n&#x3D;E(X^2)-E(X)$$</li>
+</ul>
+</li>
+<li>故<ul>
 <li>$$\begin{aligned}</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<p>&amp; g^{\prime}(1)&#x3D;\sum_{n&#x3D;1}^{\infty} n a_n&#x3D;E(X) \\<br>&amp; g^{\prime \prime}(1)&#x3D;\sum_{n&#x3D;2}^{\infty} n(n-1) a_n&#x3D;\sum_{n&#x3D;0}^{\infty} n^2 a_n-\sum_{n&#x3D;0}^{\infty} n a_n&#x3D;E(X^2)-E(X)<br>\end{aligned}$$<br>    * 故<br>        * $$\begin{aligned}<br>&amp; E(X)&#x3D;g^{\prime}(1), \quad E(X^2)&#x3D;g^{\prime}(1)+g^{\prime \prime}(1) \\<br>&amp; \sigma^2(X)&#x3D;E(X^2)-(E(X))^2&#x3D;g^{\prime}(1)+g^{\prime \prime}(1)-(g^{\prime}(1))^2<br>\end{aligned}$$</p>
+<p>&amp; E(X)&#x3D;g^{\prime}(1), \quad E(X^2)&#x3D;g^{\prime}(1)+g^{\prime \prime}(1) \\<br>&amp; \sigma^2(X)&#x3D;E(X^2)-(E(X))^2&#x3D;g^{\prime}(1)+g^{\prime \prime}(1)-(g^{\prime}(1))^2<br>\end{aligned}$$</p>
 <h4 id="卷积"><a href="#卷积" class="headerlink" title="卷积"></a>卷积</h4><ul>
 <li><p>设 $Y$ 是另一个随机变量, 取值非负整数, 概率决定如下$$P(Y&#x3D;j)&#x3D;b_j, \quad j&#x3D;0,1,2, \cdots$$</p>
 </li>
@@ -763,7 +768,10 @@
 <h4 id="定理-1"><a href="#定理-1" class="headerlink" title="定理"></a>定理</h4><ul>
 <li>定理 （中心极限）: 设 $S_n, m, \sigma^2$ 如上, 则对任意实数$-\infty&lt;a&lt;b&lt;+\infty$</li>
 <li>$$\lim _{n \rightarrow \infty} P(a&lt;\frac{S_n-n m}{\sqrt{n} \sigma} \leq b)&#x3D;\frac{1}{\sqrt{2 \pi}} \int_a^b e^{-x^2 &#x2F; 2} d x$$</li>
-<li>即$$\lim <em>{n \rightarrow \infty} P(a&lt;\frac{S_n-E(S_n)}{\sigma</em>{S_n}} \leq b)&#x3D;\frac{1}{\sqrt{2 \pi}} \int_a^b e^{-x^2 &#x2F; 2} d x$$</li>
+<li>即<ul>
+<li>$$\lim_{n \rightarrow \infty} P(a&lt;\frac{S_n-E(S_n)}{\sigma_{S_n}}\leq b)&#x3D;\frac{1}{\sqrt{2\pi}} \int_a^b e^{-x^2&#x2F;2}dx$$</li>
+</ul>
+</li>
 <li>$S_n&#x3D;X_1+X_2+\cdots+X_n$ 独立同分布</li>
 <li><strong>极限不依赖于$\theta$和$m$</strong></li>
 <li>中心极限定理可写成$$P(x_1 \sigma \sqrt{n}&lt;S_n-m n&lt;x_2 \sigma \sqrt{n}) \approx \Phi(x_2)-\Phi(x_1)$$或者令 $x_2&#x3D;x, x_1&#x3D;-x$<ul>
@@ -990,10 +998,14 @@
 <li>与超几何分布相关。</li>
 </ul>
 </li>
-<li>定理4。若总体服从期望为 $\mu$ 、方差为 $\sigma^2$ 的正态分布, 则随机变量 $Z:&#x3D;\frac{\bar{X}-\mu}{\frac{\sigma}{\sqrt{n}}}$ 收敛单位正态分布:$$\lim <em>{n \rightarrow \infty} \mathbb{P}(Z \leq x)&#x3D;\frac{1}{\sqrt{2 \pi}} \int</em>{-\infty}^x e^{-u^2 &#x2F; 2} d u$$这里假设总体无限, 或者抽样复位 （即独立同分布）。</li>
+<li>定理4。若总体服从期望为 $\mu$ 、方差为 $\sigma^2$ 的正态分布, 则随机变量 $Z:&#x3D;\frac{\bar{X}-\mu}{\frac{\sigma}{\sqrt{n}}}$ 收敛单位正态分布:$$\lim_{n \rightarrow \infty} P(Z \leq x)&#x3D;\frac{1}{\sqrt{2 \pi}} \int_{-\infty}^xe^{-u^2&#x2F;2}du$$这里假设总体无限, 或者抽样复位 （即独立同分布）。</li>
 </ul>
 <h5 id="抽样分配的差与和"><a href="#抽样分配的差与和" class="headerlink" title="抽样分配的差与和"></a>抽样分配的差与和</h5><ul>
-<li>现给定两个总体。第一、二个样本分别来自第一、二个总体, 样本容量、统计量分别为 $n_1, n_2$ 和 $S_1, S_2$, 均值和标准差（即偏差）分别为 $\mu_{S_1}, \mu_{S_2}$ 和 $\sigma_{S_1}, \sigma_{S_2}$ 。现考虑所有来自这两个总体样本的所有组合, 可得和、差$$S_1+S_2, S_1-S_2$$的分布。不难知道，若 $S_1, S_2$ 独立，则$$\begin{gathered}<br>\mu_{S_1-S_2}&#x3D;\mu_{S_1}-\mu_{S_2}, \sigma_{S_1-S_2}&#x3D;\sqrt{\sigma_{S_1}^2+\sigma_{S_2}^2}, \\<br>\mu_{\bar{X}_1-\bar{X}<em>2}&#x3D;\mu_1-\mu_2, \sigma</em>{\bar{X}_1-\bar{X}_2}&#x3D;\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}<br>\end{gathered}$$</li>
+<li>现给定两个总体。第一、二个样本分别来自第一、二个总体, 样本容量、统计量分别为 $n_1, n_2$ 和 $S_1, S_2$, 均值和标准差（即偏差）分别为 $\mu_{S_1}, \mu_{S_2}$ 和 $\sigma_{S_1}, \sigma_{S_2}$ 。现考虑所有来自这两个总体样本的所有组合, 可得和、差$$S_1+S_2, S_1-S_2$$的分布。不难知道，若 $S_1, S_2$ 独立，则<ul>
+<li>$$\mu_{S_1-S_2}&#x3D;\mu_{S_1}-\mu_{S_2}, \sigma_{S_1-S_2}&#x3D;\sqrt{\sigma_{S_1}^2+\sigma_{S_2}^2}$$</li>
+<li>$$\mu_{\bar{X}_1-\bar{X}<em>2}&#x3D;\mu_1-\mu_2, \sigma</em>{\bar{X}_1-\bar{X}_2}&#x3D;\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}$$</li>
+</ul>
+</li>
 </ul>
 <h5 id="样本方差"><a href="#样本方差" class="headerlink" title="样本方差"></a>样本方差</h5><ul>
 <li><p>样本方差: </p>
