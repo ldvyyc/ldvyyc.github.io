@@ -6,7 +6,7 @@
   <link href="https://ldvyyc.top/atom.xml" rel="self"/>
   
   <link href="https://ldvyyc.top/"/>
-  <updated>2023-06-04T08:38:52.750Z</updated>
+  <updated>2023-06-05T10:10:06.423Z</updated>
   <id>https://ldvyyc.top/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>国际金融市场cheatsheet</title>
+    <link href="https://ldvyyc.top/2023/06/05/guo-ji-jin-rong-shi-chang-cheatsheet/"/>
+    <id>https://ldvyyc.top/2023/06/05/guo-ji-jin-rong-shi-chang-cheatsheet/</id>
+    <published>2023-06-05T10:07:22.012Z</published>
+    <updated>2023-06-05T10:10:06.423Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">
+
+	&lt;div class=&quot;row&quot;&gt;
+    &lt;embed src=&quot;/pdf/期末cheatsheet.pdf&quot; width=&quot;100%&quot; height=&quot;550&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Learning" scheme="https://ldvyyc.top/categories/Learning/"/>
+    
+    
+    <category term="Finance" scheme="https://ldvyyc.top/tags/Finance/"/>
+    
+    <category term="cheatsheet" scheme="https://ldvyyc.top/tags/cheatsheet/"/>
+    
+  </entry>
   
   <entry>
     <title>固收期末复习笔记</title>
@@ -238,30 +268,23 @@
   </entry>
   
   <entry>
-    <title>MNIST Classification with MLP</title>
+    <title></title>
     <link href="https://ldvyyc.top/2023/03/16/mnist-classification-with-mlp/"/>
     <id>https://ldvyyc.top/2023/03/16/mnist-classification-with-mlp/</id>
     <published>2023-03-16T08:31:42.591Z</published>
-    <updated>2023-03-16T13:41:46.390Z</updated>
+    <updated>2023-06-05T10:07:30.123Z</updated>
     
     
       
       
         
         
-    <summary type="html">
-
-	&lt;div class=&quot;row&quot;&gt;
-    &lt;embed src=&quot;/pdf/MNISTClassificationWithMLP_于雨琛_2020011846.pdf&quot; width=&quot;100%&quot; height=&quot;550&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;cheatsheet&quot;&gt;&lt;a href=&quot;#cheatsheet&quot; class=&quot;headerlink&quot; title=&quot;cheatsheet&quot;&gt;&lt;/a&gt;cheatsheet&lt;/h2&gt;&lt;h2</summary>
         
       
     
     
     
-    <category term="Learning" scheme="https://ldvyyc.top/categories/Learning/"/>
-    
-    
-    <category term="MachineLearning" scheme="https://ldvyyc.top/tags/MachineLearning/"/>
     
   </entry>
   
