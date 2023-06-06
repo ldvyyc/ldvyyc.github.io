@@ -69,8 +69,8 @@ A fixed income security is a financial obliga">
         })();
     </script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Frank's Blog" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="Frank's Blog" type="application/atom+xml">
+</head>
 
 <body>
 
@@ -392,14 +392,14 @@ A fixed income security is a financial obliga">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.7k
+                    5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    29 分
+                    30 分
                 </div>
                 
                 
@@ -420,6 +420,7 @@ A fixed income security is a financial obliga">
 <ul>
 <li>A fixed income security is a financial obligation of an entity （the issuer） that promises to pay a specified sum of money on specified future dates</li>
 <li>bond &gt; 10 yr, notes 1-10 yr, bill &lt; 1 yr</li>
+<li>debt obligations and preferred stock</li>
 </ul>
 </li>
 <li><p>What important information does the indenture contain?</p>
@@ -459,7 +460,7 @@ A fixed income security is a financial obliga">
 </li>
 <li><p>Name the players in the fixed income markets by their roles.</p>
 <ul>
-<li><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230604104119.png" alt="image.png"></li>
+<li><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230604104119.png" alt="roles of players"></li>
 </ul>
 </li>
 <li><p>Name the risks embedded in the fixed income markets. Can you explain them in your language?</p>
@@ -470,8 +471,14 @@ A fixed income security is a financial obliga">
 </ul>
 </li>
 <li>credit risk<ul>
-<li>default risk</li>
-<li>credit spread risk: reflect how risky the issuer</li>
+<li>default risk<ul>
+<li>fail to pay</li>
+</ul>
+</li>
+<li>credit spread risk: reflect how risky the issuer<ul>
+<li>different yield between a risky bond and a risk-free bond</li>
+</ul>
+</li>
 <li>downgrade risk</li>
 </ul>
 </li>
@@ -585,6 +592,9 @@ A fixed income security is a financial obliga">
 <li>只有当hold the bond to maturity 才是</li>
 </ul>
 </li>
+<li>bond equivalent yield BEY &#x3D; annualize quoted yield</li>
+<li>effective annual yield EAY &#x3D; real yield for one year</li>
+<li>HPR &#x3D; annual interest&#x2F; market price</li>
 </ul>
 </li>
 <li><p>yield curve</p>
@@ -720,8 +730,8 @@ A fixed income security is a financial obliga">
 </li>
 <li><p>Describe multiple price&#x2F;discriminatory auction, uniform price auction, and modified multiple price auction.</p>
 <ul>
-<li>multiple price&#x2F;discriminatory auction： each winning bid receive the rate it proposes.</li>
-<li>uniform price auction: all winning bid receive highest rate that the market clears</li>
+<li>multiple price&#x2F;discriminatory auction： each winning bid receive the rate it proposes. （American auction）</li>
+<li>uniform price auction: all winning bid receive highest rate that the market clears. （Dutch auction）美国1999年后开始这个</li>
 <li>modified multiple price：rate is weighted average of winning bids. bidding with lower rate pay par price, bidding with higher rate pay discount price（with regard to their bidding rate）</li>
 </ul>
 </li>
@@ -969,6 +979,7 @@ A fixed income security is a financial obliga">
 <ul>
 <li>Vasicek: <ul>
 <li>short rate follow Brownian motion, $dr_t&#x3D;\kappa (\mu - r_t)dt+\sigma dW_t$</li>
+<li>mean reversion, allow negative interest rates</li>
 <li>zero coupon bond price can be priced</li>
 <li>calibrate model to estimate coefficient and apply to other bond</li>
 <li>Main character<ul>
@@ -983,6 +994,7 @@ A fixed income security is a financial obliga">
 </li>
 <li>CIR:<ul>
 <li>short rate follow Brownian motion, $dr_t&#x3D;\kappa (\mu - r_t)dt+\sigma \sqrt{r}dW_t$</li>
+<li>mean reversion, no negative interest rates</li>
 <li>zero coupon bond price can be priced</li>
 <li>Main character<ul>
 <li>Continuous time one factor model</li>
@@ -1003,10 +1015,15 @@ A fixed income security is a financial obliga">
 </ul>
 </li>
 <li>if short rate follow Brownian motion, <ul>
-<li>$r(t+1)&#x3D;r(t)+\theta \pm \sigma$</li>
+<li>$$r(t+1)&#x3D;r(t)+\theta \pm \sigma$$</li>
+<li>$$\frac{R(t+1,j+1,T)}{R(t+1,j,T)}&#x3D;e^{2\sigma_R(t,T)}$$</li>
 </ul>
 </li>
-<li>using bivariate lattice to price options</li>
+<li>using bivariate lattice to price options<ul>
+<li>calculate value of the option in every scenario and discount to time 0</li>
+<li>American option need to consider one more thing, continuation value</li>
+</ul>
+</li>
 <li>model is callibrated to market yields and volatilities</li>
 </ul>
 </li>
@@ -1044,9 +1061,11 @@ A fixed income security is a financial obliga">
 <li>forward contract is an agreement entered by two parties. One agree to buy, the other agree to sell an underlying asset at a predetermined price on a specified date in future.<ul>
 <li>on the settlement date, the seller is obligated to deliver the asset, price at forward price.</li>
 <li>assigned between two parties</li>
+<li>no cash flow between signing day and delivering day</li>
 </ul>
 </li>
 <li>Futures are similar to forward, agreement on deliver some asset to the other party on the settlement date on the agreed price.<ul>
+<li>marking to market, effectively rewrite the contract every day</li>
 <li>doing so in exchange market.</li>
 <li>have regulations</li>
 <li>trade via margin</li>
@@ -1057,7 +1076,7 @@ A fixed income security is a financial obliga">
 <li>Financial futures: stock index futures, interest rate futures, currency futures</li>
 </ul>
 </li>
-<li><p>Describe conversion factor.</p>
+<li><p>Describe conversion factor CF.</p>
 <ul>
 <li>conversion factors link the different prices of the eligible bonds and the price of a reference bond. because future prices are quoted on a reference bond with same maturity.</li>
 <li>each bond have a unique conversion factor.</li>
@@ -1075,12 +1094,24 @@ A fixed income security is a financial obliga">
 </li>
 <li><p>What is the cheapest-to-deliver （CTD） bond? How to determine the CTD bond?</p>
 <ul>
-<li>maximize for the shorter.</li>
+<li>when delivery occurs, it is the choice of seller to determine which eligible bond to deliver.</li>
+<li>the bond that is the most economical for the shorter.</li>
 <li>3 ways to characterize CTD:<ul>
 <li>CTD has cheapest forward invioce price</li>
-<li>It has highest implied repo rate（IRR）, which is the theoretical rate of return the short could earn by purchasing the cash security and delivering it into futures contract.</li>
+<li>It has highest implied repo rate（IRR）<ul>
+<li>which is the theoretical rate of return the short could earn by purchasing the cash security and delivering it into futures contract.</li>
+</ul>
+</li>
 <li>It has lowest basis after carry or net basis.<ul>
-<li>basis is the difference between cash price and adjusted futures price.</li>
+<li>$Basis&#x3D;P_t - CF\times F_t$<ul>
+<li>现货和期货的价差, $F_t$ 是远期价格</li>
+</ul>
+</li>
+<li>$Carry&#x3D;[AI_T-AI_t]-(P_t+AI_t)\times r\times \frac{T-t}{360}$<ul>
+<li>期货和现货的利息差，第一项是interest income，第二项是interest cost</li>
+</ul>
+</li>
+<li>$BAC\approx \text{Option Value}$</li>
 </ul>
 </li>
 </ul>
@@ -1089,6 +1120,16 @@ A fixed income security is a financial obliga">
 </li>
 <li><p>Describe the call （put） option on a futures contract.</p>
 <ul>
+<li>Call option<ul>
+<li>the buyer has the right but not obligation to purchase</li>
+<li>the seller has an obligation to sell upon exercise of the call</li>
+</ul>
+</li>
+<li>Put option<ul>
+<li>the buyer of a put option has the right but not obligation to sell</li>
+<li>the seller of put option has responsibility to buy upon exercise</li>
+</ul>
+</li>
 <li>European option: only exercised at the expiration date</li>
 <li>American: exercised at any time up to expiration date</li>
 <li>Bermudan and Atlantic: before expiration date, but only certain date.</li>
@@ -1100,13 +1141,15 @@ A fixed income security is a financial obliga">
 <ul>
 <li>default: failure to meet the legal obligations of a loan</li>
 <li>financial distress: its liquid assets are not sufficient to meet the requirements of its obligations（before default）<ul>
-<li>solutions</li>
-<li>restructuring assets: asset sales, fire sales</li>
+<li>solutions<ul>
+<li>restructuring assets: asset sales, fire sales, carry along with financial restructuring</li>
 <li>private workout: debt restructuring to reduce par, extend maturity, debt fot equity swap</li>
+<li>workout means the company is in financial distress, fundamentally good, while if no need to workout means it is in economic distress and is fundamentally bad</li>
 </ul>
 </li>
-<li>workout means the company is in financial distress, fundamentally good, while if no need to workout means it is in economic distress and is fundamentally bad</li>
-<li>bankruptcy: when workout fails, defaulted firm enter into bankruptcy. It is a legal status<ul>
+</ul>
+</li>
+<li>bankruptcy: when workout fails, defaulted firm enter into bankruptcy. It is a legal status of a person or entity cannot repay its debts<ul>
 <li>Chapter 7: liquidation, sale of nonexempt property and distribution of the proceeds to creditors.</li>
 <li>Chapter 11: reorganization, debtor remain in possession, but creditors have some power.</li>
 </ul>
@@ -1139,17 +1182,29 @@ A fixed income security is a financial obliga">
 <ul>
 <li>using credit spread</li>
 <li>credit spread is typically viewed as the difference between YTM of a risky security and the YTM of a treasury with same maturity.</li>
+<li>core component<ul>
 <li>probability of default PD</li>
 <li>expected loss in the event of default LGD</li>
+</ul>
+</li>
+<li>drivers<ul>
+<li>high risk require high return</li>
+</ul>
+</li>
 </ul>
 </li>
 <li><p>Describe the credit scoring model. What are the pros and cons of it?</p>
 <ul>
 <li>Altman’s Z-score model</li>
 <li>short-term liquidity, internel growth potential measure, profitability, leverage, efficiency</li>
+<li>pro<ul>
+<li>easy to estimate</li>
+<li>empirical results are good</li>
+</ul>
+</li>
 <li>limitations<ul>
-<li>theoretical foundation</li>
-<li>frequency of data</li>
+<li>theoretical foundation is poor</li>
+<li>frequency of data needed</li>
 <li>Impact of different industry and general economic situation</li>
 <li>Nonlinearity of impact of credit factors on default prob.</li>
 </ul>
@@ -1164,6 +1219,10 @@ A fixed income security is a financial obliga">
 <li>Call-Put parity<ul>
 <li>$P+S&#x3D;C+Xe^{-rT}$</li>
 <li>P is European put, S is underlying asset, X is strike price</li>
+<li>$V&#x3D;C+Fe^{-rT}-P$<ul>
+<li>C is equity, latter is Debt</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>using BS model to get this model</li>
@@ -1697,7 +1756,7 @@ A fixed income security is a financial obliga">
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">85.9k</span>
+            <span class="white-color">86.2k</span>
             
 
             <br>
