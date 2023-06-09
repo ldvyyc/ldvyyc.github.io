@@ -6,7 +6,7 @@
   <link href="https://ldvyyc.top/atom.xml" rel="self"/>
   
   <link href="https://ldvyyc.top/"/>
-  <updated>2023-06-05T10:10:06.423Z</updated>
+  <updated>2023-06-09T12:54:20.715Z</updated>
   <id>https://ldvyyc.top/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Latex参考文献与跳转</title>
+    <link href="https://ldvyyc.top/2023/06/09/latex-can-kao-wen-xian-yu-tiao-zhuan/"/>
+    <id>https://ldvyyc.top/2023/06/09/latex-can-kao-wen-xian-yu-tiao-zhuan/</id>
+    <published>2023-06-09T12:25:23.518Z</published>
+    <updated>2023-06-09T12:54:20.715Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;目标&quot;&gt;&lt;a href=&quot;#目标&quot; class=&quot;headerlink&quot; title=&quot;目标&quot;&gt;&lt;/a&gt;目标&lt;/h2&gt;&lt;p&gt;希望能够在latex中实现点击跳转参考文献，点击跳转文章内的图表。&lt;/p&gt;
+&lt;h2 id=&quot;参考文献&quot;&gt;&lt;a href=&quot;#参考文献&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Waffle" scheme="https://ldvyyc.top/categories/Waffle/"/>
+    
+    
+    <category term="Latex" scheme="https://ldvyyc.top/tags/Latex/"/>
+    
+    <category term="Tools" scheme="https://ldvyyc.top/tags/Tools/"/>
+    
+  </entry>
   
   <entry>
     <title>国际金融市场cheatsheet</title>

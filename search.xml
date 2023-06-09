@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Latex参考文献与跳转</title>
+      <link href="/2023/06/09/latex-can-kao-wen-xian-yu-tiao-zhuan/"/>
+      <url>/2023/06/09/latex-can-kao-wen-xian-yu-tiao-zhuan/</url>
+      
+        <content type="html"><![CDATA[<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><p>希望能够在latex中实现点击跳转参考文献，点击跳转文章内的图表。</p><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>使用bibtex插入参考文献，需要在tex文件同级目录下新建一个Ref.bib文件，文件中插入参考文献的bib格式数据。这里的数据一般在论文网站可以直接导出，复制进来即可。</p><p><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230609204359.png" alt="同级目录下添加bib文件"></p><h3 id="插入参考文献"><a href="#插入参考文献" class="headerlink" title="插入参考文献"></a>插入参考文献</h3><p>需要在tex文件结尾添加下面的几行code：</p><pre class=" language-tex"><code class="language-tex">\bibliographystyle&#123;plainnat&#125; %参考文献显示格式，plain，plainnat，unsrt等。\nocite&#123;*&#125; %这句话的意思是展示所有bib中存在的参考文献，不管是否在文章中引用过。没有这句话就只显示论文中引用过的文献。\bibliography&#123;Ref&#125; %这里引用同目录下的Ref.bib\end&#123;document&#125;</code></pre><h3 id="引用参考文献"><a href="#引用参考文献" class="headerlink" title="引用参考文献"></a>引用参考文献</h3><p>使用natbib包+citet调用。</p><pre class=" language-tex"><code class="language-tex">\usepackage&#123;natbib&#125;         % 可以添加修饰 \usepackage[...]&#123;natbib&#125;\usepackage&#123;hyperref&#125;       % hyperlinks%正文中：\cite&#123;...&#125; %展示序号\citet&#123;...&#125; %展示格式，默认为Author+year，可以在引用natbib包的时候更改引用格式</code></pre><h3 id="完整示例代码"><a href="#完整示例代码" class="headerlink" title="完整示例代码"></a>完整示例代码</h3><pre class=" language-tex"><code class="language-tex">\documentclass[12pt]&#123;article&#125; %文档头\usepackage[UTF8]&#123;ctex&#125; % 显示中文\usepackage&#123;natbib&#125; % 导入natbib包，使用author-year格式\usepackage&#123;hyperref&#125; % 导入超链接包，在文中文献引用处点击可实现跳转\begin&#123;document&#125; % 开始文档\section&#123;参考文献引用&#125; % 第一部分测试引用参考文献\citet&#123;GU2021429&#125;\bibliographystyle&#123;plainnat&#125; \bibliography&#123;Cmm&#125; % 参考文献bib文件名称\end&#123;document&#125;</code></pre><h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230609204115.png" alt="引用参考文献效果"></p><p>可以点击正文中的链接，自动跳转到参考文献对应文章处。导出pdf仍然生效。</p><h2 id="引用图表"><a href="#引用图表" class="headerlink" title="引用图表"></a>引用图表</h2><p>使用 \label 添加标签，使用 \ref 引用标签。</p><h3 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h3><pre class=" language-tex"><code class="language-tex">\documentclass[12pt]&#123;article&#125; %文档头\usepackage[UTF8]&#123;ctex&#125; % 显示中文\usepackage&#123;natbib&#125; % 导入natbib包，使用author-year格式\usepackage&#123;hyperref&#125; % 导入超链接包，在文中文献引用处点击可实现跳转\usepackage&#123;booktabs&#125; % 导入三线表需要的宏包\usepackage&#123;multirow&#125;\usepackage&#123;multicol&#125;\begin&#123;document&#125; % 开始文档\section&#123;引用示例&#125; % 第一部分\begin&#123;table&#125;[htbp]    \setlength&#123;\abovecaptionskip&#125;&#123;0.05cm&#125;    \renewcommand&#123;\arraystretch&#125;&#123;0.7&#125;  \caption&#123;测试&#125;  \label&#123;Table 1&#125;             % 设置Table的label  \centering  \begin&#123;tabular&#125;&#123;cccccccc&#125;    \toprule     & & \multicolumn&#123;6&#125;&#123;c&#125;&#123;K&#125;                   \\    \cmidrule(r)&#123;3-8&#125;    Model     & Test Assets     & 1 & 2 & 3 & 4 & 5 & 6 \\    \midrule    CNN & $r_t$ & - & - & - & - & - & -\\    \bottomrule  \end&#123;tabular&#125;\end&#123;table&#125;测试，表格\ref&#123;Table 1&#125; 在这里。 % 引用Table的label\end&#123;document&#125;</code></pre><h3 id="效果-1"><a href="#效果-1" class="headerlink" title="效果"></a>效果</h3><p><img src="https://cdn.jsdelivr.net/gh/ldvyyc/ImgBed/20230609205154.png" alt="引用图表效果"></p><p>点击序号可以跳转到表格位置。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Waffle </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Latex </tag>
+            
+            <tag> Tools </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>国际金融市场cheatsheet</title>
       <link href="/2023/06/05/guo-ji-jin-rong-shi-chang-cheatsheet/"/>
       <url>/2023/06/05/guo-ji-jin-rong-shi-chang-cheatsheet/</url>
