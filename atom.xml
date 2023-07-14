@@ -6,7 +6,7 @@
   <link href="https://ldvyyc.top/atom.xml" rel="self"/>
   
   <link href="https://ldvyyc.top/"/>
-  <updated>2023-06-09T12:54:20.715Z</updated>
+  <updated>2023-07-14T09:17:31.407Z</updated>
   <id>https://ldvyyc.top/</id>
   
   <author>
@@ -17,30 +17,71 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Latex参考文献与跳转</title>
+    <title>股票高频因子</title>
+    <link href="https://ldvyyc.top/2023/07/14/gu-piao-gao-pin-yin-zi/"/>
+    <id>https://ldvyyc.top/2023/07/14/gu-piao-gao-pin-yin-zi/</id>
+    <published>2023-07-14T09:13:59.075Z</published>
+    <updated>2023-07-14T09:17:31.407Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一-统计量类&quot;&gt;&lt;a href=&quot;#一-统计量类&quot; class=&quot;headerlink&quot; title=&quot;一. 统计量类&quot;&gt;&lt;/a&gt;一. 统计量类&lt;/h1&gt;&lt;h2 id=&quot;1-已实现方差-real-var（Concerned）&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Finance" scheme="https://ldvyyc.top/categories/Finance/"/>
+    
+    
+    <category term="Stock" scheme="https://ldvyyc.top/tags/Stock/"/>
+    
+    <category term="High-freq factor" scheme="https://ldvyyc.top/tags/High-freq-factor/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python创建环境</title>
+    <link href="https://ldvyyc.top/2023/06/26/python-chuang-jian-huan-jing/"/>
+    <id>https://ldvyyc.top/2023/06/26/python-chuang-jian-huan-jing/</id>
+    <published>2023-06-26T12:05:37.518Z</published>
+    <updated>2023-06-26T12:06:09.131Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;什么是venv&lt;br&gt;Venv（虚拟环境）是Python用来创建和管理虚拟环境的模块，你可以把它想象成一个容器，该容器供你用来存放你的Python脚本以及安装各种Python第三方模块，容器里的环境和本机是完全分开的（就像你在Windows主机上通过Vmware跑一台Ubu</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
     <link href="https://ldvyyc.top/2023/06/09/latex-can-kao-wen-xian-yu-tiao-zhuan/"/>
     <id>https://ldvyyc.top/2023/06/09/latex-can-kao-wen-xian-yu-tiao-zhuan/</id>
     <published>2023-06-09T12:25:23.518Z</published>
-    <updated>2023-06-09T12:54:20.715Z</updated>
+    <updated>2023-06-26T12:05:41.155Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;目标&quot;&gt;&lt;a href=&quot;#目标&quot; class=&quot;headerlink&quot; title=&quot;目标&quot;&gt;&lt;/a&gt;目标&lt;/h2&gt;&lt;p&gt;希望能够在latex中实现点击跳转参考文献，点击跳转文章内的图表。&lt;/p&gt;
-&lt;h2 id=&quot;参考文献&quot;&gt;&lt;a href=&quot;#参考文献&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;python&quot;&gt;&lt;a href=&quot;#python&quot; class=&quot;headerlink&quot; title=&quot;python &quot;&gt;&lt;/a&gt;python &lt;/h2&gt;&lt;h2</summary>
         
       
     
     
     
-    <category term="Waffle" scheme="https://ldvyyc.top/categories/Waffle/"/>
-    
-    
-    <category term="Latex" scheme="https://ldvyyc.top/tags/Latex/"/>
-    
-    <category term="Tools" scheme="https://ldvyyc.top/tags/Tools/"/>
     
   </entry>
   
@@ -95,9 +136,9 @@
     <category term="Learning" scheme="https://ldvyyc.top/categories/Learning/"/>
     
     
-    <category term="Finance" scheme="https://ldvyyc.top/tags/Finance/"/>
-    
     <category term="Notes" scheme="https://ldvyyc.top/tags/Notes/"/>
+    
+    <category term="Finance" scheme="https://ldvyyc.top/tags/Finance/"/>
     
   </entry>
   
@@ -149,9 +190,9 @@
     <category term="Learning" scheme="https://ldvyyc.top/categories/Learning/"/>
     
     
-    <category term="Finance" scheme="https://ldvyyc.top/tags/Finance/"/>
-    
     <category term="Notes" scheme="https://ldvyyc.top/tags/Notes/"/>
+    
+    <category term="Finance" scheme="https://ldvyyc.top/tags/Finance/"/>
     
   </entry>
   
@@ -177,9 +218,9 @@
     <category term="Learning" scheme="https://ldvyyc.top/categories/Learning/"/>
     
     
-    <category term="Finance" scheme="https://ldvyyc.top/tags/Finance/"/>
-    
     <category term="Notes" scheme="https://ldvyyc.top/tags/Notes/"/>
+    
+    <category term="Finance" scheme="https://ldvyyc.top/tags/Finance/"/>
     
   </entry>
   
@@ -234,9 +275,9 @@
     <category term="Learning" scheme="https://ldvyyc.top/categories/Learning/"/>
     
     
-    <category term="Finance" scheme="https://ldvyyc.top/tags/Finance/"/>
-    
     <category term="Notes" scheme="https://ldvyyc.top/tags/Notes/"/>
+    
+    <category term="Finance" scheme="https://ldvyyc.top/tags/Finance/"/>
     
   </entry>
   
@@ -262,9 +303,9 @@
     <category term="learning" scheme="https://ldvyyc.top/categories/learning/"/>
     
     
-    <category term="Finance" scheme="https://ldvyyc.top/tags/Finance/"/>
-    
     <category term="Notes" scheme="https://ldvyyc.top/tags/Notes/"/>
+    
+    <category term="Finance" scheme="https://ldvyyc.top/tags/Finance/"/>
     
   </entry>
   
@@ -289,9 +330,9 @@
     <category term="Learning" scheme="https://ldvyyc.top/categories/Learning/"/>
     
     
-    <category term="Notes" scheme="https://ldvyyc.top/tags/Notes/"/>
-    
     <category term="GameTheory" scheme="https://ldvyyc.top/tags/GameTheory/"/>
+    
+    <category term="Notes" scheme="https://ldvyyc.top/tags/Notes/"/>
     
   </entry>
   
@@ -337,9 +378,9 @@
     <category term="Learning" scheme="https://ldvyyc.top/categories/Learning/"/>
     
     
-    <category term="Finance" scheme="https://ldvyyc.top/tags/Finance/"/>
-    
     <category term="Notes" scheme="https://ldvyyc.top/tags/Notes/"/>
+    
+    <category term="Finance" scheme="https://ldvyyc.top/tags/Finance/"/>
     
   </entry>
   
